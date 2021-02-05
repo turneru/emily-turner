@@ -188,18 +188,19 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    padding: 12px 50px;
-    color: #545454 !important;
+    padding: 10px;
+    color: #fff !important;
     text-align: center;
-    font-size: 18px;
+    min-width: 150px;
+    font-size: 16px;
     font-weight: 500;
     /* font-family: 'Lato', sans-serif; */
     text-transform: uppercase;
     text-decoration: none;
     /* white-space: nowrap; */
-    background-color: #cbff4d;
-    border-radius: 30px;
-    border: 1px solid #cbff4d;
+    background-color: #ff8a8a;
+    border-radius: 0;
+    border: 1px solid #ff8a8a;
     cursor: pointer;
     box-sizing: border-box;
 }
@@ -214,8 +215,8 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #ffffff !important;
-  border-color: #419d78;
-	background-color: #419d78;
+  border-color: #E91E63;
+    background-color: #E91E63;
 	text-decoration: none;
   outline: 0; }
 .button.button-primary,

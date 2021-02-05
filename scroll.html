@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Emily Sokalski & Turner Uligian Wedding</title>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--        <script src="js/main.js"></script>-->
+        <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
+          
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+    
+    <style>
+    *, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    font-size: 1.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background-color: #333;
+    color: #333;
+    fill: currentColor;
+    height: 100%;
+    width: 100%;
+    max-height: 100vh;
+    min-width: 16.666667em;
+    overflow: hidden; 
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 1.65em;
+}
+
+main {
+	display: table;
+	width: 100%;
+    padding-bottom: 33px;
+    padding-top: 20px;
+}
+        
+header {
+    width: 100%;
+    background: rgb(241 241 241 / .5);
+    position: absolute;
+    padding: 20px 0px 0px;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.main, .page {
+    width: 100%;
+    height: 100%;
+}
+.main {
+    overflow: hidden;
+}
+.page {
+    position: absolute;
+    opacity: 0;
+    overflow: auto;
+}
+.page.current-slide {
+    opacity: 1;
+    z-index: 2;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition:
+        opacity 150ms cubic-bezier(.4, 0, .2, 1),
+        -webkit-transform 800ms cubic-bezier(.4, 0, .2, 1),
+        transform 800ms cubic-bezier(.4, 0, .2, 1);
+}
+.page.current-slide-animating {
+    opacity: 0;
+    z-index: 1;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    transition:
+        opacity 150ms cubic-bezier(.4, 0, .2, 1) 100ms,
+        -webkit-transform 800ms cubic-bezier(.4, 0, .2, 1),
+        transform 800ms cubic-bezier(.4, 0, .2, 1);
+}
+.page.prev-slide,
+.page.next-slide {
+    opacity: 1;
+    z-index: 2;
+}
+.page.prev-slide {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.page.next-slide {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.page.one {
+    background-color: #4bffc5;
+}
+.page.two {
+    background-color: #a497ff;
+}
+.page.three {
+    background-color: #ff5152;
+}
+.page.four {
+    background-color: #3d98ff;
+}
+        
+.menu_current, .menu_current a, .current_nav, .current_nav a {
+    color: red !important;
+    text-transform: lowercase !important;
+    font-style: italic !important;
+}        
+    
+    </style>
+    
+    <body>
+      
+        
+        
+             <!-- get a main div -->
+    <div class="main">
+            
+        <header>
+            <span class="nav_anchor"><a name="top"></a></span>
+            <nav class="top">
+                <div class="container">
+                    <div class="row no-margin">
+                        <div class="twelve columns">
+                            <ul class="menu">
+                                <li id="btn1"><a class="underline current_nav" href="#about">Our Story</a></li>
+                                <li id="btn2"><a class="underline next_nav" href="#projects">When & Where</a></li>
+                                <li id="btn3"><a class="underline" href="#contact">Registry</a></li>
+                                <li id="btn4"><a class="underline" href="#contact">RSVP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+            <!-- this is the div where you will place your desktop website -->
+            <div id="one" class="page one current-slide"></div>
+            <div id="two" class="page two next-slide"></div>
+            <div id="three" class="page three"></div>
+            <div id="four" class="page four"></div>
+    </div>
+           
+      
+    </body>
+</html>
+
+<script>
+// jQuery
+
+$(document).ready(function() {
+    // --- VARIABLES
+    var fullAnimation = false;
+    var currentSlide = 0;
+    var lastSlide = $('.page').length - 1;
+    var scrollDirection = "";
+
+    // --- FUNCTIONS
+    function slidePage(scrollDirection, currentSlide) {
+        fullAnimation = false;
+        if(scrollDirection == "right") {
+            $('.current-slide-animating').toggleClass('current-slide-animating prev-slide');
+            $('.page').eq(currentSlide - 1).addClass('prev-slide');
+            if(currentSlide != lastSlide) {
+                $('.page').eq(currentSlide + 1).addClass('next-slide');
+            }
+        } else {
+            $('.current-slide-animating').toggleClass('current-slide-animating next-slide');
+            $('.page').eq(currentSlide + 1).addClass('next-slide');
+            if(currentSlide != 0) {
+                $('.page').eq(currentSlide - 1).addClass('prev-slide');
+            }
+        } 
+    }
+
+    // --- EVENTS
+    $(window).bind('mousewheel', function(event) {
+        scrollDirection = event.originalEvent.wheelDelta > 0 ? "left" : "right";
+        if(fullAnimation == false) {
+            // if scroll right
+            if(currentSlide != lastSlide && scrollDirection == "right") {
+                fullAnimation = true;
+                currentSlide += 1;
+                $('.current-slide').toggleClass('current-slide current-slide-animating')
+                $('.next-slide').toggleClass('next-slide current-slide');
+                $('.page.prev-slide').removeClass('prev-slide');
+                $('.page.next-slide').removeClass('next-slide');
+                setTimeout(function() {
+                    slidePage(scrollDirection, currentSlide)
+                }, 600);
+            }
+            // if scroll left
+            if(currentSlide != 0 && scrollDirection == "left") {
+                fullAnimation = true;
+                currentSlide -= 1;
+                $('.current-slide').toggleClass('current-slide current-slide-animating')
+                $('.prev-slide').toggleClass('prev-slide current-slide');
+                $('.page.prev-slide').removeClass('prev-slide');
+                $('.page.next-slide').removeClass('next-slide');
+                setTimeout(function() {
+                    slidePage(scrollDirection, currentSlide)
+                }, 600);
+            }
+        }
+    });
+   
+});
+
+// jQuery
+
+$(document).ready(function() {
+    // --- VARIABLES
+    var fullAnimation = false;
+    var currentNav = 0;
+    var lastNav = $('.underline').length - 1;
+    var scrollDirection = "";
+
+    // --- FUNCTIONS
+    function slideNav(scrollDirection, currentNav) {
+        fullAnimation = false;
+        if(scrollDirection == "right") {
+            $('.current_nav_animating').delay( 800 ).toggleClass('current_nav_animating prev_nav');
+            $('.underline').eq(currentNav - 1).delay( 800 ).addClass('prev_nav');
+            if(currentNav != lastNav) {
+                $('.underline').eq(currentNav + 1).delay( 800 ).addClass('next_nav');
+            }
+        } else {
+            $('.current_nav_animating').delay( 800 ).toggleClass('current_nav_animating next_nav');
+            $('.underline').eq(currentNav + 1).delay( 800 ).addClass('next_nav');
+            if(currentNav != 0) {
+                $('.underline').eq(currentNav - 1).delay( 800 ).addClass('prev_nav');
+            }
+        } 
+    }    
+     
+    $(window).bind('mousewheel', function(event) {
+        scrollDirection = event.originalEvent.wheelDelta > 0 ? "left" : "right";
+        if(fullAnimation == false) {
+            // if scroll right
+            if(currentNav != lastNav && scrollDirection == "right") {
+                fullAnimation = true;
+                currentNav += 1;
+                $('.current_nav').delay( 800 ).toggleClass('current_nav current_nav_animating')
+                $('.next_nav').delay( 800 ).toggleClass('next_nav current_nav');
+                $('.prev_nav').delay( 800 ).removeClass('prev_nav');
+                $('.next_nav').delay( 800 ).removeClass('next_nav');
+                setTimeout(function() {
+                    slideNav(scrollDirection, currentNav)
+                }, 600);
+            }
+            // if scroll left
+            if(currentNav != 0 && scrollDirection == "left") {
+                fullAnimation = true;
+                currentNav -= 1;
+                $('.current_nav').delay( 800 ).toggleClass('current_nav current_nav_animating')
+                $('.prev_nav').delay( 800 ).toggleClass('prev_nav current_nav');
+                $('.prev_nav').delay( 800 ).removeClass('prev_nav');
+                $('.next_nav').delay( 800 ).removeClass('next_nav');
+                setTimeout(function() {
+                    slideNav(scrollDirection, currentNav)
+                }, 600);
+            }
+        }
+    });
+    
+});
+    
+//$(function() {
+//
+//   $("body").mousewheel(function{
+//
+//        if($("#two").hasClass("current-slide"))
+//        {
+//           $('#slide2').addClass("menu_current");
+//
+//        }
+//        else if($("#three").hasClass("current-slide"))
+//        {
+//            $('#slide3').addClass("menu_current");
+//        }
+//      else if($("#four").hasClass("current-slide"))
+//        {
+//            $('#slide4').addClass("menu_current");
+//        }
+//        else {
+//            
+//        }
+// });
+//     });
+</script>

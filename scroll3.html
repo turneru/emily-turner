@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Emily Sokalski & Turner Uligian Wedding</title>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        <script src="https://kit.fontawesome.com/31d108e09a.js"></script>
+        
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+    
+    <style>
+@import "compass/css3";
+ @font-face {
+	 src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/decade.ttf');
+	 font-family: Decade;
+}
+ *, *:before, *:after {
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+ html, body {
+	 height: 100%;
+/*	 overflow: hidden;*/
+	 background: #fff;
+}
+ @media (max-width: 767px) {
+	 html, body {
+		 font-size: 80%;
+	}
+}
+ @media (max-width: 640px) {
+	 html, body {
+		 font-size: 60%;
+	}
+}
+ @media (max-width: 480px) {
+	 html, body {
+		 font-size: 40%;
+	}
+}
+ .inner, .nav-panel ul .nav-btn:after {
+	 content: "";
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+}
+ .scene {
+	 width: 100%;
+	 height: 100%;
+     background: #000;
+}
+ .page {
+	 z-index: 1;
+	 position: absolute;
+     opacity: 0;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 transition: transform 0.7s, opacity 0.7s, z-index 0.7s;
+	 will-change: transform, opacity;
+}
+        
+ .page:nth-child(1) {
+	 background: #f5b94b;
+}
+ .page:nth-child(2) {
+	 background: #a497ff;
+}
+ .page:nth-child(3) {
+	 background: #ff5152;
+}
+
+ .page:nth-child(4) {
+	 background: #3d98ff;
+}
+      
+ 
+ .page.active {
+	 z-index: 5;
+      opacity: 1;
+     -webkit-animation: moveFromLeftFade .7s ease both;
+	 animation: moveFromLeftFade .7s ease both;
+	 transition: transform 0.7s, opacity 0.7s, z-index 0s 0.7s;
+}
+        
+.initial {
+	 z-index: 5 !important;
+      opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}          
+        
+ .page.active .half {
+	 transform: translateX(0) !important;
+	 transition: transform 0.7s ease-out;
+}
+ .page.previous {
+	 opacity: 0.4 !important;
+	 visibility: visible !important;
+     -webkit-animation: moveToRightFade .7s ease both;
+	animation: moveToRightFade .7s ease both;
+	 transition: transform 0.7s, opacity 0.7s, z-index 0s;
+}
+/*
+ .page.previous.small {
+	 opacity: 0 !important;
+	 visibility: visible !important;
+     -webkit-animation: moveFromRightFade .7s ease both;
+	animation: moveFromRightFade .7s ease both;
+	 transition: transform 0.7s, opacity 0.7s, z-index 0s;
+}        
+*/
+        
+ .page.small {
+/*	 transform: scale(0.8);*/
+	 opacity: 0;
+      -webkit-animation: moveToRightFade .7s ease both;
+	 animation: moveToRightFade .7s ease both;
+	 transition: transform 0.7s, opacity 0.7s;
+}
+
+ .content {
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-size: cover;
+     left: 0;
+/*
+	 transition: transform 0.7s ease-in;
+	 will-change: transform;
+*/
+}
+
+ .heading {
+	 position: absolute;
+	 z-index: 500;
+    top: 40%;
+    left: 40%;
+/*	 transform: translateX(-50%) translateY(-50%);*/
+	 font-size: 3.5rem;
+	 color: #fff;
+	 font-family: Decade;
+     padding: 50px;
+     background-color: #fb62f6;
+}
+ .nav-panel {
+	 position: fixed;
+	 top: 50%;
+	 right: 2%;
+	 transform: translateY(-50%);
+	 z-index: 1000;
+	 transition: opacity 0.5s, transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6);
+	 will-change: transform, opacity;
+}
+ .nav-panel.invisible {
+	 opacity: 0;
+	 transform: translateY(-50%) scale(0.5);
+}
+ .nav-panel ul {
+	 list-style-type: none;
+}
+ .nav-panel ul .nav-btn {
+	 position: relative;
+    /* overflow: hidden; */
+    /* width: 1rem; */
+    /* height: 1rem; */
+    /* margin-bottom: 0.5rem; */
+    /* border: 0.12rem solid #fff; */
+    /* border-radius: 50%; */
+    cursor: pointer;
+     color: #fff;
+    transition: border-color, transform 0.3s;
+    will-change: border-color, transform;
+     text-align: center;
+}
+ .nav-panel ul .nav-btn:after {
+/*
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 50%;
+	 transform: translateX(-50%) translateY(-50%) scale(0.3);
+	 background-color: #fff;
+	 opacity: 0;
+	 transition: transform, opacity 0.3s;
+	 will-change: transform, opacity;
+*/
+}
+ .nav-panel ul .nav-btn.active:after, .nav-panel ul .nav-btn:hover:after {
+	 transform: translateX(-50%) translateY(-50%) scale(0.7);
+	 opacity: 1;
+}
+ .nav-panel ul .nav-btn:hover, .nav-panel ul .nav-btn.active {
+	 border-color: yellow;
+	 transform: scale(1.2);
+}
+ .nav-panel ul .nav-btn:hover:after {
+	 background-color: yellow;
+}
+ .nav-panel .scroll-btn {
+	 position: absolute;
+	 left: 60px;
+	 width: 1rem;
+	 height: 1rem;
+	 border: 0.2rem solid #fff;
+	 border-left: none;
+	 border-bottom: none;
+	 cursor: pointer;
+	 transform-origin: 50% 50%;
+	 transition: border-color 0.3s;
+}
+.nav-panel .scroll-btn.up {
+    top: -3rem;
+    transform: rotate(-45deg);
+}
+ .nav-panel .scroll-btn.down {
+	 bottom: -1.2rem;
+	 transform: rotate(135deg);
+}
+ .nav-panel .scroll-btn:hover {
+	 border-color: yellow;
+}
+
+ 
+    </style>
+    
+    <body>
+        
+   
+        
+      <div class="scene">
+  <div class="page page-1 active initial">
+    <div class="content">
+      <h2 class="heading">Page 1</h2>
+    </div>
+  </div>
+  <div class="page page-2">
+    <div class="content">
+        <h2 class="heading">Page 2</h2> 
+    </div>
+  </div>
+  <div class="page page-3">
+    <div class="content">
+      <h2 class="heading">Page 3</h2>
+    </div>
+  </div>
+  <div class="page page-4">
+     <div class="content">
+         <h2 class="heading">Page 4</h2>
+      </div> 
+  </div>
+</div>
+<div class="nav-panel">
+  <div class="scroll-btn up"></div>
+  <div class="scroll-btn down"></div>
+  <nav>
+    <ul>
+      <li data-target="1" class="nav-btn nav-page1 active">Our Story</li>
+      <li data-target="2" class="nav-btn nav-page2">When &amp; Where</li>
+      <li data-target="3" class="nav-btn nav-page3">FAQ</li>
+      <li data-target="4" class="nav-btn nav-page4">Travel</li>
+    </ul>
+  </nav>
+</div>
+      
+    </body>
+</html>
+
+<script>
+$(document).ready(function() {
+  
+  var pages = $(".page").length,
+      scrolling = false,
+      curPage = 1;
+  
+  function pagination(page, movingUp) {
+//    scrolling = true;
+    var diff = curPage - page,
+        oldPage = curPage;
+    curPage = page;
+    $(".page").removeClass("active initial small moveToRightFade previous");
+    $(".page-" + page).addClass("active");
+    $(".nav-btn").removeClass("active");
+    $(".nav-page" + page).addClass("active");
+    if (page > 1) {
+      $(".page-" + (page - 1)).addClass("previous");
+      if (movingUp) {
+        $(".page-" + (page - 1)).hide();
+        var hackPage = page;
+        setTimeout(function() {
+          $(".page-" + (hackPage - 1)).show();
+        }, 600);
+      }
+      while (--page) {
+        $(".page-" + page).addClass("small");
+      }
+    }
+      
+      
+//    console.log(diff)
+//    if (diff > 1) {
+//      for (var j = page + 1; j < oldPage; j++) {
+//        $(".page-" + j + " .half").css("transition", "transform .7s ease-out");
+//      }
+//    }
+//      
+    setTimeout(function() {
+//      scrolling = false;
+      $(".page")
+    }, 700);
+  }
+
+  function navigateUp() {
+    if (curPage > 1) {
+      curPage--;
+         console.log(curPage);
+      
+    }
+  }
+
+  function navigateDown() {
+    if (curPage < pages) {
+      curPage++;
+      pagination(curPage);
+    }
+  }
+                  
+  $(document).on("click", ".scroll-btn", function() {
+    if ($(this).hasClass("up")) {
+      navigateUp();
+    } else {
+      navigateDown();
+    }
+  });
+  
+  $(document).on("click", ".nav-btn:not(.active)", function() {
+    pagination(+$(this).attr("data-target"));
+  });
+    
+});    
+ 
+
+
+</script>

@@ -13,21 +13,11 @@
 
 html, body {
     height: 100%;
-/*	overflow: hidden;*/
+	overflow: hidden;
     background: #fff;
     margin: 0;
 }
 
-.wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    perspective: 1200px;
-    transform-style: preserve-3d;
-    overflow-x: auto; 
-    overflow-y: hidden;
-}
-    
 .page {
     z-index: 1;
     width: 100%;
@@ -51,7 +41,7 @@ html, body {
      background: #000;
 }
             
- .page.active {
+.page.active {
     z-index: 5;
     opacity: 1;
 }   
@@ -59,7 +49,8 @@ html, body {
 .heading {
     text-align: center;
     font-size: 60px;
-    color: #000;
+    color: #558e56;
+/*    color: #000;*/
 /*    font-family: 'Cormorant Garamond', serif;*/
     font-family: 'Great Vibes', cursive;
     font-weight: 500;
@@ -90,17 +81,103 @@ p {
     text-align: center;
 }
 
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
 .no-margin {
     margin: 0;
 }
+
 .content {
     position: absolute;
-    background-color: #fff;
+    background-color: #fffaf1;
     box-shadow: 0px 5px 12px 5px rgb(0 0 0 / .3);
 }   
 
+.page:nth-child(1) {
+/*     background: #ecb258;
+    background: url(../images/wed/all_leaves.png) no-repeat bottom;
+    background-size: cover;*/
+    background-color: #fec6c6;
+}
+
+.page:nth-child(2) {
+/*    background: #d0fabb;*/
+    background: #fbea9e;
+}
+
+.page:nth-child(3) {
+    background: #fa9089;
+/*    background: #67d0ff;*/
+}
+
+.page:nth-child(4) {
+    background: #fed866;
+/*     background: #fdf878;*/
+}
+
+.page:nth-child(5) {
+     background: #f99177;
+}
+
+.page:nth-child(6) {
+/*    background: #c8d2f6;*/
+    background: #fab36b;
+}
+
+
+#page-2 .content,  #page-4 .content,  #page-6 .content {
+    border: 5px solid #f96574 !important;
+
+}  
+
+#page-3 .content, #page-5 .content{
+    border: 5px solid #ffd54d !important;
+} 
+
+
 /* =============== Header & Navigation ==================== 
    ========================================================*/
+
+#clockdiv {
+    color: #fbea9e;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    top: 0px;
+    left: 32px;
+    z-index: 99999;
+}
+
+#clockdiv .hashtag {
+    float: none !important;
+    padding: 0 !important;
+    margin: 0;
+    background: transparent;
+    color: #000;
+}
+
+#clockdiv > div {
+    padding: 0px 5px;
+    border-radius: 0;
+    background: #558e56;
+    display: block;
+    float: left;
+    min-width: 75px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#clockdiv span {
+    color: #fff;
+}
+
 .nav-panel {
     position: fixed;
     top: 0;
@@ -151,14 +228,11 @@ nav {
     width: 60px;
 }
 
-
+.nav-panel ul .nav-btn:nth-of-type(6) {
+    width: 85px;
+}
 
 .nav-panel ul .nav-btn:hover, .nav-panel ul .nav-btn.active {
-/*
-    top: 0%;
-	opacity: 1;
-    transform: scale(1.1);
-*/
     color: #569056;
     font-weight: 700;
 }
@@ -196,22 +270,51 @@ nav {
   right: 10px;
 }
 
+
+.menu.mobile {
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    right: 0;
+}
+
+.nav-panel.mobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99998;
+    height: 100%;
+    background-color: #fff;
+}
+
+.nav-panel.mobile nav {
+    position: relative;
+    top: 110px;
+    right: auto;
+    margin: 0 auto;
+    left: auto;
+}
+
+.nav-panel.mobile  ul {
+    width: 100%;
+}
+
+.nav-panel.mobile  ul .nav-btn {
+    margin: 0 auto 50px;
+    display: block;
+}
+
+
 /* =============== Home/Our Story styles ========================= 
    ========================================================*/
-.page:nth-child(1) {
-/*     background: #ecb258;*/
-    background: url(../images/wed/all_leaves.png) no-repeat bottom;
-    background-size: cover;
-    background-color: #fec6c6;
-}
 
 #page-1 .content {
     position: absolute;
     z-index: 500;
     top: 50%;
     left: 50%;
-    background-color: #fff;
-    padding: 10px 60px;
+    background-color: #fffaf1;
+    padding: 0px 30px;
     width: 50%;
 /*    min-height: 700px;*/
     margin-left: -25%;
@@ -222,7 +325,7 @@ nav {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    border: 30px solid #fff;
+    border: 25px solid #fffaf1;
     outline: thick solid #ffd54d;
 }   
 
@@ -235,6 +338,47 @@ nav {
 	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 }
 
+#page-1.active #home_bg {
+    -webkit-animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+	        animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#page-1.active #home_bg_top_left {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    -webkit-animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+	        animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+}
+
+#page-1.active #home_bg_top_right {
+    position: absolute;
+    top: 30px;
+    right: 12%;
+    -webkit-animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+	        animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+}
+
+#page-1.active #home_bg_bottom_left {
+    position: absolute;
+    bottom: -160px;
+    left: 12%;
+    -webkit-animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+	        animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+}
+
+#page-1.active #home_bg_bottom_right {
+    position: absolute;
+    bottom: -160px;
+    right: 12%;
+    -webkit-animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+	        animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.05s both;
+}
+
 #page-1 .heading {
     margin-top: 15px;
 }
@@ -244,6 +388,10 @@ nav {
     top: 91%;
     right: 27%;
     z-index: 599;
+}
+
+#scroll:hover {
+    cursor: pointer;
 }
 
 #scroll i {
@@ -277,17 +425,14 @@ nav {
 /* =============== When & Where styles ========================= 
    ========================================================*/
 
- .page:nth-child(2) {
-    background: #C1FBA4;
-    background-size: cover;
-}
+ 
 
 #page-2 .content {
     position: absolute;
     z-index: 500;
     top: 50%;
     left: 50%;
-    background-color: #fff;
+    background-color: #fffaf1;
     width: 50%;
     min-height: 700px;
     margin-left: -25%;
@@ -308,12 +453,22 @@ nav {
     bottom: -75px;
 }
 
+.orchid {
+    left: -30px;
+    position: absolute;
+    z-index: 300;
+    bottom: -750px;
+}
+
+.button:hover i {
+    -webkit-animation: arrow-slide-right 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: arrow-slide-right 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+                        
+
 /* =============== Travel styles ========================= 
    ========================================================*/
- .page:nth-child(3) {
- /*   background: #fdf878;*/
-    background: #c0f3fb;
-}
+
 
 #page-3 .content.right {
     position: absolute;
@@ -349,42 +504,48 @@ nav {
 	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 }
 
-.leaf_left {
-    left: 0;
+#page-3 .content.mobile {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 50%;
+    background-color: #fffaf1;
+    border: 5px solid #fce67e;
+}      
+
+#page-3 .leaf_left {
+    left: -60px;
     position: absolute;
     z-index: 600;
     top: 0px;
 }
 
-.leaf_left img {
+#page-3 .leaf_left img {
     max-width: 425px;
 }
 
-.leaf_right {
-    right: 0;
+#page-3 .leaf_right {
+    right: -60px;
     position: absolute;
     z-index: 600;
     bottom: -5px;
 }
 
-.leaf_right img {
+#page-3 .leaf_right img {
     max-width: 440px;
 }
 
 /* =============== Registry styles ========================= 
    ========================================================*/
 
- .page:nth-child(4) {
-/*    background: #e3c8f6;*/
-     background: #fdf878;
-}
+
 
 #page-4 .content {
     position: absolute;
     z-index: 500;
     top: 50%;
     left: 50%;
-    background-color: #fff;
+    background-color: #fffaf1;
     width: 50%;
     min-height: 700px;
     margin-left: -25%;
@@ -398,6 +559,205 @@ nav {
 	        animation: slide-in-fwd-center 1s ease-out 0.5s both;
 }
 
+.registry_leaf_center {
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.registry_leaf_center_overlay {
+    z-index: 700;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* =============== RSVP styles ========================= 
+   ========================================================*/
+
+
+#page-5 .content {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 50%;
+    background-color: #fffaf1;
+    width: 50%;
+    min-height: 740px;
+    margin-left: -25%;
+    margin-top: -330px;
+    border: 5px solid #50efd2;
+    box-shadow: 0px 5px 12px 5px rgb(0 0 0 / .3);
+    
+}   
+            
+#page-5.active .content {
+   	-webkit-animation: puff-in-center 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) 0.3s both;
+	        animation: puff-in-center 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) 0.3s both;
+}
+
+.iframe_container {
+    width: 775px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 500;
+    top: 62%;
+    left: 50%;
+    background-color: #fffaf1;
+    min-height: 606px;
+    margin-left: -50%;
+    margin-top: -330px;
+}
+
+iframe {
+   width: 110%;
+    height: 602px;
+    overflow: auto;
+}
+
+.palm_leaf {
+    right: -65px;
+    position: absolute;
+    z-index: 400;
+    bottom: -55px;
+}
+
+.flowers_right {
+    z-index: 600;
+    position: absolute;
+    bottom: -20px;
+    right: -60px; 
+}
+
+/* =============== Photos styles ========================= 
+   ========================================================*/
+
+
+
+#page-6 .content {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 50%;
+    background-color: #fffaf1;
+    width: 50%;
+    min-height: 760px;
+    margin-left: -25%;
+    margin-top: -330px;
+    border: 5px solid #fa9d5a;
+    box-shadow: 0px 5px 12px 5px rgb(0 0 0 / .3);
+}   
+            
+#page-6.active .content {
+   	-webkit-animation: slide-in-fwd-center 1s ease-out 0.5s both;
+	        animation: slide-in-fwd-center 1s ease-out 0.5s both;
+}
+
+.flower_left {
+    position: absolute;
+    bottom: -120px;
+    left: -200px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 45px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fffaf1;
+}
+
+/* Modal Content */
+.photo_content {
+    position: relative;
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.prev_photo,
+.next_photo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next_photo {
+    right: 0;
+    border-radius: 0;
+}
+
+.prev_photo:hover,
+.next_photo:hover {
+     background-color: rgba(0, 0, 0, 0.05);
+     color: #000;
+}
+
+.slide_count {
+    color: #000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img.hover_shadow {
+    transition: 0.3s;
+}
+
+.hover_shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
 
 .leaf_center {
     z-index: 300;
@@ -407,38 +767,6 @@ nav {
     left: 0;
     bottom: 0;
     right: 0;
-}
-
-/* =============== RSVP styles ========================= 
-   ========================================================*/
-.page:nth-child(5) {
-     background: #f99177;
-}
-
-#page-5 .content {
-    position: absolute;
-    z-index: 500;
-    top: 50%;
-    left: 50%;
-    background-color: #fff;
-    width: 50%;
-    min-height: 700px;
-    margin-left: -25%;
-    margin-top: -330px;
-    border: 5px solid #50efd2;
-    box-shadow: 0px 5px 12px 5px rgb(0 0 0 / .3);
-}   
-            
-#page-5.active .content {
-   	-webkit-animation: puff-in-center 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) 0.3s both;
-	        animation: puff-in-center 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) 0.3s both;
-}
-
-.palm_leaf {
-    right: -65px;
-    position: absolute;
-    z-index: 600;
-    bottom: -55px;
 }
 
 /* =============== Media Queries ========================= 
@@ -461,7 +789,74 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
     
+    .scene {
+        overflow: hidden;
+    }
+
+    .content {
+        width: 90% !important;
+        margin-left: -45% !important;
+        min-height: 690px !important;
+        margin-top: -300px !important;
+    }
+    
+    #page-1 .content {
+        padding: 0px;
+    }
+    
+    #page-1 .heading {
+        margin-top: 0;
+    }
+    
+    .heading {
+        font-size: 42px;
+    }
+    
+    #page-1 .content p {
+        font-size: 18px;
+    }
+    
+    #page-3 .leaf_left, #page-3 .leaf_right {
+        z-index: 300;
+    }
+
+    #page-5 .flowers_right {
+        z-index: 300;
+    }
+    
+    #page-5 iframe {
+        height: 575px;
+    }
+    
+    #page-5 .iframe_container {
+        width: 305px;
+        min-height: 585px;
+    }
+    
+    #page-6 .content {
+        padding: 0px 10px;
+        max-height: 650px;
+        overflow-y: scroll;
+    }
+    
+    #page-6 .content .three.columns {
+        margin-left: 0 !important;
+    }
+    
+    
+    
+    #clockdiv {
+        top: 25px;
+        z-index: 9999;
+    }
 }
 
 @media only screen and (max-width: 540px) {
