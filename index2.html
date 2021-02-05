@@ -222,12 +222,44 @@
         <div class="Photos-container section-container">
             <div class="container">
                 <h1>Photos</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit <a href="#">amet consectetur</a> lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-                <h2>Secondary Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit <a href="#">amet consectetur</a> lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-                <h3>Tertiary Heading</h3>
-                <h4>Quaternary Heading</h4>
-                <a href="#" class="button">Button Link</a>
+                <div class="row">
+                    <div class="three columns" style="margin-left: 2%;">
+                        <img src="images/wed/tuco_bw_xs.jpg" onclick="openModal();currentSlide(1)" class="img-responsive hover_shadow">
+                    </div>
+                    <div class="three columns">
+                        <img src="images/wed/cocoa.jpg" onclick="openModal();currentSlide(2)" class="img-responsive hover_shadow">
+                    </div>
+                    <div class="three columns">
+                        <img src="images/wed/tuco_og.jpg" onclick="openModal();currentSlide(3)" class="img-responsive hover_shadow">
+                    </div>
+                    <div class="three columns">
+                        <img src="images/wed/ring.jpg" onclick="openModal();currentSlide(4)" class="img-responsive hover_shadow">
+                    </div>
+                </div>
+                <div id="photo_modal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="photo_content">
+                        <div class="slide">
+                          <div class="slide_count">1 / 4</div>
+                          <img src="images/wed/tuco_bw_xs.jpg" class="u-max-full-width">
+                        </div>
+                        <div class="slide">
+                            <div class="slide_count">2 / 4</div>
+                            <img src="images/wed/cocoa.jpg" class="u-max-full-width">
+                        </div>
+                        <div class="slide">
+                            <div class="slide_count">3 / 4</div>
+                            <img src="images/wed/tuco_og.jpg" class="u-max-full-width">
+                        </div>
+                        <div class="slide">
+                            <div class="slide_count">4 / 4</div>
+                            <img src="images/wed/ring.jpg" class="u-max-full-width">
+                        </div>
+                        <!-- Next/previous controls -->
+                        <a class="prev_photo" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next_photo" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
@@ -356,6 +388,47 @@ for (var i = 0; i < btns.length; i++) {
   });
 }    
 
+// Open the Modal
+        function openModal() {
+          document.getElementById("photo_modal").style.display = "block";
+        }
+
+    // Close the Modal
+        function closeModal() {
+          document.getElementById("photo_modal").style.display = "none";
+        }
+    
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+    // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+    // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+               
+          }
+//          for (i = 0; i < dots.length; i++) {
+//            dots[i].className = dots[i].className.replace(" active_photo", "");
+//          }
+         slides[slideIndex-1].style.display = "block";
+//          dots[slideIndex-1].className += " active_photo";
+        }    
+        
+    
+    
  function getTimeRemaining(endtime) {
       var t = Date.parse(endtime) - Date.parse(new Date());
       var seconds = Math.floor((t / 1000) % 60);
