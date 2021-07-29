@@ -112,14 +112,20 @@
  * animation slide-right for arrow in button
  * ----------------------------------------
  */
+
+.arrow-slide-right {
+	-webkit-animation: arrow-slide-right 1s ease-in-out 0s both;
+	        animation: arrow-slide-right 1s ease-in-out 0s both;
+}
+
 @-webkit-keyframes arrow-slide-right {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
 }
 @keyframes arrow-slide-right {
@@ -128,8 +134,8 @@
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
 }
 
@@ -1050,20 +1056,20 @@ deep blue - #2f2963
             animation-timing-function: ease-out;
   }
   10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
   17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    -webkit-transform: scale(0.90);
+            transform: scale(0.90);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
   33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    -webkit-transform: scale(0.80);
+            transform: scale(0.80);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
@@ -1084,20 +1090,20 @@ deep blue - #2f2963
             animation-timing-function: ease-out;
   }
   10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
   17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    -webkit-transform: scale(0.90);
+            transform: scale(0.90);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
   33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    -webkit-transform: scale(0.80);
+            transform: scale(0.80);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
