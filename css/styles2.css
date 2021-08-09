@@ -682,6 +682,20 @@ p.home_date {
     background-size: cover;
 }
 
+.rsvp_wrapper {
+	text-align: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    margin: 15px 0px;
+    border: 1px solid #eee;
+    opacity: 0;
+    z-index: 500;
+    position: relative;
+    box-shadow: 0 0 25px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .iframe_container {
     width: 100%;
     margin-top: 10px;
@@ -692,7 +706,6 @@ iframe {
     min-height: 675px;
     overflow: auto;
 }
-
 
 /* =============== Photos styles ========================= 
    ========================================================*/
