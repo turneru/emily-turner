@@ -165,6 +165,10 @@ $(function() {
 
 		if (scroll >= 5) {
 			ourstory.addClass("slide-in-bottom-small");
+			$('.tl-item:nth-of-type(1)').addClass("delay200 slide-in-left");
+			$('.tl-item:nth-of-type(2)').addClass("delay300 slide-in-left");
+			$('.tl-item:nth-of-type(3)').addClass("delay400 slide-in-left");
+			$('.tl-item:nth-of-type(4)').addClass("delay500 slide-in-left");
 		} 
 	});
 });   	

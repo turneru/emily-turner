@@ -10,15 +10,16 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="js/jquery.waypoints.js"></script>
 		<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.1.1/iframeResizer.min.js"></script>
+		<script src="js/main.min.js"></script>
 		<script src="https://kit.fontawesome.com/31d108e09a.js"></script>
 		
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/grid.css">
 		<link rel="stylesheet" href="css/hamburger.css">
-		<link rel="stylesheet" href="css/styles2.css">
+		<link rel="stylesheet" href="css/styles2.min.css">
 		<link rel="stylesheet" href="css/animation.css">
-		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<!--		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">-->
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
@@ -85,9 +86,11 @@
             </div>
 		</div>
 		<!--- RSVP Button --->
+<!--
 		<div class="rsvp_btn slide-in-right delay2500">
 			<a class="scroll-link fly_out" href="#RSVP">RSVP</a>
 		</div>
+-->
 		<!--- Home Section --->
 		<div class="home section-container">
 			<section id="home">
@@ -104,69 +107,60 @@
 		<div class="waypoint ourstory"></div>
 		<div class="OurStory-container section-container" style="background-color: #fed7bb87;">
 			<section id="OurStory">
-				<div class="container">
-					<h1>Our Story</h1>
-					<div class="timeline">
-						<div class="container">
-							<div class="timeline-item">
-								<div class="timeline-img"></div>
-								<div class="timeline-content js--fadeInLeft timeline-item-1">
-									<img src="images/timeline/state.jpg" class="img-responsive mobile" alt="Tuco and Blondie">
-									<h3>How we met</h3>
-									<div class="date">December 11, 2018</div>
-									<p>After working at SmithBucklin together for over a year (albeit on different floors) and exchanging work related emails, we finally met at the company Christmas party in December 2017. At the after party Turner bought Emily a vodka lemonade (her favorite at the time), and they chatted for a good portion of the night. That night Turner went home and told his roommates at the time, that Emily was 'the one'.</p>
-								</div>
-								<div class="timeline-content js--fadeInRight timeline-item-2 desktop">
-									<img src="images/timeline/state.jpg" class="img-responsive" alt="Tuco and Blondie">
-								</div>
+				<h1>Our Story</h1>
+					<div id="timeline">
+						<div class="tl-item">
+							<div class="tl-bg" style="background-image: url(images/timeline/christmas3.jpg)"></div>
+							<div class="tl-year">
+								<p class="f2 heading--sanSerif">2017</p>
 							</div>
-							<div class="timeline-item">
-								<div class="timeline-img"></div>
-								<div class="timeline-content js--fadeInLeft timeline-item-3 desktop">
-									<img src="images/timeline/guthries.png" class="img-responsive" alt="Guthries Tavern">
-								</div>
-								<div class="timeline-content js--fadeInRight timeline-item-4">
-									<img src="images/timeline/guthries.png" class="img-responsive mobile" alt="Guthries Tavern">
-									<h3>The first date</h3>
-									<div class="date">January 7, 2019</div>
-									<p>After texting back and forth for the next couple of days, Emily and Turner went on their first date that weekend, beginning with dinner at an Italian restaurant Turner believed was a mom-and-pop place in the neighborhood. Emily later informed him she had been to this restaurant before, and that it was more so a Chicago chain. Chain or mom-and-pop, it didn't matter - they hit it off and had a great time getting to know each other in between bites of pasta.</p>
-									<p>After dinner the date continued to Guthrie's Tavern, a local watering hole and dive bar with bookcases full of board games. They spent the next couple of hours battling it out in rounds of Yahteez!, Scrabble, and other board games. Turner of course let her win just enough times, though Emily disputes that fact and if it was even necessary (OJ is a word in Scrabble, right?). The date lasted about 6 hours total and Emily says that's when she knew Turner was the one.</p>
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-img"></div>
-								<div class="timeline-content js--fadeInLeft timeline-item-5">
-									<img src="images/timeline/proposal.jpg" class="img-responsive mobile" alt="Cocoa Beach">
-									<h3>She says yes</h3>
-									<div class="date">September 18, 2020</div>
-									<p>After a couple of years of dating, and in the midst of the mess of 2020, Emily and Turner took a quick trip to Cocoa Beach, FL for a weekend away. Turner proposed on the beach the morning after they arrived - he had planned with a family friend to help set up a blanket, champagne glasses, chilled champagne and flowers on the beach.</p>
-								</div>
-								<div class="timeline-content js--fadeInRight timeline-item-6 desktop">
-									<img src="images/timeline/proposal.jpg" class="img-responsive" alt="Cocoa Beach">
-								</div>
-							</div>
-							<div class="timeline-item">
-								<div class="timeline-img"></div>
-								<div class="timeline-content js--fadeInLeft timeline-item-7 desktop">
-									<img src="images/timeline/tree_walk_small.jpg" class="img-responsive" alt="Walking Engagement Photo">
-								</div>
-								<div class="timeline-content js--fadeInRight timeline-item-8">
-									<img src="images/timeline/tree_walk_small.jpg" class="img-responsive mobile" alt="Walking Engagement Photo">
-									<h3>The big day</h3>
-									<div class="date">June 18, 2022</div>
-									<p>We can't wait to celebrate with all of our friends and family in June! Thank you all for being a part of our story.<br /><br />
-										Love,<br />
-										Emily and Turner
-									</p>
-								</div>
+							<div class="tl-content">
+								<h3>12.11.17</h3>
+								<h1>How We Met</h1>
+								<p>After working at SmithBucklin together for over a year (albeit on different floors) and exchanging work related emails, we finally met at the company Christmas party. At the after party Turner bought Emily a vodka lemonade (her favorite at the time), and they chatted for a good portion of the night. That night Turner went home and told his roommates at the time, that Emily was 'the one'.</p>
 							</div>
 						</div>
-					</div>
-				</div>
-				
+						<div class="tl-item">
+							<div class="tl-bg" style="background-image: url(images/timeline/guthries_tavern2.jpg)"></div>
+							<div class="tl-year">
+								<p class="f2 heading--sanSerif">2018</p>
+							</div>
+							<div class="tl-content">
+								<h3>01.06.18</h3>
+								<h1 class="f3 text--accent ttu">Our First Date</h1>
+								<p>After texting back and forth for the next couple of days, Emily and Turner went on their first date that weekend, beginning with dinner at an Italian restaurant Turner believed was a mom-and-pop place in the neighborhood. Emily later informed him she had been to this restaurant before, and that it was more so a Chicago chain. Chain or mom-and-pop, it didn't matter - they hit it off and had a great time getting to know each other in between bites of pasta.</p>
+								<p>After dinner the date continued to Guthrie's Tavern, a local watering hole and dive bar with bookcases full of board games. They spent the next couple of hours battling it out in rounds of Yahteez!, Scrabble, and other board games. Turner of course let her win just enough times, though Emily disputes that fact and if it was even necessary (OJ is a word in Scrabble, right?). The date lasted about 6 hours total and Emily says that's when she knew Turner was the one.</p>
+							</div>
+						</div>
+						<div class="tl-item">
+							<div class="tl-bg" style="background-image: url(images/timeline/proposal2.jpg)"></div>
+							<div class="tl-year">
+								<p class="f2 heading--sanSerif">2020</p>
+							</div>
+							<div class="tl-content">
+								<h3>09.18.20</h3>
+								<h1 class="f3 text--accent ttu">She Says Yes</h1>
+								<p>After a couple of years of dating, and in the midst of the mess of 2020, Emily and Turner took a quick trip to Cocoa Beach, FL for a weekend away. Turner proposed on the beach the morning after they arrived - he had planned with a family friend to help set up a blanket, champagne glasses, chilled champagne and flowers on the beach.</p>
+							</div>
+						</div>
+						<div class="tl-item">
+							<div class="tl-bg" style="background-image: url(images/timeline/kiss.jpg)"></div>
+							<div class="tl-year">
+								<p class="f2 heading--sanSerif">2022</p>
+							</div>
+							<div class="tl-content">
+								<h3>06.18.22</h3>
+								<h1 class="f3 text--accent ttu">The Big Day</h1>
+								<p>We can't wait to celebrate with all of our friends and family in June! Thank you all for being a part of our story.<br /><br />
+									Love,<br />
+									Emily and Turner
+								</p>
+							</div>
+						</div>
+					</div>		
 			</section>
 		</div>
-		<!--- When Where Section --->
+		<!--- When Where Section---> 
 		<div class="waypoint whenwhere"></div>
 		<div class="WhenWhere-container section-container">
 			<section id="WhenWhere">
@@ -186,7 +180,9 @@
 									324 N Leavitt St,<br />
 									Chicago, IL 60612
 								</p>
-								<p class="no-margin"><a href="https://www.google.com/maps/place/Kitchen+Chicago/@41.8878348,-87.6846407,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c12b62b1:0x4f07b49cd13224d5!8m2!3d41.8878354!4d-87.6823682" target="_blank" class="button">Directions <span class="arrow"><i></i><svg><use xlink:href="#circle"></svg></span></a></p>
+								<p class="no-margin"><a href="https://www.google.com/maps/place/Kitchen+Chicago/@41.8878348,-87.6846407,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c12b62b1:0x4f07b49cd13224d5!8m2!3d41.8878354!4d-87.6823682" target="_blank" class="button arrow_btn">Directions <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
+								</p>
+								<p><em>Attire: Cocktail/Semi Formal</em></p>
 							</div>
 						</div>
 						<div class="six columns">
@@ -203,9 +199,9 @@
 									Chicago, IL 60612
 								</p>
 								<p class="no-margin">
-									<a href="/" target="_blank" class="button">Book Room<span class="arrow"><i></i><svg><use xlink:href="#circle"></svg></span></a>
+									<a href="https://www.google.com/maps/place/City+View+Loft/@41.8875923,-87.6846585,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c132e071:0xfd1d2d7768410371!8m2!3d41.8875931!4d-87.6823649" target="_blank" class="button arrow_btn">Directions <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
 								</p>
-<!--								<p class="no-margin"><a href="https://www.google.com/maps/place/City+View+Loft/@41.8875923,-87.6846585,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c132e071:0xfd1d2d7768410371!8m2!3d41.8875931!4d-87.6823649" target="_blank" class="button">Directions<span class="arrow"><i></i><svg><use xlink:href="#circle"></svg></span></a></p><p class="no-margin"><a href="https://www.google.com/maps/place/City+View+Loft/@41.8875923,-87.6846585,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c132e071:0xfd1d2d7768410371!8m2!3d41.8875931!4d-87.6823649" target="_blank" class="button">Directions<span class="arrow"><i></i><svg><use xlink:href="#circle"></svg></span></a></p>-->
+								<p><em>Attire: Cocktail/Semi Formal</em></p>
 							</div>
 						</div>
 					</div>
@@ -246,24 +242,24 @@
 						<div class="two columns">&nbsp;</div>
 						<div class="eight columns">
 							<div class="hotels">
+								<p>&nbsp;</p>
+								<p>Hotel Information Coming Soon!</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+<!--
 								<h3>The Hoxton</h3>
 								<p>200 N Green St, Chicago, IL 60607</p>
-								
 								<p class="no-margin">
-									<a href="/" target="_blank" class="button">Book Room<span class="arrow"><i></i><svg><use xlink:href="#circle"></svg></span></a>
+									<a href="/" target="_blank" class="button arrow_btn">Book Room <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
 								</p>
 
 								<h3>JW Marriott</h3>
 								<p>151 W Adams St, Chicago, IL 60603</p>
-								
 								<p class="no-margin">
-									<a href="/" target="_blank" class="button">Book Room<span class="arrow"><i></i><svg><use xlink:href="#circle"></svg></span></a>
+									<a href="/" target="_blank" class="button arrow_btn">Book Room <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
 								</p>
-								<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-									<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26px" height="26px" id="circle" fill="none" stroke="currentColor">
-										<circle r="10" cy="13" cx="13" id="test">
-									</symbol>
-								</svg>
+-->
+
 							</div>
 						</div>
 						<div class="two columns">&nbsp;</div>
@@ -281,12 +277,21 @@
 						<div class="twelve columns">
 							<h1>Registry</h1>
 							<div class="registry_content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit <a href="#">amet consectetur</a> lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-								<h2>Secondary Heading</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit <a href="#">amet consectetur</a> lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. </p>
-								<h3>Tertiary Heading</h3>
-								<h4>Quaternary Heading</h4>
-								<a href="#" class="button">Button Link</a>
+
+								<div class="reg_frame_container">
+									<iframe id="regFrame" class="reg_frame_content" scrolling="yes" frameborder="0" style="overflow: hidden;"></iframe>
+								</div>
+
+								<p class="no-margin">
+									<a href="https://www.myregistry.com/wedding-registry/turner-uligian-and-emily-sokalski-chicago-il/2940177/giftlist" target="_blank" class="button arrow_btn">View Full Registry <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
+								</p>
+								
+								<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+									<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26px" height="26px" id="circle" fill="none" stroke="currentColor">
+										<circle r="10" cy="13" cx="13" id="test1"></circle>
+									</symbol>
+								</svg>
+
 							</div>
 						</div>
 					</div>
@@ -300,8 +305,15 @@
 			<section id="RSVP">
 				<div class="container sub">
 					<h1>Rsvp</h1>
+					<div class="hotels">
+						<p>&nbsp;</p>
+						<p>RSVP Information Coming Soon!</p>
+						<p>&nbsp;</p>
+<!--
 					<div class="iframe_container">
 						<iframe src="https://emilyturner.app.rsvpify.com/" title="RSVP" frameborder="0"></iframe>
+					</div>
+-->
 					</div>
 				</div>
 				
@@ -313,160 +325,97 @@
 			<section id="Photos">
 				<div class="container sub">
 					<h1>Photos</h1>
-					<div class="row">
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-20.jpg" onclick="openModal();currentSlide(1)" class="img-responsive hover_shadow">
+					<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/material-photo-gallery.min.js"></script>
+
+					<div class="m-p-g">
+						<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+							<img src="images/photos/CoupleEmilyTurner-16.jpg" data-full="images/photos/CoupleEmilyTurner-16.jpg" class="m-p-g__thumbs-img tall" />
+							<img src="images/photos/CoupleEmilyTurner-13.jpg" data-full="images/photos/CoupleEmilyTurner-13.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-17.jpg" data-full="images/photos/CoupleEmilyTurner-17.jpg" class="m-p-g__thumbs-img wide" />
+
+							<img src="images/photos/CoupleEmilyTurner-24.jpg" data-full="images/photos/CoupleEmilyTurner-24.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-3.jpg" data-full="images/photos/CoupleEmilyTurner-3.jpg" class="m-p-g__thumbs-img tall" />
+							<img src="images/photos/CoupleEmilyTurner-20.jpg" data-full="images/photos/CoupleEmilyTurner-20.jpg" class="m-p-g__thumbs-img wide" />
+
+							<img src="images/photos/CoupleEmilyTurner-56.jpg" data-full="images/photos/CoupleEmilyTurner-56.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-33.jpg" data-full="images/photos/CoupleEmilyTurner-33.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-58.jpg" data-full="images/photos/CoupleEmilyTurner-58.jpg" class="m-p-g__thumbs-img tall" />
+
+							<img src="images/photos/CoupleEmilyTurner-54.jpg" data-full="images/photos/CoupleEmilyTurner-54.jpg" class="m-p-g__thumbs-img tall" />
+							<img src="images/photos/CoupleEmilyTurner-25.jpg" data-full="images/photos/CoupleEmilyTurner-25.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-22.jpg" data-full="images/photos/CoupleEmilyTurner-22.jpg" class="m-p-g__thumbs-img wide" />
+
+							<img src="images/photos/CoupleEmilyTurner-36.jpg" data-full="images/photos/CoupleEmilyTurner-36.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-46.1.jpg" data-full="images/photos/CoupleEmilyTurner-46.1.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-2.jpg" data-full="images/photos/CoupleEmilyTurner-2.jpg" class="m-p-g__thumbs-img tall" />
+
+							<img src="images/photos/CoupleEmilyTurner-50.jpg" data-full="images/photos/CoupleEmilyTurner-50.jpg" class="m-p-g__thumbs-img tall" />
+							<img src="images/photos/CoupleEmilyTurner-51.jpg" data-full="images/photos/CoupleEmilyTurner-51.jpg" class="m-p-g__thumbs-img tall" />
+							<img src="images/photos/CoupleEmilyTurner-42.jpg" data-full="images/photos/CoupleEmilyTurner-42.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-43.jpg" data-full="images/photos/CoupleEmilyTurner-43.jpg" class="m-p-g__thumbs-img wide" />
+
+							<img src="images/photos/CoupleEmilyTurner-44.jpg" data-full="images/photos/CoupleEmilyTurner-44.jpg" class="m-p-g__thumbs-img wide" />
+
+							<img src="images/photos/CoupleEmilyTurner-5.jpg" data-full="images/photos/CoupleEmilyTurner-5.jpg" class="m-p-g__thumbs-img tall" />
+							<img src="images/photos/CoupleEmilyTurner-59.jpg" data-full="images/photos/CoupleEmilyTurner-59.jpg" class="m-p-g__thumbs-img wide" />
+							<img src="images/photos/CoupleEmilyTurner-40.jpg" data-full="images/photos/CoupleEmilyTurner-40.jpg" class="m-p-g__thumbs-img wide" />
+
+							<div class="m-p-g__fullscreen"></div>
 						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-17.jpg" onclick="openModal();currentSlide(2)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-13.jpg" onclick="openModal();currentSlide(3)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-25.jpg" onclick="openModal();currentSlide(4)" class="img-responsive hover_shadow">
-						</div>
-					</div>
-					<div class="row">
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-3.jpg" onclick="openModal();currentSlide(5)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-54.jpg" onclick="openModal();currentSlide(6)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-16.jpg" onclick="openModal();currentSlide(7)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-58.jpg" onclick="openModal();currentSlide(8)" class="img-responsive hover_shadow">
-						</div>
-					</div>
-					<div class="row">
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-22.jpg" onclick="openModal();currentSlide(9)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-56.jpg" onclick="openModal();currentSlide(10)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-33.jpg" onclick="openModal();currentSlide(11)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-24.jpg" onclick="openModal();currentSlide(12)" class="img-responsive hover_shadow">
-						</div>
-					</div>
-					<div class="row">
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-2.jpg" onclick="openModal();currentSlide(13)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-50.jpg" onclick="openModal();currentSlide(14)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-51.jpg" onclick="openModal();currentSlide(15)" class="img-responsive hover_shadow">
-						</div>
-						<div class="three columns">
-							<img src="images/photos/CoupleEmilyTurner-5.jpg" onclick="openModal();currentSlide(16)" class="img-responsive hover_shadow">
-						</div>
-					</div>
-					<div id="photo_modal" class="modal">
-						<span class="close cursor" onclick="closeModal()">&times;</span>
-						<div class="photo_content">
-							<div class="slide">
-								<div class="slide_count">1 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-20.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">2 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-17.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">3 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-13.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">4 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-25.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">5 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-3.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">6 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-54.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">7 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-16.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">8 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-58.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">9 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-22.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">10 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-56.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">11 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-33.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">12 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-24.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">13 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-2.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">14 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-50.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">15 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-51.jpg" class="u-max-full-width">
-							</div>
-							<div class="slide">
-								<div class="slide_count">16 / <span class="slideTotal"></span></div>
-								<img src="images/photos/CoupleEmilyTurner-5.jpg" class="u-max-full-width">
-							</div>
-							<!-- Next/previous controls -->
-							<a class="prev_photo" onclick="plusSlides(-1)">&#10094;</a>
-							<a class="next_photo" onclick="plusSlides(1)">&#10095;</a>
-						</div>
-					</div>
+					</div>   
+					<p>&nbsp;</p>
 				</div>
 			</section>
 		</div>
 	</body>
 </html>
+<script>	
+iFrameResize({ log: true }, '#regframe');
+</script>
+
 <script>
 	
-$('.arrow').on('mouseover', function(e) {
+var elem = document.querySelector('.m-p-g');
 
-    e.preventDefault();
-
-    let arrow = $(this);
-
-    if(!arrow.hasClass('animate')) {
-        arrow.addClass('animate');
-        setTimeout(() => {
-            arrow.removeClass('animate');
-        }, 1600);
-    }
-
+document.addEventListener('DOMContentLoaded', function() {
+	var gallery = new MaterialPhotoGallery(elem);
 });	
 	
-	
-var slideTotal = 16;
-$(document).ready(function() {
-	$(".slideTotal").text(slideTotal);
+$('.arrow_btn').on('mouseover', function(e) {
+
+	e.preventDefault();
+
+	let arrow = $(this).find('span.arrow');
+
+	if(!arrow.hasClass('animate')) {
+		arrow.addClass('animate');
+		setTimeout(() => {
+			arrow.removeClass('animate');
+		}, 1600);
+	}
+
 });	
+								
+
+document.addEventListener('DOMContentLoaded', function() {
+	function loadFrame() {
+	  $('.reg_frame_content').attr("src", "registry.html");
+	  var container = $('.reg_frame_container');
+	  container.addClass("reg_frame_loaded");
+	}
+
+	loadFrame();
+});	
+	
+//$(document).ready(function() {
+//	function loadFrame() {
+//	  $('.reg_frame_content').attr("src", "registry.html");
+//	  var container = $('.reg_frame_container');
+//	  container.addClass("reg_frame_loaded");
+//	}
+//
+//	loadFrame();	
+//});	
+
 </script>
 <script src="js/footer.js"></script>
