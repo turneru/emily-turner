@@ -206,6 +206,71 @@ nav {
     padding: 5px 0px 40px;
 }
 
+.turner-emily {
+	cursor: pointer;
+	fill: #454545;
+	max-width: 750px;
+}
+.turner-emily #and {
+	fill: #f96674;
+}	      
+.turner-emily .mask {
+	fill: none;
+	stroke: #fff;
+	stroke-miterlimit: 10;
+}
+ @keyframes strokeOffset {
+	 to {
+		 stroke-dashoffset: 0;
+	}
+}
+
+ #mask-e {
+	 animation: strokeOffset 0.5s linear forwards;
+}
+ #mask-m {
+	 animation: strokeOffset 0.25s linear forwards .5s;
+}
+ #mask-i-line {
+	 animation: strokeOffset 0.25s linear forwards .75s;
+}
+ #mask-i-dot {
+	 animation: strokeOffset 0.1s linear forwards 1s;
+}
+ #mask-l {
+	 animation: strokeOffset 0.25s linear forwards 1.25s;
+}
+ #mask-y {
+	 animation: strokeOffset 0.25s linear forwards 1.5s;
+}
+#mask-and {
+	 animation: strokeOffset 0.25s linear forwards 1.75s;
+}	   
+ #mask-t {
+	 animation: strokeOffset 0.25s linear forwards 2s;
+}
+ #mask-u {
+	 animation: strokeOffset 0.25s linear forwards 2.25s;
+}
+ #mask-r {
+	 animation: strokeOffset 0.25s linear forwards 2.5s;
+}
+ #mask-n {
+	 animation: strokeOffset 0.25s linear forwards 2.75s;
+}
+ #mask-e-2 {
+	 animation: strokeOffset 0.25s linear forwards 3s;
+}
+ #mask-r-2 {
+	 animation: strokeOffset 0.25s linear forwards 3.25s;
+}
+
+svg.hdn {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
 .home.section-container h1 {
 	color: #454545;
     font-size: 130px;
@@ -655,6 +720,26 @@ p.home_date {
 	width: 100%
 }
 
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	border-top-color: #000;
+	animation: spinner .6s linear infinite;
+}
+
 .reg_frame_loaded {
 	height: 555px;
     width: 107.5%;
@@ -688,7 +773,7 @@ p.home_date {
     background-color: #fff;
     margin: 15px 0px;
     border: 1px solid #eee;
-    opacity: 0;
+    opacity: 1;
     z-index: 500;
     position: relative;
     box-shadow: 0 0 25px rgb(0 0 0 / 30%);
@@ -905,20 +990,6 @@ h4 {
     color: #104911;
 }
 
-.button {
-    background-color: #f96574;
-    border-radius: 5px;
-    margin: 15px 0px;
-    border: 1px solid #f96574;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-
 
 /* =============== Mobile Menu ========================= 
    ========================================================*/
@@ -1070,10 +1141,17 @@ h4 {
 
 /* =============== Media Queries ========================= 
    ========================================================*/
-@media only screen and (min-width: 1700px){
-
+@media only screen and (min-width: 1675px){
+	.tl-item:nth-of-type(2) .tl-content {
+		top: 25%;
+	}
 }
-    
+@media only screen and (min-width: 1575px){
+	.tl-item:nth-of-type(2) .tl-content {
+		top: 20%;
+	}
+}
+        
 @media only screen and (max-width: 1400px){
 	.home {
 		background: url(../images/home/ET15v4.jpg) no-repeat left center;
@@ -1083,7 +1161,15 @@ h4 {
 	.home.section-container h1 {
 		font-size: 85px;
 	}
-
+	
+	.tl-content p {
+		font-size: 16px;
+		line-height: 18px;
+	}
+	
+	.tl-item:nth-of-type(2) .tl-content {
+		top: 25%;
+	}
 }
     
 @media only screen and (max-width: 1024px){
@@ -1095,11 +1181,11 @@ h4 {
         display: block;
     }
 
-    .desktop, .rsvp_btn, .down {
+    .desktop, .rsvp_btn, #timeline.desktop {
         display: none;
     }
 
-	.OurStory-container, .WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .Photos-container  {
+	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .Photos-container  {
 		padding: 75px 0px;
 		height: auto;
 		min-height: calc(100vh + 30px);
@@ -1148,76 +1234,122 @@ h4 {
 		font-size: 25px;
 	}
 	
-	.timeline {
+	.OurStory-container {
+		padding: 45px 0px 0px;
+		height: auto;
+		min-height: calc(100vh + 30px);
+	}
+	
+	#OurStory > h1 {
+		padding-top: 0px;
+	}
+	
+	.flexbox-slider {
+		 display: flex;
+		 width: 100%;
+		 height: auto;
+		 visibility: hidden;
+		 flex-direction: column;
+	}
+	
+	.flexbox-slider .flexbox-slide {
+		 transition-property: all;
+		 transition-duration: 0.3s;
+		 transition-timing-function: linear;
+		 transition-delay: 0s;
+		 width: 100%;
+		 height: 180px;
+		 position: relative;
 		 overflow: hidden;
+		 cursor: pointer;
+		 visibility: visible;
 	}
 	
-	.timeline::before {
-		 left: 15px;
-	}
-	 
-	.timeline > .container {
-		 padding: 0;
-	}
-	
-	.timeline h3 {
-		margin-top: 10px;
-	}
-	 
-	.timeline .timeline-img {
-		 left: 15px;
-	}
-	 
-	.timeline .timeline-content {
-		max-width: 100%;
-		width: auto;
-		margin-left: 40px;
-		margin-right: 20px;
-		border: 20px solid #f5f5f5;
-	}
-	 
-	.timeline-item {
-		margin-bottom: 30px;
-	} 
-	 
-	.timeline .timeline-item:nth-child(even) .timeline-content {
-		 float: none;
-	}
-	 
-	.timeline .timeline-item:nth-child(odd) .timeline-content::after {
-		 content: '';
+	.flexbox-slider .flexbox-slide:after {
 		 position: absolute;
-		 border-style: solid;
-		 width: 0;
-		 height: 0;
-		 top: 30px;
-		 left: -15px;
-		 border-width: 10px 15px 10px 0;
-		 border-color: transparent #f5f5f5 transparent transparent;
+		 top: 0;
+		 left: 0;
+		 content: "";
+		 display: block;
+		 width: 100%;
+		 height: 100%;
+		 background-color: rgba(255, 255, 255, 0.6);
+		 z-index: 2;
+		 opacity: 0;
 	}
 	
-	.timeline-item-1, .timeline-item-4 {
+	.flexbox-slider .flexbox-slide img {
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 height: auto;
+		 width: auto;
+		 min-width: 100%;
+		 min-height: 100%;
+		 transform: translate(-50%, -50%);
+		 z-index: 1;
+	}
+	
+	.flexbox-slider .flexbox-slide .tl-content {
+		position: absolute;
+		bottom: 0;
+		padding: 10px;
+		border-radius: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: #fff;
+		z-index: 4;
+		visibility: hidden;
 		opacity: 0;
+		top: inherit;
+    	margin: 0 0 5px 0;
 	}
-	 
-	.timeline-item-4 {
-		margin-top: 0px;
+	
+	.tl-content h3 {
+		font-size: 22px;
+		margin-bottom: 5px;
 	}
-
-	.timeline-item-8 {
-		margin-top: 0px;
+	
+	.tl-content h1 {
+		font-size: 30px;
+		padding-top: 0;
+		margin-top: -10px;
 	}
-	 
-	.timeline h2 {
-		margin-top:5px;
-		font-size: 25px;
-		line-height: normal;
+	
+	.flexbox-slider:hover .flexbox-slide:hover {
+		 flex-shrink: 0;
+		 width: 100%;
+		 height: 500px;
 	}
-	 
-	.date, .timeline-content p {
-		font-size: 16px;
-    	line-height: normal;
-	 }
+	
+	.flexbox-slider:hover .flexbox-slide:hover >.tl-year {
+		opacity: 0;
+		-o-transition: .25s;
+		-ms-transition: .25s;
+		-moz-transition: .25s;
+		-webkit-transition: .25s;
+		transition: .25s;
+	}
+	
+	.flexbox-slider.flexbox-slider-1 .flexbox-slide .tl-content {
+		 bottom: 0px;
+	}
+	
+	.flexbox-slider.flexbox-slider-1:hover .flexbox-slide:hover .tl-content {
+		 transition-property: all;
+		 transition-duration: 0.2s;
+		 transition-timing-function: linear;
+		 transition-delay: 0.5s;
+		 bottom: 0px;
+		 opacity: 1;
+		 visibility: visible;
+	}
+	
+	.tl-year {
+		bottom: 5px;
+		top: inherit;
+		position: absolute;
+		width: 100%;
+	}
 	
 	.WhenWhere-container {
 		background: url(../images/backgrounds/mobile/when_where2.jpg) no-repeat center center;

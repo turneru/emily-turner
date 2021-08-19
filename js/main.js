@@ -159,7 +159,7 @@ $(function() {
 
 //Our Story H1 slide up 
 $(function() {
-	var ourstory = $(".OurStory-container h1");	
+	var ourstory = $("OurStory > h1");	
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
 
@@ -183,6 +183,25 @@ $(function() {
 //  offset: '25%'
 //}) 
 
+function loadFrame() {
+	$('.reg_frame_content').attr("src", "registry.html");
+	var container = $('.reg_frame_container');
+	container.addClass("reg_frame_loaded");
+	
+}
+
+var timer = setInterval(function() {
+	if ($("#Registry h1").hasClass("slide-in-bottom-small")) {
+		loadFrame();
+		$('#loading').removeClass('spinner');
+            // to run this block only once, simply uncomment the next line:
+            clearInterval(timer);
+        }
+
+}, 250);
+
+
+
 //On scroll to element do this script	
 function isScrolledIntoView(elem) {
   var docViewTop = $(window).scrollTop();
@@ -193,11 +212,17 @@ function isScrolledIntoView(elem) {
 
   return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
-
-
+					
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-$(document).ready(function(){		
+$(document).ready(function(){
+
+//	$(window).scroll(function () {
+//		if (isScrolledIntoView('.waypoint.registry')) {
+//			loadFrame();
+//		} 
+//	});
+
 	if(!isMobile) {
 		$(window).scroll(function () {
 			$('.waypoint.whenwhere').each(function () {
@@ -254,83 +279,97 @@ $(document).ready(function(){
 	}
 });	
 
-//timeline slide in script	
-$(function(){
-	window.sr = ScrollReveal();
-	
-	if ($(window).width() < 768) {
-//		if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-//			$('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-//		}
-//		 sr.reveal('.js--fadeInRight', {
-//			 origin: 'right',
-//			 distance: '300px',
-//			 easing: 'ease-in-out',
-//			 delay: 600,
-//			 duration: 800,
-//	 	});
 
-		var waypoints = new Waypoint({
-			element: document.getElementById('end-home'),
-			handler: function() {
-				$(".timeline-item-1").addClass("slide-in-right");  
-				$(".timeline-item-4").addClass("slide-in-right delay1000");
-				$(".timeline-item-5").addClass("slide-in-right delay1000");
-				$(".timeline-item-5").addClass("slide-in-right delay2000");  
-		}
-		}) 
-	} 
+
 	
-	else {
-		sr.reveal('.js--fadeInLeft', {
-			origin: 'left',
-			distance: '300px',
-			easing: 'ease-in-out',
-			delay: 600,
-			duration: 800,
-		});
-		sr.reveal('.js--fadeInRight', {
-			origin: 'right',
-			distance: '300px',
-			easing: 'ease-in-out',
-			delay: 600,
-			duration: 800,
-		});
-	}
-});
-	
+
+//$(window).scroll(function () {
+//
+//		if (isScrolledIntoView('.waypoint.registry') === true) {          
+//			loadFrame();
+//			}
+//	});
+
+
+
+
+//timeline slide in script	
+//$(function(){
+//	window.sr = ScrollReveal();
+//	
+//	if ($(window).width() < 768) {
+////		if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+////			$('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+////		}
+////		 sr.reveal('.js--fadeInRight', {
+////			 origin: 'right',
+////			 distance: '300px',
+////			 easing: 'ease-in-out',
+////			 delay: 600,
+////			 duration: 800,
+////	 	});
+//
+//		var waypoints = new Waypoint({
+//			element: document.getElementById('end-home'),
+//			handler: function() {
+//				$(".timeline-item-1").addClass("slide-in-right");  
+//				$(".timeline-item-4").addClass("slide-in-right delay1000");
+//				$(".timeline-item-5").addClass("slide-in-right delay1000");
+//				$(".timeline-item-5").addClass("slide-in-right delay2000");  
+//		}
+//		}) 
+//	} 
+//	
+//	else {
+//		sr.reveal('.js--fadeInLeft', {
+//			origin: 'left',
+//			distance: '300px',
+//			easing: 'ease-in-out',
+//			delay: 600,
+//			duration: 800,
+//		});
+//		sr.reveal('.js--fadeInRight', {
+//			origin: 'right',
+//			distance: '300px',
+//			easing: 'ease-in-out',
+//			delay: 600,
+//			duration: 800,
+//		});
+//	}
+//});
+//	
 
 
 //Photos modal js
 // Open the Modal
-function openModal() {
-  document.getElementById("photo_modal").style.display = "block";
-}
-// Close the Modal
-function closeModal() {
-	document.getElementById("photo_modal").style.display = "none";
-}
-var slideIndex = 1;
-showSlides(slideIndex);
-// Next/previous controls
-function plusSlides(n) {
-	showSlides(slideIndex += n);
-}
-// Thumbnail image controls
-function currentSlide(n) {
-	showSlides(slideIndex = n);
- }
-function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("slide");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-	}
-//          for (i = 0; i < dots.length; i++) {
-//            dots[i].className = dots[i].className.replace(" active_photo", "");
-//          }
-    slides[slideIndex-1].style.display = "block";
-//          dots[slideIndex-1].className += " active_photo";
-}    
+//function openModal() {
+//  document.getElementById("photo_modal").style.display = "block";
+//}
+//// Close the Modal
+//function closeModal() {
+//	document.getElementById("photo_modal").style.display = "none";
+//}
+//var slideIndex = 1;
+//showSlides(slideIndex);
+//// Next/previous controls
+//function plusSlides(n) {
+//	showSlides(slideIndex += n);
+//}
+//// Thumbnail image controls
+//function currentSlide(n) {
+//	showSlides(slideIndex = n);
+// }
+//function showSlides(n) {
+//	var i;
+//	var slides = document.getElementsByClassName("slide");
+//	if (n > slides.length) {slideIndex = 1}
+//	if (n < 1) {slideIndex = slides.length}
+//	for (i = 0; i < slides.length; i++) {
+//		slides[i].style.display = "none";
+//	}
+////          for (i = 0; i < dots.length; i++) {
+////            dots[i].className = dots[i].className.replace(" active_photo", "");
+////          }
+//    slides[slideIndex-1].style.display = "block";
+////          dots[slideIndex-1].className += " active_photo";
+//}    
