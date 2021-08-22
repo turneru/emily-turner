@@ -210,6 +210,7 @@ nav {
 	cursor: pointer;
 	fill: #454545;
 	max-width: 750px;
+	margin: 0 auto;
 }
 .turner-emily #and {
 	fill: #f96674;
@@ -396,14 +397,18 @@ p.home_date {
 		
 .tl-item:nth-of-type(2) .tl-content {
 	top: 28%;
+}
+
+.tl-content h3 {
+    font-size: 20px;
+    color: #d55764;
+    margin-bottom: 0px;
 }	
 		
 .tl-content h1 {
-	font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    color: #f6b242;
+	color: #f6b242;
     font-size: 35px;
-	padding-top: 0;
+    padding-top: 0;
 }
 .tl-content p {
 	line-height: 20px;
@@ -417,9 +422,9 @@ p.home_date {
 }
 
 .tl-year p {
-	font-size: 37px;
+	font-size: 25px;
     font-weight: 600;
-    line-height: 38px;
+    line-height: 18px;
     color: #fff;
     padding: 5px 0px;
     border-top: 2px solid #f6b242;
@@ -441,11 +446,6 @@ p.home_date {
     transition: filter 0.5s ease;
 }
 
-.tl-content h3 {
-    font-size: 25px;
-    color: #d55764;
-    margin-bottom: 0px;
-}	
 		
  
 
@@ -744,7 +744,7 @@ p.home_date {
 	height: 555px;
     width: 107.5%;
     margin-left: -62px;
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 }
 
 .reg_frame_content {
@@ -795,7 +795,8 @@ iframe {
 /* =============== Photos styles ========================= 
    ========================================================*/
 .Photos-container {
-	background: url("../images/backgrounds/bg_ring_leaf.jpg") no-repeat top center;
+/*	background: url("../images/backgrounds/bg_ring_leaf.jpg") no-repeat top center;*/
+	background: #ffe3d3;
     background-size: cover;
 	min-height: 100vh;
 	height: auto;
@@ -1141,16 +1142,20 @@ h4 {
 
 /* =============== Media Queries ========================= 
    ========================================================*/
+
 @media only screen and (min-width: 1675px){
 	.tl-item:nth-of-type(2) .tl-content {
 		top: 25%;
 	}
 }
-@media only screen and (min-width: 1575px){
+
+
+@media only screen and (max-width: 1575px){
 	.tl-item:nth-of-type(2) .tl-content {
 		top: 20%;
 	}
 }
+
         
 @media only screen and (max-width: 1400px){
 	.home {
