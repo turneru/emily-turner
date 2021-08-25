@@ -40,7 +40,7 @@ p {
     text-align: center;
 }
 
-.mobile {
+.mobile, #timeline.mobile {
     display: none;
 }
 
@@ -267,9 +267,9 @@ nav {
 }
 
 svg.hdn {
-  height: 0;
-  position: absolute;
-  width: 0;
+	height: 0;
+	position: absolute;
+	width: 0;
 }
 
 .home.section-container h1 {
@@ -712,6 +712,12 @@ p.home_date {
     box-shadow: 0 0 25px rgb(0 0 0 / 30%);
     border-radius: 10px;
     overflow: hidden;
+}
+
+.registry_content p {
+	text-align: center; 
+	padding: 25px 100px 0px; 
+	margin-bottom: 0;
 }
 
 .reg_frame_container {
@@ -1189,6 +1195,10 @@ h4 {
     .desktop, .rsvp_btn, #timeline.desktop {
         display: none;
     }
+	
+	#timeline.mobile {
+        display: flex;
+    }
 
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .Photos-container  {
 		padding: 75px 0px;
@@ -1403,6 +1413,10 @@ h4 {
 
 	#Travel h1 {
 		padding-top: 45px;
+	}
+	
+	.registry_content p {
+		padding: 0px; 
 	}
 	
 	.reg_frame_loaded {
