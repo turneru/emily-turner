@@ -811,6 +811,10 @@ iframe {
 	height: auto;
 }
 
+#Photos .container.sub {
+	padding-bottom: 10px;
+}
+
 .m-p-g {
 	max-width: 100%;
 	margin: 0 auto;
@@ -967,6 +971,21 @@ iframe {
 }
 .m-p-g__btn:hover {
 	background: rgba(255, 255, 255, 0.15);
+}
+
+.footer {
+	width: 100%;
+    float: left;
+    text-align: center;
+    background: #454545;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    height: 40px;
+}
+
+.footer a, .footer a:link, .footer a:visited {
+    color: #fff;
 }
 
 /* =============== Default Overides ========================= 
@@ -1198,10 +1217,6 @@ h4 {
     .desktop, .rsvp_btn, #timeline.desktop {
         display: none;
     }
-	
-	#timeline.mobile {
-        display: flex;
-    }
 
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .Photos-container  {
 		padding: 75px 0px;
@@ -1260,7 +1275,13 @@ h4 {
 	
 	#OurStory > h1 {
 		padding-top: 0px;
+		text-shadow: none;
 	}
+	
+	#timeline.mobile {
+        display: flex;
+		top: auto;
+    }
 	
 	.flexbox-slider {
 		 display: flex;

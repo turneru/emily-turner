@@ -1381,9 +1381,17 @@ deep blue - #2f2963
 	-webkit-animation-delay: .5s;
 	animation-delay: .5s;
 }
+.delay600 {
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
+}
 .delay700 {
 	-webkit-animation-delay: .7s;
 	animation-delay: .7s;
+}
+.delay800 {
+	-webkit-animation-delay: .8s;
+	animation-delay: .8s;
 }
 .delay1000 {
 	-webkit-animation-delay: 1s;
