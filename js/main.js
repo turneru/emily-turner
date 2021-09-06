@@ -235,7 +235,6 @@ $(document).ready(function(){
 							$(".ceremony h3, .reception h3").addClass("slide-in-bottom-small delay1000");
 							$(".ceremony p, .reception p").addClass("slide-in-bottom-small delay1200");
 							$("#clockdiv").addClass("slide-in-top delay1200");
-							$("#WhenWhere .down").addClass("slide-in-bottom-small delay2000");
 						});
 				}
 			});
@@ -245,13 +244,15 @@ $(document).ready(function(){
 					$(".Travel-container h1").addClass("slide-in-bottom-small");
 					$(".hotels").addClass("slide-in-bottom delay800");
 						$(function(){
-							$(".hotels h3:nth-of-type(1)").addClass("slide-in-bottom-small delay800");
-							$(".hotels p:nth-of-type(1)").addClass("slide-in-bottom-small delay1000");
-							$(".hotels p:nth-of-type(2)").addClass("slide-in-bottom-small delay1000");
-							$(".hotels h3:nth-of-type(2)").addClass("slide-in-bottom-small delay1200");
-							$(".hotels p:nth-of-type(3)").addClass("slide-in-bottom-small delay1400");
-							$(".hotels p:nth-of-type(4)").addClass("slide-in-bottom-small delay1400");
-							$("#Travel .down").addClass("slide-in-bottom-small delay2000");
+							$("p.hotel-intro").addClass("slide-in-bottom-small delay1000");
+							$(".hotels img").addClass("slide-in-bottom-small delay1200");
+							$(".hotels .row h3:nth-of-type(1)").addClass("slide-in-bottom-small delay1200");
+							$(".hotels .row p:nth-of-type(1)").addClass("slide-in-bottom-small delay1500");
+							$(".hotels .row p:nth-of-type(2)").addClass("slide-in-bottom-small delay1800");
+							$("p.attire").addClass("slide-in-bottom-small delay2000");
+//							$(".hotels h3:nth-of-type(2)").addClass("slide-in-bottom-small delay1200");
+//							$(".hotels p:nth-of-type(3)").addClass("slide-in-bottom-small delay1400");
+//							$(".hotels p:nth-of-type(4)").addClass("slide-in-bottom-small delay1400");
 						});
 					
 				}
