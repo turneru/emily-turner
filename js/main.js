@@ -118,7 +118,7 @@ jQuery(document).ready(function() {
 		
 		else {
 			
-				if ($(window).width() < 768) {
+				if ($(window).width() < 1025) {
 					$('#overlay').removeClass('open');
 					$('#toggle').removeClass('menu_active');
 					
