@@ -1296,8 +1296,6 @@ h4 {
 	}
 
 	.home.section-container h1 {
-		font-size: 60px;
-		line-height: 60px;
 		margin-top: 75px;
 	}
 	
@@ -1310,18 +1308,17 @@ h4 {
 	}
 		
 	.home.section-container p.married {
-		font-size: 18px;
     	font-weight: 500;
 		margin-bottom: 15px;
 		letter-spacing: 8px;
 	}	
 	
 	.home.section-container p.home_date {
-		font-size: 25px;
+		font-size: 30px;
 	}
 	
 	.OurStory-container {
-		padding: 15px 0px 0px;
+		padding: 50px 0px 0px;
 		margin: 55px 0px 0px;
 		height: 100vh;
 /*		min-height: calc(100vh + 30px);*/
@@ -1342,15 +1339,6 @@ h4 {
 	  
 	 #timeline:hover .tl-item {
 		width: 20%;
-	}
-	
-	.WhenWhere-container {
-		background: url(../images/backgrounds/mobile/when_where2.jpg) no-repeat center center;
-		background-size: cover;
-	}
-	
-	#WhenWhere h1 {
-		font-size: 55px;
 	}
 	
 	.ceremony, .reception, .hotels, .registry_content {
@@ -1377,13 +1365,6 @@ h4 {
 		margin-right: 0px;
 	}
 	
-/*
-	.Travel-container {
-		background: url(../images/backgrounds/mobile/skyline2.jpg) no-repeat center center;
-		background-size: cover;
-	}
-	
-*/
 	#Travel {
 		margin-top: -75px;
 	}
@@ -1391,29 +1372,15 @@ h4 {
 	#Travel h1 {
 		padding-top: 45px;
 	}
-	
-	.reg_frame_loaded {
-		width: 109%;
-    	margin-left: -15px;
-	}
-	
-	.reg_frame_content {
-		margin-top: -35px;
-	}
-	
-	.RSVP-container {
-		background: url(../images/backgrounds/mobile/rsvp.jpg) no-repeat center center;
-		background-size: cover;
-	}
 	  
 	.Photos-container  {
-		padding: 75px 0px 0px;
+		padding: 50px 0px 0px;
 		height: auto;
 		min-height: calc(100vh + 30px);
 	}
 	
 	.m-p-g__fullscreen {
-    	top: 40px;
+    	top: 0px;
 	}
 	
 	.m-p-g__controls-close {
@@ -1424,6 +1391,10 @@ h4 {
 	.m-p-g__btn {
 		background: rgb(0 0 0 / 40%);
 	}
+	  
+	.m-p-g__btn:hover {
+		background: rgb(0 0 0 / 40%);
+	}  
 }
 
 @media only screen and (max-width: 768px) {
@@ -1642,13 +1613,11 @@ h4 {
 	#clockdiv .countdown > div:last-of-type {
 		margin-right: 2px;
 	}
-	
-/*
+
 	.Travel-container {
-		background: url(../images/backgrounds/mobile/skyline2.jpg) no-repeat center center;
+		background: url(../images/backgrounds/mobile/skyline_sunset.jpg) no-repeat center center;
 		background-size: cover;
 	}
-*/
 	
 	#Travel {
 		margin-top: -75px;
@@ -1658,13 +1627,9 @@ h4 {
 		padding-top: 45px;
 	}
 	
-	.reg_frame_loaded {
-		width: 109%;
-    	margin-left: -15px;
-	}
-	
-	.reg_frame_content {
-		margin-top: -35px;
+	.Registry-container {
+		background: url(../images/backgrounds/mobile/registry_bg.jpg) no-repeat center center;
+		background-size: cover;
 	}
 	
 	.RSVP-container {
@@ -1673,12 +1638,24 @@ h4 {
 	}
 	
 	.m-p-g__fullscreen {
-    	top: 40px;
+    	top: 0px;
 	}
 	
 	.m-p-g__controls-close {
     	right: -10vw;
 	}
+	
+	.m-p-g__btn {
+		background: rgb(0 0 0 / 40%);
+		width: 25px;
+    	height: 25px;
+	}
+	  
+	.m-p-g__btn:hover {
+		background: rgb(0 0 0 / 40%);
+		width: 25px;
+    	height: 25px;
+	}  	
 }
 
 @media only screen and (max-width: 479px) {
