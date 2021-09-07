@@ -1358,6 +1358,10 @@ h4 {
 		margin: 10px 10px;
 		opacity: 1;
 	}
+	  
+	.ceremony, .reception {
+		min-height: 470px;
+	}
     
     #clockdiv {
         top: 25px;
@@ -1365,16 +1369,8 @@ h4 {
     }
 	
 	#clockdiv .countdown {
-		width: 100%;
 		height: auto;
 		min-height: 140px;
-	}
-	
-	#clockdiv .countdown > div {
-		min-width: 80px;
-		width: 20%;
-		margin: 0px 30px 25px 20px;
-		margin-bottom: 25px;
 	}
 	
 	#clockdiv .countdown > div:last-of-type {
