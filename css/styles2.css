@@ -344,6 +344,7 @@ p.home_date {
 	min-height: 800px;
 	overflow: hidden;
 	transition: width 0.5s ease;
+	cursor: pointer;
 }
 
 .tl-item:before, .tl-item:after {
@@ -399,7 +400,7 @@ p.home_date {
 }
 		
 .tl-content {
-	 transform: translate3d(0, 0, 0) translateY(25px);
+	transform: translate3d(0, 0, 0) translateY(25px);
 	position: absolute;
     z-index: 1;
     text-align: center;
@@ -408,12 +409,6 @@ p.home_date {
     opacity: 0;
 }
 		
-/*
-.tl-item:nth-of-type(2) .tl-content {
-	top: 36%;
-}
-*/
-
 .tl-content h3 {
     font-size: 20px;
     color: #d55764;
