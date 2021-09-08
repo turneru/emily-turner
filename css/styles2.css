@@ -1472,6 +1472,7 @@ h4 {
 		 height: auto;
 		 visibility: hidden;
 		 flex-direction: column;
+		 cursor: pointer;
 	}
 	
 	.flexbox-slider .flexbox-slide {
@@ -1510,6 +1511,7 @@ h4 {
 		 min-height: 100%;
 		 transform: translate(-50%, -50%);
 		 z-index: 1;
+		 cursor: pointer;
 	}
 	
 	.flexbox-slider .flexbox-slide .tl-content {
@@ -1524,6 +1526,7 @@ h4 {
 		opacity: 0;
 		top: inherit;
     	margin: 0 0 5px 0;
+		cursor: pointer;
 	}
 	
 	.tl-content h3 {
