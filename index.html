@@ -531,7 +531,22 @@
 </html>
 
 
+<script>
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
+$(document).ready(function() {	
+	if (isSafari) { 
+		$('.flexbox-slide').click(function() {
+//		$(this).find('.tl-year').css('opacity' '0');
+		$(this).toggleClass('open'); 
+		});	
+	} 
+	else { 
+		
+	}		
+});
+								  
+</script>
 	
 <!--
 <script>	
