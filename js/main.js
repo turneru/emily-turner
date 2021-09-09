@@ -173,6 +173,24 @@ $(function() {
 	});
 });   	
 
+//Our Story Safari Fix 
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+$(document).ready(function() {	
+	if (isSafari) { 
+		$('.flexbox-slide').click(function() {
+			$('.flexbox-slide').each(function () {
+				$(this).removeClass('open');
+			});
+
+			$(this).toggleClass('open'); 
+	});	
+	} 
+	
+	else { 
+	}		
+});
+
 //When Where sections slide in
 //var waypoint = new Waypoint({
 //  element: document.getElementById('WhenWhere'),
