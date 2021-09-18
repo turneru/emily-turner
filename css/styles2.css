@@ -212,14 +212,17 @@ nav {
 	max-width: 750px;
 	margin: 0 auto;
 }
+
 .turner-emily #and {
 	fill: #f96674;
-}	      
+}	
+
 .turner-emily .mask {
 	fill: none;
 	stroke: #fff;
 	stroke-miterlimit: 10;
 }
+
  @keyframes strokeOffset {
 	 to {
 		 stroke-dashoffset: 0;
@@ -315,7 +318,16 @@ p.home_date {
     overflow: hidden;
 }
 
-.OurStory-container h1{
+#OurStory > h1, #timeline {
+	opacity: 0;
+	transition: all .25s;
+}
+
+#timeline.visible {
+	opacity: 1;
+}
+
+.OurStory-container h1 {
 	padding-top: 0px;
 	position: relative;
 	top: 0;
@@ -467,6 +479,11 @@ p.home_date {
     background-size: cover;
 }
 
+.WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img , .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv {
+	opacity: 0;
+	transition: all .25s;
+}
+
 .ceremony, .reception {
     text-align: center;
     padding: 15px 20px;
@@ -554,12 +571,10 @@ p.home_date {
 	background-size: cover;
 }
 
-/*
-#Travel {
-	background: linear-gradient(180deg, rgba(255,255,255,.9) 3%, rgba(255,255,255,.6) 15%, rgba(255,255,255,.3) 30%, rgba(255,255,255,0) 100%);
-    margin-top: -50px;
+.Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire {
+	opacity: 0;
+	transition: all .25s;
 }
-*/
 
 .hotels {
 	text-align: center;
@@ -720,13 +735,17 @@ p.home_date {
 	background-size: cover;
 }
 
+.Registry-container h1, .registry_content {
+	opacity: 0;
+	transition: all .25s;
+}
+
 .registry_content {
 	text-align: center;
     padding: 10px;
     background-color: #fff;
     margin: 15px 0px;
     border: 1px solid #eee;
-    opacity: 0;
     z-index: 500;
     position: relative;
     box-shadow: 0 0 25px rgb(0 0 0 / 30%);
@@ -787,6 +806,11 @@ p.home_date {
     background-size: cover;
 }
 
+.RSVP-container h1, .rsvp_wrapper {
+	opacity: 0;
+	transition: all .25s;
+}
+
 .rsvp_wrapper {
 	text-align: center;
     padding: 15px 20px;
@@ -820,6 +844,11 @@ iframe {
     background-size: cover;
 	min-height: 100vh;
 	height: auto;
+}
+
+.Photos-container h1, .m-p-g {
+	opacity: 0;
+	transition: all .25s;
 }
 
 #Photos .container.sub {
@@ -1029,6 +1058,10 @@ h4 {
     font-size: 20px;
     color: #104911;
 }
+
+.visible {
+	opacity: 1;
+}	
 
 
 /* =============== Mobile Menu ========================= 
@@ -1301,6 +1334,12 @@ h4 {
 	.section-container .container.sub h1 {
 		opacity: 1;
 	}
+	  
+	 .WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img, .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv, 
+	 .Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire, 
+	 .Photos-container h1, .m-p-g{
+		opacity: 1;
+	}
 		
 	.home.section-container p.married {
     	font-weight: 500;
@@ -1436,6 +1475,13 @@ h4 {
 	}
 	
 	.section-container .container.sub h1 {
+		opacity: 1;
+	}
+	
+	#OurStory > h1, #timeline,
+	.WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img, .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv, 
+	.Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire, 
+	.Photos-container h1, .m-p-g{
 		opacity: 1;
 	}
 		

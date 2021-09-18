@@ -157,39 +157,7 @@ $(function() {
 	}
 });    	
 
-//Our Story H1 slide up 
-$(function() {
-	var ourstory = $("OurStory > h1");	
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
 
-		if (scroll >= 5) {
-			ourstory.addClass("slide-in-bottom-small");
-			$('.tl-item:nth-of-type(1)').addClass("delay200 slide-in-left");
-			$('.tl-item:nth-of-type(2)').addClass("delay300 slide-in-left");
-			$('.tl-item:nth-of-type(3)').addClass("delay400 slide-in-left");
-			$('.tl-item:nth-of-type(4)').addClass("delay500 slide-in-left");
-		} 
-	});
-});   	
-
-//Our Story Safari Fix 
-var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-$(document).ready(function() {	
-	if (isSafari) { 
-		$('.flexbox-slide').click(function() {
-			$('.flexbox-slide').each(function () {
-				$(this).removeClass('open');
-			});
-
-			$(this).toggleClass('open'); 
-	});	
-	} 
-	
-	else { 
-	}		
-});
 
 //When Where sections slide in
 //var waypoint = new Waypoint({
@@ -218,7 +186,39 @@ var timer = setInterval(function() {
 
 }, 250);
 
+//Our Story H1 slide up 
+$(function() {	
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
 
+		if (scroll >= 5) {
+			$("#OurStory > h1").addClass("visible slide-in-bottom-small delay500");
+			$("#timeline").addClass("visible delay500");
+			$('.tl-item:nth-of-type(1)').addClass("delay600 slide-in-left");
+			$('.tl-item:nth-of-type(2)').addClass("delay700 slide-in-left");
+			$('.tl-item:nth-of-type(3)').addClass("delay800 slide-in-left");
+			$('.tl-item:nth-of-type(4)').addClass("delay900 slide-in-left");
+		} 
+	});
+});   	
+
+//Our Story Safari Fix 
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+$(document).ready(function() {	
+	if (isSafari) { 
+		$('.flexbox-slide').click(function() {
+			$('.flexbox-slide').each(function () {
+				$(this).removeClass('open');
+			});
+
+			$(this).toggleClass('open'); 
+	});	
+	} 
+	
+	else { 
+	}		
+});
 
 //On scroll to element do this script	
 function isScrolledIntoView(elem) {
@@ -243,31 +243,32 @@ $(document).ready(function(){
 
 	if(!isMobile) {
 		$(window).scroll(function () {
+		
 			$('.waypoint.whenwhere').each(function () {
 				if (isScrolledIntoView(this) === true) {          
-					$(".WhenWhere-container h1").addClass("slide-in-bottom-small"); 
-					$('.ceremony').addClass('slide-in-left');
-					$('.reception').addClass('slide-in-right');
+					$(".WhenWhere-container h1").addClass("visible slide-in-bottom-small delay500"); 
+					$('.ceremony').addClass('visible slide-in-left delay600');
+					$('.reception').addClass('visible slide-in-right delay600');
 						$(function(){
-							$(".ceremony img, .reception img").addClass("slide-in-bottom-small delay800");
-							$(".ceremony h3, .reception h3").addClass("slide-in-bottom-small delay1000");
-							$(".ceremony p, .reception p").addClass("slide-in-bottom-small delay1200");
-							$("#clockdiv").addClass("slide-in-top delay1200");
+							$(".ceremony img, .reception img").addClass("visible slide-in-bottom-small delay800");
+							$(".ceremony h3, .reception h3").addClass("visible slide-in-bottom-small delay1000");
+							$(".ceremony p, .reception p").addClass("visible slide-in-bottom-small delay1200");
+							$("#clockdiv").addClass("visible slide-in-top delay1200");
 						});
 				}
 			});
 
 			$('.waypoint.travel').each(function () {
-				if (isScrolledIntoView(this) === true) {          
-					$(".Travel-container h1").addClass("slide-in-bottom-small");
-					$(".hotels").addClass("slide-in-bottom delay800");
+				if (isScrolledIntoView(this) === true) { 
+					$(".Travel-container h1").addClass("visible slide-in-bottom-small delay500");
+					$(".hotels").addClass("visible slide-in-bottom delay700");
 						$(function(){
-							$("p.hotel-intro").addClass("slide-in-bottom-small delay1000");
-							$(".hotels img").addClass("slide-in-bottom-small delay1200");
-							$(".hotels .row h3:nth-of-type(1)").addClass("slide-in-bottom-small delay1200");
-							$(".hotels .row p:nth-of-type(1)").addClass("slide-in-bottom-small delay1500");
-							$(".hotels .row p:nth-of-type(2)").addClass("slide-in-bottom-small delay1800");
-							$("p.attire").addClass("slide-in-bottom-small delay2000");
+							$("p.hotel-intro").addClass("visible slide-in-bottom-small delay900");
+							$(".hotels img").addClass("visible slide-in-bottom-small delay1000");
+							$(".hotels .row h3:nth-of-type(1)").addClass("visible slide-in-bottom-small delay1200");
+							$(".hotels .row p:nth-of-type(1)").addClass("visible slide-in-bottom-small delay1400");
+							$(".hotels .row p:nth-of-type(2)").addClass("visible slide-in-bottom-small delay1500");
+							$("p.attire").addClass("visible slide-in-bottom-small delay1800");
 //							$(".hotels h3:nth-of-type(2)").addClass("slide-in-bottom-small delay1200");
 //							$(".hotels p:nth-of-type(3)").addClass("slide-in-bottom-small delay1400");
 //							$(".hotels p:nth-of-type(4)").addClass("slide-in-bottom-small delay1400");
@@ -277,21 +278,23 @@ $(document).ready(function(){
 			});
 
 			$('.waypoint.registry').each(function () {
-				if (isScrolledIntoView(this) === true) {          
-					$(".Registry-container h1").addClass("slide-in-bottom-small");
-					$(".registry_content").addClass("slide-in-bottom delay800");
+				if (isScrolledIntoView(this) === true) { 
+					$(".Registry-container h1").addClass("visible slide-in-bottom-small delay500");
+					$(".registry_content").addClass("visible slide-in-bottom delay800");
 				}
 			});
 
 			$('.waypoint.rsvp').each(function () {
-				if (isScrolledIntoView(this) === true) {          
-					$(".RSVP-container h1").addClass("slide-in-bottom-small");
+				if (isScrolledIntoView(this) === true) {   
+					$(".RSVP-container h1").addClass("visible slide-in-bottom-small delay500");
+					$(".rsvp_wrapper").addClass("visible slide-in-bottom delay600");
 				}
 			});	
 
 			$('.waypoint.photos').each(function () {
-				if (isScrolledIntoView(this) === true) {          
-					$(".Photos-container h1").addClass("slide-in-bottom-small");
+				if (isScrolledIntoView(this) === true) {   
+					$(".Photos-container h1").addClass("visible slide-in-bottom-small delay500");
+					$(".m-p-g").addClass("visible slide-in-bottom delay600");
 				}
 			});		
 		});
