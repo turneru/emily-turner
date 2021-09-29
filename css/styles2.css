@@ -566,9 +566,11 @@ p.home_date {
 /* =============== Travel styles ========================= 
    ========================================================*/
 .Travel-container {
-/*	background: url(../images/backgrounds/skyline4.6.jpg) no-repeat center center;*/
-	background: url(../images/backgrounds/skyline_sunset.jpg) no-repeat left top;
+/*	background: url(../images/backgrounds/skyline4.6.jpg) no-repeat center center;
+	background: url(../images/backgrounds/skyline_sunset.jpg) no-repeat left top;*/
+	background: url(../images/backgrounds/skyline_rise_far3.jpg) no-repeat right top;
 	background-size: cover;
+	
 }
 
 .Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire {
@@ -893,7 +895,7 @@ iframe {
 .m-p-g__fullscreen {
 	position: fixed;
 	z-index: 10;
-	top: 25px;
+	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -1659,7 +1661,7 @@ h4 {
 	}
 
 	.Travel-container {
-		background: url(../images/backgrounds/mobile/skyline_sunset.jpg) no-repeat center center;
+		background: url(../images/backgrounds/mobile/skyline_rise.jpg) no-repeat center center;
 		background-size: cover;
 	}
 	
@@ -1710,8 +1712,17 @@ h4 {
 	}
 */
 	
+	.hotels .four.columns:nth-of-type(2), .hotels .four.columns:nth-of-type(3) {
+		border-top: 1px solid #c6c6c6;
+    	padding-top: 15px;
+	}
+	
+	.hotels .four.columns img {
+		max-width: 225px;
+	}
+	
 	.hotels .button {
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 	}
 	
 	.attire {
