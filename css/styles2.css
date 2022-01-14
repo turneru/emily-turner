@@ -108,6 +108,10 @@ nav {
     display: inline;
 }
 
+.nav-panel ul .nav-btn:hover {
+	cursor: pointer;
+}
+
 .nav-panel a.scroll-link {
     color: #fff;
 }
@@ -174,7 +178,9 @@ nav {
 	padding: 8px 22px 6px 18px;
 }
 
-
+.section-container {
+	height: 100vh;
+}
 /* =============== Home styles ========================= 
    ========================================================*/
 
@@ -310,12 +316,23 @@ p.home_date {
 
 /* =============== Our Story styles ========================= 
    ========================================================*/
-
+#OurStory {
+	height: 100vh; 
+	overflow: hidden;
+}
+	
+/*
 .OurStory-container {
 	height: 95vh;
     min-height: 800px;
     width: 100%;
     overflow: hidden;
+}
+*/
+
+#OurStory > h1 {
+	padding-top: 50px;
+	top: 35px;
 }
 
 #OurStory > h1, #timeline {
@@ -529,6 +546,10 @@ p.home_date {
     font-size: 30px;
 }
 
+#clockdiv .hashtag a {
+    color: #fff;
+}
+
 #clockdiv .countdown {
     margin: 0 auto;
     width: 500px;
@@ -733,13 +754,17 @@ p.home_date {
 
 .Registry-container {
     background-color: #f6f6f6;
-	background: url(../images/backgrounds/bg_ring_leaf.jpg) no-repeat center center;
+	background: url("../images/backgrounds/registry3.jpg") no-repeat center center;
 	background-size: cover;
 }
 
 .Registry-container h1, .registry_content {
 	opacity: 0;
 	transition: all .25s;
+}
+
+.Registry-container h1 {
+	padding-top: 75px;
 }
 
 .registry_content {
@@ -782,9 +807,9 @@ p.home_date {
 }
 
 .reg_frame_loaded {
-	height: 600px;
+	height: 608px;
     width: 107.5%;
-    margin-left: -62px;
+    margin-left: -60px;
 	margin-bottom: 0px;
 }
 
@@ -803,6 +828,11 @@ p.home_date {
 
 /* =============== RSVP styles ========================= 
    ========================================================*/
+#RSVP {
+	height: 100vh; 
+	overflow: hidden;
+}
+
 .RSVP-container { 	
 	background: url("../images/backgrounds/monpurp_bg.jpg") no-repeat center center;
     background-size: cover;
@@ -819,7 +849,6 @@ p.home_date {
     background-color: #fff;
     margin-top: 15px;
     border: 1px solid #eee;
-    opacity: 1;
     z-index: 500;
     position: relative;
     box-shadow: 0 0 25px rgb(0 0 0 / 30%);
@@ -838,8 +867,93 @@ iframe {
     overflow: auto;
 }
 
+/* =============== FAQ styles ========================= 
+   ========================================================*/
+#FAQ {
+	min-height: 100vh;
+}	
+	
+.FAQ-container {
+	background: url("../images/backgrounds/bg_pink_flowers_light.jpg") no-repeat top right;
+    background-size: cover;
+}	
+						
+.faq_content {
+    padding: 25px;
+	border: 1px solid #eee;
+    background-color: #fff;
+    margin: 15px 0px;
+    z-index: 500;
+    position: relative;
+    box-shadow: 0 0 25px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+    overflow: hidden;
+	opacity: 0;
+}						
+											
+.toggler {
+	cursor: pointer;
+    height: 65px;
+    padding: 20px 20px 5px;
+    background-color: #fef3e1;
+	margin-bottom: 3px;
+/*    border-bottom: 2px solid #f6b242;*/
+}
+						
+.toggled_on {
+	background-color: #fff;
+}						
+
+.toggler h4 {
+	padding: 0px 20px;
+    width: 100%;
+    margin-bottom: 0;
+    color: #454545;
+}
+						
+.toggler.toggled_on h4 {
+    color: #f96574;
+}						
+
+.toggle_info {
+	display: none;
+	padding: 0px 20px 20px;
+	background-color: #fff;
+	width: 100%;
+}
+
+.toggle_info p {
+	margin-bottom: 0;
+	padding: 0px 30px 0px 20px;
+}						
+						
+h4 i {
+    right: 25px;
+    position: absolute;
+    margin: -5px 15px 0px 0px;
+    color: #454545;
+    padding: 10px;
+}						
+						
+.toggled_on h4 i {
+	color: #f96574;
+}
+.rotate_down {
+    transform: rotate(0deg);
+    transition: .5s;
+}
+.rotate_up {
+    transform: rotate(-180deg);
+    transition: .5s;
+}
+
 /* =============== Photos styles ========================= 
    ========================================================*/
+#P-wrapper {
+	min-height: 100% !important;
+	height: 100% !important;
+}
+
 .Photos-container {
 /*	background: url("../images/backgrounds/bg_ring_leaf.jpg") no-repeat top center;*/
 	background: #ffe3d3;
@@ -1015,6 +1129,10 @@ iframe {
 	background: rgba(255, 255, 255, 0.15);
 }
 
+.Footer-container {
+	background: #454545;
+}
+
 .footer {
 	width: 100%;
     float: left;
@@ -1039,7 +1157,7 @@ h1 {
     font-size: 75px;
     color: #f96574;
     text-align: center;
-	padding-top: 50px;
+	padding-top: 100px;
 }
 
 .section-container .container.sub h1 {
@@ -1167,6 +1285,9 @@ h4 {
 .nav-panel-mobile .overlay.open li:nth-of-type(7) {
   	animation-delay: .65s;
 }
+.nav-panel-mobile .overlay.open li:nth-of-type(8) {
+  	animation-delay: .70s;
+}
 
 .nav-panel-mobile .overlay nav {
 	position: relative;
@@ -1188,7 +1309,7 @@ h4 {
 }
 
 .nav-panel-mobile .overlay ul li {
-  	margin: 0 auto 50px;
+  	margin: 0 auto 40px;
     display: block;
   	height: 25px;
   	position: relative;
@@ -1247,25 +1368,6 @@ h4 {
 		width:25%;
 	}
 }
-
-
-@media only screen and (min-width: 1675px){
-/*
-	.tl-item:nth-of-type(2) .tl-content {
-		top: 40%;
-	}
-*/
-}
-
-
-@media only screen and (max-width: 1575px){
-/*
-	.tl-item:nth-of-type(2) .tl-content {
-		top: 30%;
-	}
-*/
-}
-
         
 @media only screen and (max-width: 1400px){
 	.home {
@@ -1282,156 +1384,9 @@ h4 {
 		line-height: 18px;
 	}
 	
-/*
-	.tl-item:nth-of-type(2) .tl-content {
-		top: 35%;
-	}
-*/
 }
     
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-	 .mobile {
-        display: block;
-    }
 
-    .desktop, .rsvp_btn {
-        display: none;
-    }
-
-	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container  {
-		padding: 75px 0px;
-		height: auto;
-		min-height: calc(100vh + 30px);
-	}
-	
-	h1 {
-    	font-size: 60px;
-		padding-top: 0px;
-	}
-	
-	.home {
-		background: url(../images/home/ET15_mobile.jpg) no-repeat center center;
-		background-size: cover;
-	}
-	
-	.home_menu_bg {
-		background: linear-gradient(180deg, rgba(255,255,255,0.9) 25%, rgba(255,255,255,.7) 50%, rgba(255,255,255,.6) 70%, rgba(255,255,255,.1) 100%);
-		width: 100%;
-		position: absolute;
-		top: 0;
-		height: 40px;
-	}
-
-	.home.section-container h1 {
-		margin-top: 75px;
-	}
-	
-	.home.section-container h1 span {
-    	font-size: 50px;
-	}
-	
-	.section-container .container.sub h1 {
-		opacity: 1;
-	}
-	  
-	 .WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img, .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv, 
-	 .Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire, 
-	 .Photos-container h1, .m-p-g{
-		opacity: 1;
-	}
-		
-	.home.section-container p.married {
-    	font-weight: 500;
-		margin-bottom: 15px;
-		letter-spacing: 8px;
-	}	
-	
-	.home.section-container p.home_date {
-		font-size: 30px;
-	}
-	
-	.OurStory-container {
-		padding: 50px 0px 0px;
-		margin: 55px 0px 0px;
-		height: 100vh;
-/*		min-height: calc(100vh + 30px);*/
-	}
-	
-	#OurStory > h1 {
-		padding-top: 0px;
-		text-shadow: none;
-	}
-	  
-	 .tl-item {
-		height: 100vh;
-	}
-	  
-	 .tl-item:hover {
-		width: 40% !important;
-	}
-	  
-	 #timeline:hover .tl-item {
-		width: 20%;
-	}
-	
-	.ceremony, .reception, .hotels, .registry_content {
-		padding: 10px 10px;
-		margin: 10px 10px;
-		opacity: 1;
-	}
-	  
-	.ceremony, .reception {
-		min-height: 470px;
-	}
-    
-    #clockdiv {
-        top: 25px;
-        z-index: 9999;
-    }
-	
-	#clockdiv .countdown {
-		height: auto;
-		min-height: 140px;
-	}
-	
-	#clockdiv .countdown > div:last-of-type {
-		margin-right: 0px;
-	}
-	
-	#Travel {
-		margin-top: -75px;
-	}
-
-	#Travel h1 {
-		padding-top: 45px;
-	}
-	  
-	.Photos-container  {
-		padding: 50px 0px 0px;
-		height: auto;
-		min-height: calc(100vh + 30px);
-	}
-	
-	.m-p-g__fullscreen {
-    	top: 0px;
-	}
-	
-	.m-p-g__controls-close {
-		right: -35px;
-		top: 16vh;
-	}
-	  
-	.m-p-g__btn {
-		background: rgb(0 0 0 / 40%);
-	}
-	  
-	.m-p-g__btn:hover {
-		background: rgb(0 0 0 / 40%);
-	}  
-}
 
 @media only screen and (max-width: 768px) {
     .mobile {
@@ -1442,6 +1397,11 @@ h4 {
         display: none;
     }
 
+	html, body {
+		overflow-y: visible !important;
+    	overflow-x: hidden !important;
+	}
+	
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .Photos-container  {
 		padding: 75px 0px;
 		height: auto;
@@ -1501,12 +1461,18 @@ h4 {
 	.OurStory-container {
 		padding: 45px 0px 0px;
 		height: auto;
-		min-height: calc(100vh + 30px);
+		min-height: calc(100vh + 100px);
+	}
+	
+	#OurStory {
+		min-height: calc(100vh + 180px);
+		overflow: visible;
 	}
 	
 	#OurStory > h1 {
-		padding-top: 0px;
+		padding-top: 0px !important;
 		text-shadow: none;
+		top: 0;
 	}
 	
 	#timeline.mobile {
@@ -1670,7 +1636,7 @@ h4 {
 	}
 
 	#Travel h1 {
-		padding-top: 45px;
+		padding-top: 45px !important;
 	}
 	
 	.Registry-container {
@@ -1678,9 +1644,46 @@ h4 {
 		background-size: cover;
 	}
 	
+	.Registry-container h1 {
+		padding-top: 0px;
+	}
+	
+	.RSVP-container h1, .rsvp_wrapper {
+		opacity: 1;
+	}
+	
 	.RSVP-container {
 		background: url(../images/backgrounds/mobile/rsvp.jpg) no-repeat center center;
 		background-size: cover;
+	}
+	
+	.FAQ-container {
+		background: url(../images/backgrounds/mobile/faq.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	
+	#FAQ h1 {
+		padding-top: 45px !important;
+	}
+	
+	
+	.faq_content {
+		padding: 0;
+		opacity: 1;
+	}
+	
+	.toggler {
+		height: 65px;
+		padding: 10px 5px 5px;
+	}
+	
+	h4 i {
+		right: 0px;
+		margin: -20px 0px 0px 0px;
+	}
+	
+	.toggle_info p {
+		padding: 0;
 	}
 	
 	.m-p-g__fullscreen {
@@ -1704,6 +1707,172 @@ h4 {
 	}  	
 }
 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	 .mobile {
+        display: block;
+    }
+
+    .desktop, .rsvp_btn {
+        display: none;
+    }
+
+	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .FAQ-container  {
+		padding: 75px 0px;
+		height: auto;
+		min-height: calc(100vh + 30px);
+	}
+	
+	h1 {
+    	font-size: 60px;
+		padding-top: 0px;
+	}
+	
+	.home {
+		background: url(../images/home/ET15_mobile.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	
+	.home_menu_bg {
+		background: linear-gradient(180deg, rgba(255,255,255,0.9) 25%, rgba(255,255,255,.7) 50%, rgba(255,255,255,.6) 70%, rgba(255,255,255,.1) 100%);
+		width: 100%;
+		position: absolute;
+		top: 0;
+		height: 40px;
+	}
+
+	.home.section-container h1 {
+		margin-top: 75px;
+	}
+	
+	.home.section-container h1 span {
+    	font-size: 50px;
+	}
+	
+	.section-container .container.sub h1 {
+		opacity: 1;
+	}
+	  
+	 .WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img, .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv, 
+	 .Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire, 
+	 .Photos-container h1, .m-p-g{
+		opacity: 1;
+	}
+		
+	.home.section-container p.married {
+    	font-weight: 500;
+		margin-bottom: 15px;
+		letter-spacing: 8px;
+	}	
+	
+	.home.section-container p.home_date {
+		font-size: 30px;
+	}
+	
+	.OurStory-container {
+		padding: 50px 0px 0px;
+		margin: 55px 0px 0px;
+		min-height: 100vh;
+/*		min-height: calc(100vh + 30px);*/
+	}
+	
+	#OurStory > h1 {
+		padding-top: 0px;
+		text-shadow: none;
+	}
+	  
+	 .tl-item {
+		height: 100vh;
+	}
+	  
+	 .tl-item:hover {
+		width: 40% !important;
+	}
+	  
+	 #timeline:hover .tl-item {
+		width: 20%;
+	}
+	
+	.ceremony, .reception, .hotels, .registry_content {
+		padding: 10px 10px;
+		margin: 10px 10px;
+		opacity: 1;
+	}
+	  
+	.ceremony, .reception {
+		min-height: 470px;
+	}
+    
+    #clockdiv {
+        top: 25px;
+        z-index: 9999;
+    }
+	
+	#clockdiv .countdown {
+		height: auto;
+		min-height: 140px;
+	}
+	  
+	#clockdiv .countdown > div {
+		margin: 0px 8px 25px 7px;
+	}
+	
+	#clockdiv .countdown > div:last-of-type {
+		margin-right: 0px;
+	}
+	
+	#Travel {
+		margin-top: -75px;
+	}
+
+	#Travel h1 {
+		padding-top: 45px;
+	}
+	  
+	#Travel .ten.columns {
+		width: 96%;
+	}  
+	  
+	.hotels h3 {
+		line-height: 30px;
+	}  
+	  
+	.registry_content {
+		padding: 20px 20px;
+		margin: 50px 20px;
+	}  
+	  
+	.faq_content {
+		margin: 25px;
+	}  
+	  
+	.Photos-container  {
+		padding: 50px 0px 0px;
+		height: auto;
+		min-height: calc(100vh + 30px);
+	}
+	
+	.m-p-g__fullscreen {
+    	top: 0px;
+		position: relative;
+	}
+	
+	.m-p-g__controls-close {
+		right: -35px;
+		top: 16vh;
+	}
+	  
+	.m-p-g__btn {
+		background: rgb(0 0 0 / 40%);
+	}
+	  
+	.m-p-g__btn:hover {
+		background: rgb(0 0 0 / 40%);
+	}  
+}
+
 @media only screen and (max-width: 479px) {
 
 /*
@@ -1711,6 +1880,24 @@ h4 {
 		min-height: 900px;
 	}
 */
+	
+	#OurStory {
+		min-height: calc(100vh + 360px);
+		overflow: visible;
+	}
+	
+	.flexbox-slider .flexbox-slide {
+		min-height: 215px;
+		height: 100%;
+	}
+	
+	.ceremony, .reception {
+		margin: 10px 10px;
+	}
+	
+	#clockdiv .countdown > div {
+		margin: 0px 5px 25px 2px;
+	}
 	
 	.hotels .four.columns:nth-of-type(2), .hotels .four.columns:nth-of-type(3) {
 		border-top: 1px solid #c6c6c6;
@@ -1727,6 +1914,62 @@ h4 {
 	
 	.attire {
 		margin: 10px;
+	}
+	
+	.registry_content {
+		padding: 20px 10px;
+		margin: 50px 10px;
+	}
+	
+	.toggler {
+		min-height: 50px;
+		padding: 10px 5px 10px;
+		height: auto;
+	}
+	
+	.toggler h4 {
+		font-size: 15px;
+		line-height: normal;
+		padding: 0px 30px 0px 5px;
+	}
+	
+	.toggle_info p {
+		font-size: 15px;
+		line-height: normal;
+	}
+	
+	.m-p-g__fullscreen {
+		top: 0px;
+		position: relative;
+		padding: 10px;
+	}
+	
+	.m-p-g__fullscreen-img {
+/*		padding: 10px;*/
+		max-width: 96vw;
+	}
+	
+	.m-p-g__controls {
+		position: fixed;
+		top: 46%;
+		left: 0;
+		width: 100%;
+		z-index: 200;
+		height: 20vh;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	
+	.m-p-g__controls-close {
+		right: -10vw;
+		top: 5vh;
+	}
+	
+	.m-p-g__controls-arrow {
+		min-width: auto;
+		padding: 0;
+		margin: 0;
 	}
 	
 	.footer {

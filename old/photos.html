@@ -37,7 +37,7 @@
 		<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
 <!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.1.1/iframeResizer.min.js"></script>-->
 		<script src="js/main.js"></script>
-		<script src="https://kit.fontawesome.com/31d108e09a.js"></script>
+<!--		<script src="https://kit.fontawesome.com/31d108e09a.js"></script>-->
 		<script type="text/javascript" src="js/fullpage.js"></script>
 		<script type="text/javascript" src="js/scrolloverflow.js"></script>
 		
@@ -48,6 +48,26 @@
 		<link rel="stylesheet" href="css/styles2.css?v=1.0">
 		<link rel="stylesheet" href="css/animation.css">
 		<link rel="stylesheet" href="css/fullpage.css">
+		
+		<style>
+			.section-container {
+				height: 100vh;
+			}
+			
+			h1 {
+				padding-top: 100px;
+			}
+			
+			#OurStory > h1 {
+				padding-top: 50px;
+				top: 35px;
+			}
+			
+			.nav-panel ul .nav-btn:hover {
+				cursor: pointer;
+			}
+		</style>
+		
 		
 		<!--- Fonts --->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,13 +88,13 @@
 			<nav>
 				<ul id="myMenu" class="navbar-nav">
 					<li data-menuanchor="firstPage" class="nav-btn active">
-						<a class="scroll-link hvr-underline-from-center" id="#home">Home</a>
+						<a class="scroll-link hvr-underline-from-center" name="#home">Home</a>
 					</li>
 					<li data-menuanchor="secondPage" class="nav-btn">
-						<a class="scroll-link hvr-underline-from-center" id="#OurStory">Our Story</a>
+						<a class="scroll-link hvr-underline-from-center" name="#OurStory">Our Story</a>
 					</li>
 					<li data-menuanchor="thirdPage" class="nav-btn">
-						<a class="scroll-link hvr-underline-from-center" id="#WhenWhere">When &amp; Where</a>
+						<a class="scroll-link hvr-underline-from-center" name="#WhenWhere">When &amp; Where</a>
 					</li>
 					<li data-menuanchor="fourthPage" class="nav-btn">
 						<a class="scroll-link hvr-underline-from-center" id="#Travel">Hotel & Travel</a>
@@ -86,9 +106,6 @@
 						<a class="scroll-link hvr-underline-from-center" id="#RSVP">RSVP</a>
 					</li>
 					<li data-menuanchor="seventhPage" class="nav-btn">
-						<a class="scroll-link hvr-underline-from-center" id="#FAQ">FAQ</a>
-					</li>
-					<li data-menuanchor="eigthPage" class="nav-btn">
 						<a class="scroll-link hvr-underline-from-center" id="#Photos">Photos</a>
 					</li>
 				</ul>
@@ -101,32 +118,29 @@
 		<div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
             <div class="overlay" id="overlay">
                 <nav class="overlay-menu">
-                    <ul id="myMenu" class="navbar-nav">
-						<li data-menuanchor="firstPage" class="nav-btn active">
-							<a class="scroll-link hvr-underline-from-center" id="#home">Home</a>
+                    <ul>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#home">Home</a>
 						</li>
-						<li data-menuanchor="secondPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#OurStory">Our Story</a>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#OurStory">Our Story</a>
 						</li>
-						<li data-menuanchor="thirdPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#WhenWhere">When &amp; Where</a>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#WhenWhere">When &amp; Where</a>
 						</li>
-						<li data-menuanchor="fourthPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#Travel">Hotel & Travel</a>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#Travel">Hotel & Travel</a>
 						</li>
-						<li data-menuanchor="fifthPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#Registry">Registry</a>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#Registry">Registry</a>
 						</li>
-						<li data-menuanchor="sixthPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#RSVP">RSVP</a>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#RSVP">RSVP</a>
 						</li>
-						<li data-menuanchor="seventhPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#FAQ">FAQ</a>
+						<li class="nav-btn">
+							<a class="scroll-link hvr-underline-from-center" href="#Photos">Photos</a>
 						</li>
-						<li data-menuanchor="eigthPage" class="nav-btn">
-							<a class="scroll-link hvr-underline-from-center" id="#Photos">Photos</a>
-						</li>
-				</ul>
+                    </ul>
                 </nav>
             </div>
 		</div>
@@ -136,393 +150,32 @@
 			<a class="scroll-link fly_out" href="#RSVP">RSVP</a>
 		</div>
 -->
-		<div id="fullpage">
-		<!--- Home Section --->
-		<div id="H-wrapper" class="home section-container section">
-			<section id="home">
-				<div class="home_menu_bg mobile"></div>
-				<div class="intro_text center">
-					<!--- Desktop Intro Text --->
-					<svg class="turner-emily desktop" viewBox="0 0 696.23 141.37">
-					   <use xlink:href="#e-and-t"></use>
-					</svg>
-					<p class="married desktop fade-in-fwd delay3200">ARE GETTING MARRIED</p>
-					<p class="home_date desktop fade-in-fwd delay3500">June 18th, 2022</p>
-					
-					<!--- Mobile Intro Text--->
-					<h1 class="mobile fade-in-fwd delay500">Emily <span>&amp;</span> Turner</h1>
-					<p class="mobile married fade-in-fwd delay1000">ARE GETTING MARRIED</p>
-					<p class="mobile home_date fade-in-fwd delay1500">June 18th, 2022</p>
-					<div id="end-home"></div>
-				</div>
-			</section>
-		</div>
-		
-		<!--- Our Story Section --->
-		<div id="OS-wrapper" class="OurStory-container section-container section" style="background-color: #fed7bb87;">
-			<section id="OurStory">
-				<h1>Our Story</h1>
-				<div id="timeline" class="desktop">					
-					<div class="tl-item">
-						<div class="tl-bg" style="background-image: url(images/timeline/christmas3.jpg)"></div>
-						<div class="tl-year">
-							<p>2017</p>
-						</div>
-						<div class="tl-content">
-							<h3>12.11.17</h3>
-							<h1>How We Met</h1>
-							<p>After working at SmithBucklin together for over a year (albeit on different floors) and exchanging work related emails, we finally met at the company Christmas party. At the after party Turner bought Emily a vodka lemonade (her favorite at the time), and they chatted for a good portion of the night. That night Turner went home and told his roommates at the time, that Emily was 'the one'.</p>
-						</div>
-					</div>
-					<div class="tl-item">
-						<div class="tl-bg" style="background-image: url(images/timeline/guthries_tavern3.jpg)"></div>
-						<div class="tl-year">
-							<p>2018</p>
-						</div>
-						<div class="tl-content">
-							<h3>01.06.18</h3>
-							<h1>Our First Date</h1>
-							<p>After texting back and forth for the next couple of days, Emily and Turner went on their first date that weekend, beginning with dinner at an Italian restaurant Turner believed was a mom-and-pop place in the neighborhood. Emily later informed him she had been to this restaurant before, and that it was more so a Chicago chain. Chain or mom-and-pop, it didn't matter - they hit it off and had a great time getting to know each other in between bites of pasta.</p>
-							<p>After dinner the date continued to Guthrie's Tavern, a local watering hole and dive bar with bookcases full of board games. They spent the next couple of hours battling it out in rounds of Yahteez!, Scrabble, and other board games. Turner of course let her win just enough times, though Emily disputes that fact and if it was even necessary (OJ is a word in Scrabble, right?). The date lasted about 6 hours total and Emily says that's when she knew Turner was the one.</p>
-						</div>
-					</div>
-					<div class="tl-item">
-						<div class="tl-bg" style="background-image: url(images/timeline/proposal3.jpg)"></div>
-						<div class="tl-year">
-							<p>2020</p>
-						</div>
-						<div class="tl-content">
-							<h3>09.18.20</h3>
-							<h1>She Says Yes</h1>
-							<p>After a couple of years of dating, and in the midst of the mess of 2020, Emily and Turner took a quick trip to Cocoa Beach, FL for a weekend away. Turner proposed on the beach the morning after they arrived - he had planned with a family friend to help set up a blanket, champagne glasses, chilled champagne and flowers on the beach.</p>
-						</div>
-					</div>
-					<div class="tl-item">
-						<div class="tl-bg" style="background-image: url(images/timeline/kiss.jpg)"></div>
-						<div class="tl-year">
-							<p>2022</p>
-						</div>
-						<div class="tl-content">
-							<h3>06.18.22</h3>
-							<h1>The Big Day</h1>
-							<p>We can't wait to celebrate with all of our friends and family in June! Thank you all for being a part of our story.<br /><br />
-								Love,<br />
-								Emily and Turner
-							</p>
-						</div>
-					</div>
-				</div>
-				<div id="timeline" class="mobile">
-					<div class="flexbox-slider flexbox-slider-1">
-						<div class="flexbox-slide" style="background: url(images/timeline/mobile_christmas.jpg); background-position: center; background-size: cover;">
-							<div class="tl-year">
-								<p>2017</p>
-							</div>
-							<div class="tl-content">
-								<h3>12.11.17</h3>
-								<h1>How We Met</h1>
-								<p>After working at SmithBucklin together for over a year (albeit on different floors) and exchanging work related emails, we finally met at the company Christmas party. At the after party Turner bought Emily a vodka lemonade (her favorite at the time), and they chatted for a good portion of the night. That night Turner went home and told his roommates at the time, that Emily was 'the one'.</p>
-							</div>
-						</div>
-						<div class="flexbox-slide" style="background: url(images/timeline/mobile_guthries.jpg); background-position: center; background-size: cover;">
-							<div class="tl-year">
-								<p>2018</p>
-							</div>
-							<div class="tl-content">
-								<h3>01.06.18</h3>
-								<h1>Our First Date</h1>
-								<p>After texting back and forth for the next couple of days, Emily and Turner went on their first date that weekend, beginning with dinner at an Italian restaurant Turner believed was a mom-and-pop place in the neighborhood. Emily later informed him she had been to this restaurant before, and that it was more so a Chicago chain. Chain or mom-and-pop, it didn't matter - they hit it off and had a great time getting to know each other in between bites of pasta.</p>
-								<p>After dinner the date continued to Guthrie's Tavern, a local watering hole and dive bar with bookcases full of board games. They spent the next couple of hours battling it out in rounds of Yahteez!, Scrabble, and other board games. Turner of course let her win just enough times, though Emily disputes that fact and if it was even necessary (OJ is a word in Scrabble, right?). The date lasted about 6 hours total and Emily says that's when she knew Turner was the one.</p>
-							</div>
-						</div>
-						<div class="flexbox-slide" style="background: url(images/timeline/mobile_proposal2.jpg); background-position: center; background-size: cover;">
-							<div class="tl-year">
-								<p>2020</p>
-							</div>
-							<div class="tl-content">
-								<h3>09.18.20</h3>
-								<h1>She Says Yes</h1>
-								<p>After a couple of years of dating, and in the midst of the mess of 2020, Emily and Turner took a quick trip to Cocoa Beach, FL for a weekend away. Turner proposed on the beach the morning after they arrived - he had planned with a family friend to help set up a blanket, champagne glasses, chilled champagne and flowers on the beach.</p>
-							</div>
-						</div>
-						<div class="flexbox-slide" style="background: url(images/timeline/mobile_kiss.jpg); background-position: center; background-size: cover;">
-							<div class="tl-year">
-								<p>2022</p>
-							</div>
-							<div class="tl-content">
-								<h3>06.18.22</h3>
-								<h1>The Big Day</h1>
-								<p>We can't wait to celebrate with all of our friends and family in June! Thank you all for being a part of our story.<br /><br />
-									Love,<br />
-									Emily and Turner
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<!--- When Where Section---> 
-		<div id="WW-wrapper" class="WhenWhere-container section-container section">
-			<section id="WhenWhere">
-				<div class="container sub">
-					<h1>When &amp; Where</h1>
-					<div class="row">
-						<div class="six columns">
-							<div class="ceremony">
-								<div class="bells2">    
-									<img src="images/icons/bells5.gif" alt="wedding bells" class="img-responsive" />
-								</div>
-								<h3>Ceremony</h3>
-								<p>Saturday, June 18, 2022<br />
-									4:30 PM
-								</p>
-								<p>Kitchen Chicago (at City View Loft)<br />
-									324 N Leavitt St,<br />
-									Chicago, IL 60612
-								</p>
-								<p class="no-margin"><a href="https://www.google.com/maps/place/Kitchen+Chicago/@41.8878348,-87.6846407,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c12b62b1:0x4f07b49cd13224d5!8m2!3d41.8878354!4d-87.6823682" target="_blank" class="button arrow_btn">Directions <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-								</p>
-								<p class="attire"><em>Attire: Cocktail</em></p>
-							</div>
-						</div>
-						<div class="six columns">
-							<div class="reception">
-								<div class="glasses2">    
-									<img src="images/icons/glasses5.gif" alt="champagne glasses" class="img-responsive" />
-								</div>
-								<h3>Reception</h3>
-								<p>Saturday, June 18, 2022<br />
-									5:00 PM
-								</p>
-								<p>City View Loft<br />
-									324 N Leavitt St, Ste 200,<br />
-									Chicago, IL 60612
-								</p>
-								<p class="no-margin">
-									<a href="https://www.google.com/maps/place/City+View+Loft/@41.8875923,-87.6846585,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2d48c132e071:0xfd1d2d7768410371!8m2!3d41.8875931!4d-87.6823649" target="_blank" class="button arrow_btn">Directions <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-								</p>
-								<p class="attire"><em>Attire: Cocktail</em></p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div id="clockdiv">
-							<div class="countdown">
-								<div>
-									<span class="days"></span>
-									<div class="smalltext">Days</div>
-								</div>
-								<div>
-									<span class="hours"></span>
-									<div class="smalltext">Hours</div>
-								</div>
-								<div>
-									<span class="minutes"></span>
-									<div class="smalltext">Mins</div>
-								</div>
-								<div>
-									<span class="seconds"></span>
-									<div class="smalltext">Secs</div>
-								</div>
-							</div>
-							<div class="hashtag"><a href="https://www.instagram.com/explore/tags/turnemuligian/" target="_blank">#TurnEmUligian</a></div>
-						</div>
-					</div>
-				</div>
-				
-			</section>	
-		</div>
-		<!--- Travel Section --->
-		<div id="T-wrapper" class="Travel-container section-container section">
-			<section id="Travel">
-				<div class="container sub">
-					<h1>Hotel &amp; Travel</h1>
-					<div class="row">
-						<div class="one columns desktop">&nbsp;</div>
-						<div class="ten columns">
-							<div class="hotels">
-								<p class="hotel-intro" style="padding: 20px 0px;">We have secured room blocks for three downtown hotels at a discounted rate.<br /> 
-								Use the links below to book a room. The rates will expire on May 20th, so be sure to book before then!</p>		
-								
-								<div class="row">
-									<div class="four columns center">
-										<img src="images/hotel/jw.jpg" alt="JW Marriott" class="img-responsive rounded">
-										<h3>JW Marriott</h3>
-										<p>151 W Adams St<br />Chicago, IL 60603</p>
-<!--
-										<p class="no-margin">
-											<a href="https://www.marriott.com/hotels/travel/chijw-jw-marriott-chicago/" target="_blank" class="button arrow_btn">Visit Hotel Website <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-										</p>
--->
-										<p class="no-margin">
-											<a href="https://book.passkey.com/go/SokalskiUligianWedding" target="_blank" class="button arrow_btn">Book Room <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-										</p>
-										
-									</div>
-									<div class="four columns center">
-										<img src="images/hotel/w-chicago.jpg" alt="W Chicago" class="img-responsive rounded">
-										<h3>W Chicago</h3>
-										<p>172 W Adams St<br />Chicago, IL 60603</p>
-<!--
-										<p class="no-margin">
-											<a href="https://www.marriott.com/hotels/travel/chiwc-w-chicago-city-center/" target="_blank" class="button arrow_btn">Visit Hotel Website <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-										</p>
--->
-										<p class="no-margin">
-											<a href="https://www.marriott.com/events/start.mi?id=1630600556868&key=GRP" target="_blank" class="button arrow_btn">Book Room <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-										</p>
-				
-									</div>
-									<div class="four columns center">
-										<img src="images/hotel/hyatt-regency.jpg" alt="Hyatt" class="img-responsive rounded">
-										<h3>Hyatt Regency</h3>
-										<p>151 W Wacker Dr<br />Chicago, IL 60601</p>
-<!--
-										<p class="no-margin">
-											<a href="https://www.hyatt.com/en-US/hotel/illinois/hyatt-regency-chicago/chirc" target="_blank" class="button arrow_btn">Visit Hotel Website <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-										</p>
--->
-										<p class="no-margin">
-											<a href="https://www.hyatt.com/en-US/group-booking/CHIRC/G-FSUW" target="_blank" class="button arrow_btn">Book Room <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-										</p>
-									</div>	
-								</div>
-								<p class="attire" style="text-align:center;"><em>*Roundtrip transportation to City View Loft provided from the JW Marriott.</em></p>
-							</div>
-						</div>
-						<div class="one columns desktop">&nbsp;</div>
-					</div>
-				</div>
-				
-			</section>	
-		</div>
-		<!--- Registry Section --->
-		<div id="R-wrapper" class="Registry-container section-container section">
-			<section id="Registry" style="height: 100vh; overflow: hidden;">
-				<div class="container sub">
-					<div class="row">
-						<div class="twelve columns">
-							<h1>Registry</h1>
-							<div class="registry_content">
-								<div id="loading" class="spinner desktop"></div>
-								<div class="reg_frame_container desktop">
-									<iframe id="regFrame" class="reg_frame_content" scrolling="yes" frameborder="0" style="overflow: hidden;"></iframe>
-								</div>
-								<p class="mobile">We are registered at Bed Bath and Beyond, Williams Sonoma, &amp; Target. <br><br>To view the registry on a tablet/mobile device click the button below and it will open in a new window for a better viewing experience.</p>
-								<p class="no-margin registry_btn">
-									<a href="https://www.myregistry.com/wedding-registry/turner-uligian-and-emily-sokalski-chicago-il/2940177/giftlist" target="_blank" class="button arrow_btn">View Registry <span class="arrow"><i></i><svg><use xlink:href="#circle"></use></svg></span></a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>	
-		</div>
-		<!--- RSVP Section --->
-		<div id="RSVP-wrapper" class="RSVP-container section-container section">
-			<section id="RSVP">
-				<div class="container sub">
-					<h1>Rsvp</h1>
-					<div class="row">
-						<div class="three columns">&nbsp;</div>
-						<div class="six columns rsvp_wrapper">
-							<p style="padding-top:25px;">Check back soon to RSVP!</p>
-						</div>
-						<div class="three columns">&nbsp;</div>
-					</div>
-				<!--<div class="rsvp_wrapper">
-						<p>Please enter your first and last name to unlock your RSVP form.
- 						If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</p>
-						<div class="iframe_container">
-							<iframe src="https://emilyturner.app.rsvpify.com/" title="RSVP" frameborder="0"></iframe>
-						</div>
-
-					</div>-->
-				</div>
-				
-			</section>	
-		</div>
-		<div id="FAQ-wrapper" class="FAQ-container section-container section fp-auto-height">
-			<section id="FAQ">
-				<div class="container sub">
-					<h1>FAQ</h1>
-					<div class="faq_content">
-						<div class="row no-margin">
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>Are there any COVID-19 related restrictions/requirements at your wedding?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>As of January 3rd, 2022 our venue, in accordance with the City of Chicago mandate, will be requiring proof of full vaccination for all guests ages 5 and over. Valid forms of verification include Vaccination Card, Photocopy of vaccination card, Digital record/app, or printed record from vaccine provider. Face coverings/masks are also currently required at the venue by the City of Chicago when not actively eating/drinking. We will continue to update this information if any changes to the mandates are made.</p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>Do you have a hotel block for guests? What is the deadline to book a hotel room?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>Yes, we have secured room blocks at a discounted rate at the JW Marriott, W Chicago, & Hyatt Regency. If you'd like to book a room in one of these blocks please do so by May 20th. See the Hotel & Travel section for hotel details and booking links.</p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>What should I wear? Is there a dress code?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>Our suggested dress code is "cocktail attire". Semi-formal wear like a cocktail dress or formal jumpsuit for ladies, a suit or blazer with or without a tie for gentlemen. Our wedding will have a tropical/summer vibe, so feel free to wear bright colors or floral prints. Both the ceremony and reception will be indoors with air conditioning. Chicago's average high temperature in June is 81&deg; with an average low of 63&deg;. </p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>What time should I arrive to the ceremony?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>Please plan to arrive at the venue between 4:00-4:25PM to get settled and find a seat. The ceremony will begin promptly at 4:30 PM.</p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>How do I get to the wedding venue? Will transportation be provided?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>We will be providing transportation for guests from the JW Marriott to the venue before the ceremony, and transportation from the venue back to the JW Marriott after the reception. The W is located directly across the street from the JW Marriott, so guests staying there can walk over to hop on the coach bus. Stay tuned for additional details on specific timing. You can also drive, or take an Uber/Lyft/cab to the venue if you prefer.</p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>Is there parking available at the wedding venue?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>Yes, there is a parking lot on Leavitt St. as well as free street parking around our venue on Leavitt St, Carroll Avenue, and Bell Avenue.</p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>How can I RSVP? When is the RSVP deadline?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>You can RSVP on our website above in the RSVP section once invitations have gone out. We ask that you kindly RSVP by May 21st.</p>
-								</div>
-							</div>
-							<div class="twelve columns">
-								<div class="toggler">
-									<h4>What's the best way to contact you if I have additional questions?<i class="fa fa-chevron-down"></i></h4>
-								</div>
-								<div class="toggle_info">
-									<p>If you have additional questions leading up to our big day feel free to reach out to one of us via text or <a href="mailto:tuligian@gmail.com;emilysokalski@gmail.com&subject=Wedding Question">shoot us an email</a>.</p>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</section>
-		</div>	
+		<style>
+		.Photos-container h1, .m-p-g {
+    opacity: 1;
+    transition: all .25s;
+}
+			#P-wrapper {
+				min-height: 100% !important;
+    			height: 100% !important;
+			}
+		</style>
 		<!--- Photos Section --->
+<!--		<div class="waypoint photos"></div>-->
 		<div id="P-wrapper" class="Photos-container section-container section fp-auto-height">
 			<section id="Photos">
+				<style>
+					#P-wrapper {
+						min-height: 100% !important;
+						height: 100% !important;
+					}
+				</style>
+				<!--<link rel="stylesheet" href="https://micahstubbs.github.io/material-photo-gallery/dist/css/material-photo-gallery.css">
+				<div class="container sub">-->
+
 					<h1>Photos</h1>
+<!--					<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/material-photo-gallery.min.js"></script>-->
+					
 					<div class="m-p-g">
 						<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 							<img src="images/photos/ET-18small.jpg" data-full="images/photos/ET-18.jpg" loading="lazy" class="m-p-g__thumbs-img tall" />
@@ -603,22 +256,34 @@
 						</div>
 						<div class="m-p-g__fullscreen"></div>
 					</div>   
+
 					<p>&nbsp;</p>
+
+<!--				</div>-->
+
+
+					<script src="https://micahstubbs.github.io/material-photo-gallery/dist/js/material-photo-gallery.js"></script>
+					<script>
+						var elem = document.querySelector('.m-p-g');
+
+						document.addEventListener('DOMContentLoaded', function() {
+							var gallery = new MaterialPhotoGallery(elem);
+						});
+					</script>
+				
 			</section>
 		</div>
 		<div id="F-wrapper" class="Footer-container section-container section fp-auto-height">
 			<section id="Footer">
 				<div class="container sub">
 					<div class="footer">
-					<p class="no-margin">Custom designed and developed by Turner Uligian &copy;2022 <span class="vbar">|</span> <a href="mailto:tuligian@gmail.com">Contact</a> <span class="vbar">|</span> <a href="https://www.instagram.com/explore/tags/turnemuligian/" target="_blank">#TurnEmUligian</a></p>
+					<p class="no-margin">Custom designed and developed by Turner Uligian &copy;2022 <span class="vbar">|</span> <a href="mailto:tuligian@gmail.com">Contact</a> | <a href="https://www.instagram.com/explore/tags/turnemuligian/" target="_blank">#TurnEmUligian</a></p>
 <!--					https://twitter.com/hashtag/TurnEmUligian?src=hashtag_click-->
 				</div>
 				</div>
 			</section>
 		</div>
-			
-	</div>	
-		
+		</div>	
 		<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 			<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26px" height="26px" id="circle" fill="none" stroke="currentColor">
 				<circle r="10" cy="13" cx="13" id="test1"></circle>
@@ -689,91 +354,21 @@
 	</body>
 </html>
 
-<script src="https://micahstubbs.github.io/material-photo-gallery/dist/js/material-photo-gallery.js"></script>
-<script>
-	var elem = document.querySelector('.m-p-g');
-
-	document.addEventListener('DOMContentLoaded', function() {
-		var gallery = new MaterialPhotoGallery(elem);
-	});
-	
-		var myFunction = function() {
-			
-			var y;
-			var topCalc;
-			var resulty;
-			
-			if ($("#P-wrapper").hasClass("active")) {
-
-				//$(window).on('mousewheel', function(){
-					var obj = $('.fp-scroller');
-					 var transformMatrix = obj.css("-webkit-transform") ||
-					   obj.css("-moz-transform")    ||
-					   obj.css("-ms-transform")     ||
-					   obj.css("-o-transform")      ||
-					   obj.css("transform");
-					 var matrix = transformMatrix.replace(/[^0-9\-.,]/g, '').split(',');
-					 var x = matrix[12] || matrix[4];//translate x
-					 var y = matrix[13] || matrix[5];//translate y
-
-					console.log("transform y is:" + y);
-
-					var resulty = -y;
-					console.log(resulty);
-				
-					//var topCalc = "calc(100vh + (" + y + "px / 2)";
-					//var topCalc = "calc(20vh + (" + resulty + "px)";
-					var topCalc = "calc(" + resulty + "px - 150px)";
-					console.log(topCalc);
-
-				if ($('.m-p-g__fullscreen').hasClass('active')) {
-						$(this).css('top', topCalc);
-						//$(this).css('top', resulty);
-						$('.m-p-g__controls').css('top', topCalc);
-					}
-			
-				$('.m-p-g__thumbs img').click(function(){
-						$('.m-p-g__fullscreen').css('top', topCalc);
-						//$('.m-p-g__fullscreen').css('top', resulty);
-						$('.m-p-g__controls').css('top', topCalc);
-				});
-				
-				$(document).ready(function() {	
-					if($(window).width() < 769) {	
-						$('.m-p-g__thumbs img').click(function(){
-						 event.preventDefault();	
-						});
-					}
-				});
-				
-			}
-		}
-		setInterval(myFunction, 1000); // call every 1000 milliseconds
-			
-		//}
-	
-</script>
-		
-
-<script>
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;	
+<script>	
 	
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		//options here
 		licenseKey: '2684F9D6-3C2D4A4C-BF442AFB-CA786171',
 		responsiveHeight: 800,
-		responsiveWidth: 800,
 		scrollingSpeed: 900,
 		scrollOverflow: true,
-		anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eigthPage'],
+		anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
 		menu: '#myMenu',
 		lockAnchors: true, 
 		//events
 		afterLoad: function(origin, destination, direction){
-
-			if(!isMobile) {
-
+			
 				if ($("#H-wrapper").hasClass("active")) {
 				   $(".nav-panel").addClass("navbar-no-bg");
 				} 
@@ -827,20 +422,12 @@ $(document).ready(function() {
 					$(".rsvp_wrapper").addClass("visible slide-in-bottom delay100");
 				}
 			
-			   if ($("#FAQ-wrapper").hasClass("active")) {
-				    $(".nav-panel").removeClass("navbar-no-bg");
-					$(".FAQ-container h1").addClass("visible slide-in-bottom-small");
-					$(".faq_content").addClass("visible slide-in-bottom delay100");
-				}
-			
 			   if ($("#P-wrapper").hasClass("active")) {
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".Photos-container h1").addClass("visible slide-in-bottom-small");
 					$(".m-p-g").addClass("visible slide-in-bottom delay100");
 				}
 			}
-			
-		}	
 	});
 
 	//methods
@@ -875,37 +462,18 @@ $('.nav-btn:nth-of-type(7)').click(function(){
         event.preventDefault();
         fullpage_api.moveTo('seventhPage', 6);
 });		
-$('.nav-btn:nth-of-type(8)').click(function(){
-        event.preventDefault();
-        fullpage_api.moveTo('eigthPage', 7);
+$('.m-p-g__thumbs img').click(function(){
+        //event.preventDefault();
+        fullpage_api.moveTo('seventhPage', 6);
 });		
-	
-//FAQ Accordion JS    
-$(document).ready(function(){
-      
-    $("div.toggler").click(function() {
-		$(".toggler").removeClass('toggled_on');	
-    
-        if ($('.toggle_info').is(':visible')) {
-			$(this).removeClass('toggled_on');
-        	$(".toggle_info").slideUp(300);
-        	$("h4 i").removeClass('rotate_up').addClass('rotate_down');
-        }
-
-        if ($(this).next(".toggle_info").is(':visible')) {
-			$(this).removeClass('toggled_on');	
-        	$(this).next(".toggle_info").slideUp(300);
-            $('h4 i').removeClass('rotate_up').addClass('rotate_down');
-        } 
-
-        else {
-			$(this).addClass('toggled_on');	
-        	$(this).next(".toggle_info").slideDown(300);
-        	$(this).find("h4 i").addClass('rotate_up');
-        }
-  });
-});
-
+	 
+</script>		
+<!--
+<script>	
+iFrameResize({ log: true }, '#regframe');
+</script>
+-->
+<script>
 //Home Title  
 const masks = ['e', 'm', 'i-line', 'i-dot', 'l', 'y', 'and', 't', 'u', 'r', 'n', 'e-2', 'r-2']
 
@@ -916,7 +484,8 @@ masks.forEach((mask, index, el) => {
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
 })	
-
+</script>
+<script>
 	
 //var elem = document.querySelector('.m-p-g');
 //

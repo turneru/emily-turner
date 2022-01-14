@@ -849,6 +849,10 @@ deep blue - #2f2963
 	-webkit-animation-delay: 1.2s;
 	animation-delay: 1.2s;
 }
+.delay1300 {
+	-webkit-animation-delay: 1.32s;
+	animation-delay: 1.3s;
+}
 .delay1400 {
 	-webkit-animation-delay: 1.4s;
 	animation-delay: 1.4s;
@@ -857,9 +861,21 @@ deep blue - #2f2963
 	-webkit-animation-delay: 1.5s;
 	animation-delay: 1.5s;
 }
+.delay1600 {
+	-webkit-animation-delay: 1.6s;
+	animation-delay: 1.6s;
+}
+.delay1700 {
+	-webkit-animation-delay: 1.7s;
+	animation-delay: 1.7s;
+}
 .delay1800 {
 	-webkit-animation-delay: 1.8s;
 	animation-delay: 1.8s;
+}
+.delay1900 {
+	-webkit-animation-delay: 1.9s;
+	animation-delay: 1.9s;
 }
 .delay2000 {
 	-webkit-animation-delay: 2s;
