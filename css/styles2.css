@@ -531,6 +531,11 @@ p.home_date {
 	        animation: wobble-hor-top 0.8s both;
 }
 
+.bells2 {
+	margin-bottom: 20px;
+    margin-top: 11px;
+}
+
 .attire {
 	font-size: 15px;
     margin: 15px 0px 0px;
@@ -1402,12 +1407,6 @@ h4 {
     	overflow-x: hidden !important;
 	}
 	
-	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .Photos-container  {
-		padding: 75px 0px;
-		height: auto;
-		min-height: calc(100vh + 30px);
-	}
-	
 	h1 {
     	font-size: 60px;
 		padding-top: 0px;
@@ -1593,6 +1592,11 @@ h4 {
 	.WhenWhere-container {
 		background: url(../images/backgrounds/mobile/when_where2.jpg) no-repeat center center;
 		background-size: cover;
+		padding: 75px 0px;
+/*
+		height: auto;
+		min-height: calc(100vh + 30px);
+*/
 	}
 	
 	#WhenWhere h1 {
@@ -1629,8 +1633,14 @@ h4 {
 	.Travel-container {
 		background: url(../images/backgrounds/mobile/skyline_rise.jpg) no-repeat center center;
 		background-size: cover;
+		padding: 75px 0px;
+/*
+		height: auto;
+		min-height: calc(100vh + 30px);
+*/
 	}
 	
+/*
 	#Travel {
 		margin-top: -75px;
 	}
@@ -1638,10 +1648,16 @@ h4 {
 	#Travel h1 {
 		padding-top: 45px !important;
 	}
+*/
 	
 	.Registry-container {
 		background: url(../images/backgrounds/mobile/registry_bg.jpg) no-repeat center center;
 		background-size: cover;
+		padding: 75px 0px 0px;
+/*
+		height: auto;
+		min-height: calc(100vh + 30px);
+*/
 	}
 	
 	.Registry-container h1 {
@@ -1655,17 +1671,29 @@ h4 {
 	.RSVP-container {
 		background: url(../images/backgrounds/mobile/rsvp.jpg) no-repeat center center;
 		background-size: cover;
+		padding: 75px 0px;
+/*
+		height: auto;
+		min-height: calc(100vh + 30px);
+*/
 	}
 	
 	.FAQ-container {
 		background: url(../images/backgrounds/mobile/faq.jpg) no-repeat center center;
 		background-size: cover;
+		padding: 75px 0px 0px;
+/*
+		height: auto;
+		min-height: calc(100vh + 30px);
+*/
 	}
 	
+/*
 	#FAQ h1 {
 		padding-top: 45px !important;
 	}
 	
+*/
 	
 	.faq_content {
 		padding: 0;
@@ -1686,6 +1714,12 @@ h4 {
 		padding: 0;
 	}
 	
+	.Photos-container  {
+		padding: 75px 0px 0px;
+		height: auto;
+		min-height: calc(100vh + 30px);
+	}
+
 	.m-p-g__fullscreen {
     	top: 0px;
 	}
