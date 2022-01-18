@@ -850,11 +850,13 @@ $(document).ready(function() {
 	
 //In mobile adjust height of bg to fix jumping due to url bar hiding
 $(document).ready(function() {
-	if ($(window).width() > 768) {
+	if ($(window).width() < 768) {
 		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
-
+		var newMinH = ($(window).height() + 60);
+		console.log(newMinH);
+		
 		function resizeBackground() {
-			bg.height($(window).height() + 60);
+			bg.css('min-height', newMinH);
 		}
 
 		$(window).resize(resizeBackground);
