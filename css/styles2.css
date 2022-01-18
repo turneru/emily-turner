@@ -1924,14 +1924,6 @@ h4 {
 		min-height: 900px;
 	}
 */
-	.section-container, .fp-tableCell {
-		height: 100% !important;
-		min-height: 98vh;
-	}
-	
-	#F-wrapper.section-container {
-		min-height: 100px !important;
-	}
 	
 	.home {
 		background: url(../images/backgrounds/mobile/ET15_mobile400.jpg) no-repeat center center;

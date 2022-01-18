@@ -45,7 +45,7 @@
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/grid.css">
 		<link rel="stylesheet" href="css/hamburger.css">
-		<link rel="stylesheet" href="css/styles2.css?v=1.2">
+		<link rel="stylesheet" href="css/styles2.css?v=1.3">
 		<link rel="stylesheet" href="css/animation.css">
 		<link rel="stylesheet" href="css/fullpage.css">
 		
@@ -759,20 +759,22 @@
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;	
 	
 $(document).ready(function() {
-	$('#fullpage').fullpage({
-		//options here
-		licenseKey: '2684F9D6-3C2D4A4C-BF442AFB-CA786171',
-		responsiveHeight: 800,
-		responsiveWidth: 800,
-		scrollingSpeed: 900,
-		scrollOverflow: true,
-		anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eigthPage'],
-		menu: '#myMenu',
-		lockAnchors: true, 
-		//events
-		afterLoad: function(origin, destination, direction){
+	if(!isMobile) {
+	
+		$('#fullpage').fullpage({
+			//options here
+			licenseKey: '2684F9D6-3C2D4A4C-BF442AFB-CA786171',
+			responsiveHeight: 800,
+			responsiveWidth: 800,
+			scrollingSpeed: 900,
+			scrollOverflow: true,
+			anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eigthPage'],
+			menu: '#myMenu',
+			lockAnchors: true, 
+			//events
+			afterLoad: function(origin, destination, direction){
 
-			if(!isMobile) {
+			
 
 				if ($("#H-wrapper").hasClass("active")) {
 				   $(".nav-panel").addClass("navbar-no-bg");
@@ -840,11 +842,13 @@ $(document).ready(function() {
 				}
 			}
 			
-		}	
-	});
+			
+		});
 
 	//methods
 	//$.fn.fullpage.setAllowScrolling(false);
+	}	
+		
 });
 	
 	
