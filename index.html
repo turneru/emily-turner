@@ -159,7 +159,7 @@
 		</div>
 		
 		<!--- Our Story Section --->
-		<div id="OS-wrapper" class="OurStory-container section-container section" style="background-color: #fed7bb87;">
+		<div id="OS-wrapper" class="OurStory-container section-container section">
 			<section id="OurStory">
 				<h1>Our Story</h1>
 				<div id="timeline" class="desktop">					
@@ -400,7 +400,7 @@
 		</div>
 		<!--- Registry Section --->
 		<div id="R-wrapper" class="Registry-container section-container section">
-			<section id="Registry" style="height: 100vh; overflow: hidden;">
+			<section id="Registry">
 				<div class="container sub">
 					<div class="row">
 						<div class="twelve columns">
@@ -867,35 +867,35 @@ $(document).ready(function() {
 //	}
 //});    
 	
-$(document).ready(function () {
-    //run when page first loads
-	if ($(window).width() < 768) {
-		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
-		var windowH = ($(window).height() + 60);
-		var newMinH = windowH +"px";
-		
-		console.log(newMinH);
-		
-		bg.css('min-height', newMinH);
-
-	}
-	
-});
-
-$(window).resize(function () {
-    //run on every window resize
-	if ($(window).width() < 768) {
-		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
-		var windowH = ($(window).height() + 60);
-		var newMinH = windowH +"px";
-		
-		console.log(newMinH);
-		
-		bg.css('min-height', newMinH);
-
-	}
-	
-});	
+//$(document).ready(function () {
+//    //run when page first loads
+//	if ($(window).width() < 768) {
+//		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
+//		var windowH = ($(window).height() + 60);
+//		var newMinH = windowH +"px";
+//		
+//		console.log(newMinH);
+//		
+//		bg.css('min-height', newMinH);
+//
+//	}
+//	
+//});
+//
+//$(window).resize(function () {
+//    //run on every window resize
+//	if ($(window).width() < 768) {
+//		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
+//		var windowH = ($(window).height() + 60);
+//		var newMinH = windowH +"px";
+//		
+//		console.log(newMinH);
+//		
+//		bg.css('min-height', newMinH);
+//
+//	}
+//	
+//});	
 	
 	
 	

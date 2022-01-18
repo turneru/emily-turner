@@ -316,19 +316,13 @@ p.home_date {
 
 /* =============== Our Story styles ========================= 
    ========================================================*/
-#OurStory {
+
+
+.OurStory-container {
 	height: 100vh; 
 	overflow: hidden;
+	background-color: #fed7bb87;
 }
-	
-/*
-.OurStory-container {
-	height: 95vh;
-    min-height: 800px;
-    width: 100%;
-    overflow: hidden;
-}
-*/
 
 #OurStory > h1 {
 	padding-top: 50px;
@@ -1464,12 +1458,7 @@ h4 {
 	.OurStory-container {
 		padding: 45px 0px 25px;
 		height: auto;
-		min-height: calc(100vh + 100px);
-	}
-	
-	#OurStory {
 		min-height: calc(100vh + 180px);
-		overflow: visible;
 	}
 	
 	#OurStory > h1 {
@@ -1946,6 +1935,13 @@ h4 {
 	#OurStory {
 		min-height: calc(100vh + 360px);
 		overflow: visible;
+	}
+	
+	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .FAQ-container  {
+		padding: 75px 0px;
+		height: auto !important;
+/*		min-height: calc(100vh + 30px);*/
+		min-height: 98vh;
 	}
 	
 	.flexbox-slider .flexbox-slide {
