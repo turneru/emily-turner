@@ -1399,15 +1399,12 @@ h4 {
 	html, body {
 		overflow-y: visible !important;
     	overflow-x: hidden !important;
+		height: 100% !important;
 	}
 	
 	h1 {
     	font-size: 60px;
 		padding-top: 0px;
-	}
-	
-	.section-container {
-		transition: height 999999s;
 	}
 	
 	.home {
@@ -1927,19 +1924,28 @@ h4 {
 		min-height: 900px;
 	}
 */
+	.section-container, .fp-tableCell {
+		height: 100% !important;
+		min-height: 98vh;
+	}
+	
+	#F-wrapper.section-container {
+		min-height: 100px !important;
+	}
+	
 	.home {
 		background: url(../images/backgrounds/mobile/ET15_mobile400.jpg) no-repeat center center;
 		background-size: cover;
 	}
 
 	#OurStory {
-		min-height: calc(100vh + 360px);
+		min-height: calc(100vh + 375px);
 		overflow: visible;
 	}
 	
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .FAQ-container  {
 		padding: 75px 0px;
-		height: auto !important;
+/*		height: auto !important;*/
 /*		min-height: calc(100vh + 30px);*/
 		min-height: 98vh;
 	}
