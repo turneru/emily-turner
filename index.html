@@ -849,20 +849,55 @@ $(document).ready(function() {
 	
 	
 //In mobile adjust height of bg to fix jumping due to url bar hiding
-$(document).ready(function() {
+//$(function() {
+//	if ($(window).width() < 768) {
+//		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
+//		var windowH = ($(window).height() + 60);
+//		var newMinH = windowH +"px";
+//		
+//		console.log(newMinH);
+//		
+//		function resizeBackground() {
+//			bg.css('min-height', newMinH);
+//		}
+//
+//		$(window).resize(resizeBackground);
+//		resizeBackground();
+//		console.log(newMinH);
+//	}
+//});    
+	
+$(document).ready(function () {
+    //run when page first loads
 	if ($(window).width() < 768) {
 		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
-		var newMinH = ($(window).height() + 60);
+		var windowH = ($(window).height() + 60);
+		var newMinH = windowH +"px";
+		
 		console.log(newMinH);
 		
-		function resizeBackground() {
-			bg.css('min-height', newMinH);
-		}
+		bg.css('min-height', newMinH);
 
-		$(window).resize(resizeBackground);
-		resizeBackground();
 	}
-});    	
+	
+});
+
+$(window).resize(function () {
+    //run on every window resize
+	if ($(window).width() < 768) {
+		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
+		var windowH = ($(window).height() + 60);
+		var newMinH = windowH +"px";
+		
+		console.log(newMinH);
+		
+		bg.css('min-height', newMinH);
+
+	}
+	
+});	
+	
+	
 	
 $('.nav-btn:nth-of-type(1)').click(function(){
         event.preventDefault();
