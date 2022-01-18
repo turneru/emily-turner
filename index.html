@@ -45,7 +45,7 @@
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/grid.css">
 		<link rel="stylesheet" href="css/hamburger.css">
-		<link rel="stylesheet" href="css/styles2.css?v=1.1">
+		<link rel="stylesheet" href="css/styles2.css?v=1.2">
 		<link rel="stylesheet" href="css/animation.css">
 		<link rel="stylesheet" href="css/fullpage.css">
 		
@@ -846,6 +846,21 @@ $(document).ready(function() {
 	//methods
 	//$.fn.fullpage.setAllowScrolling(false);
 });
+	
+	
+//In mobile adjust height of bg to fix jumping due to url bar hiding
+$(document).ready(function() {
+	if ($(window).width() > 768) {
+		var bg = $("#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #P-wrapper");
+
+		function resizeBackground() {
+			bg.height($(window).height() + 60);
+		}
+
+		$(window).resize(resizeBackground);
+		resizeBackground();
+	}
+});    	
 	
 $('.nav-btn:nth-of-type(1)').click(function(){
         event.preventDefault();

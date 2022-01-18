@@ -1458,7 +1458,7 @@ h4 {
 	}
 	
 	.OurStory-container {
-		padding: 45px 0px 0px;
+		padding: 45px 0px 25px;
 		height: auto;
 		min-height: calc(100vh + 100px);
 	}
@@ -1753,11 +1753,13 @@ h4 {
         display: none;
     }
 
+/*
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .FAQ-container  {
 		padding: 75px 0px;
 		height: auto;
 		min-height: calc(100vh + 30px);
 	}
+*/
 	
 	h1 {
     	font-size: 60px;
@@ -1808,8 +1810,8 @@ h4 {
 	.OurStory-container {
 		padding: 50px 0px 0px;
 		margin: 55px 0px 0px;
-		min-height: 100vh;
-/*		min-height: calc(100vh + 30px);*/
+/*		min-height: 100vh;
+		min-height: calc(100vh + 30px);*/
 	}
 	
 	#OurStory > h1 {
@@ -1857,6 +1859,7 @@ h4 {
 		margin-right: 0px;
 	}
 	
+/*
 	#Travel {
 		margin-top: -75px;
 	}
@@ -1864,7 +1867,7 @@ h4 {
 	#Travel h1 {
 		padding-top: 45px;
 	}
-	  
+*/	  
 	#Travel .ten.columns {
 		width: 96%;
 	}  
@@ -1881,11 +1884,28 @@ h4 {
 	.faq_content {
 		margin: 25px;
 	}  
+	
+	h4 i {
+		right: 0px;
+		margin: -20px 0px 0px 0px;
+	}
+	  
+	.toggler {
+		min-height: 50px;
+		padding: 10px 5px 10px;
+		height: auto;
+	}
+	
+	.toggle_info p {
+		font-size: 15px;
+		line-height: normal;
+		padding: 0;
+	} 
 	  
 	.Photos-container  {
 		padding: 50px 0px 0px;
 		height: auto;
-		min-height: calc(100vh + 30px);
+/*		min-height: calc(100vh + 30px);*/
 	}
 	
 	.m-p-g__fullscreen {
@@ -1915,11 +1935,13 @@ h4 {
 	}
 */
 	
+/*
 	#OurStory {
 		min-height: calc(100vh + 360px);
 		overflow: visible;
 	}
 	
+*/
 	.flexbox-slider .flexbox-slide {
 		min-height: 215px;
 		height: 100%;
