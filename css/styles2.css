@@ -1938,8 +1938,8 @@ h4 {
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .FAQ-container  {
 		padding: 75px 0px;
 /*		height: auto !important;*/
-/*		min-height: calc(100vh + 30px);*/
-		min-height: 98vh;
+		min-height: calc(100vh + 30px);
+/*		min-height: 98vh;*/
 	}
 	
 	.flexbox-slider .flexbox-slide {

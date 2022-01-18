@@ -45,7 +45,7 @@
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/grid.css">
 		<link rel="stylesheet" href="css/hamburger.css">
-		<link rel="stylesheet" href="css/styles2.css?v=1.3">
+		<link rel="stylesheet" href="css/styles2.css?v=1.4">
 		<link rel="stylesheet" href="css/animation.css">
 		<link rel="stylesheet" href="css/fullpage.css">
 		
@@ -759,7 +759,6 @@
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;	
 	
 $(document).ready(function() {
-	if(!isMobile) {
 	
 		$('#fullpage').fullpage({
 			//options here
@@ -774,13 +773,13 @@ $(document).ready(function() {
 			//events
 			afterLoad: function(origin, destination, direction){
 
-			
+			if(!isMobile) {
 
 				if ($("#H-wrapper").hasClass("active")) {
 				   $(".nav-panel").addClass("navbar-no-bg");
 				} 
 			
-			   if ($("#OS-wrapper").hasClass("active")) {
+			    if ($("#OS-wrapper").hasClass("active")) {
 					$(".nav-panel").removeClass("navbar-no-bg");
 					$("#OurStory > h1").addClass("visible slide-in-bottom-small");
 					$("#timeline").addClass("visible");
@@ -790,7 +789,7 @@ $(document).ready(function() {
 					$('.tl-item:nth-of-type(4)').addClass("delay500 slide-in-left");
 				} 
 			
-		   	  if ($("#WW-wrapper").hasClass("active")) { 
+		   	    if ($("#WW-wrapper").hasClass("active")) { 
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".WhenWhere-container h1").addClass("visible slide-in-bottom-small"); 
 					$('.ceremony').addClass('visible slide-in-left delay300');
@@ -803,7 +802,7 @@ $(document).ready(function() {
 							});
 				}
 			
-			   if ($("#T-wrapper").hasClass("active")) { 
+			    if ($("#T-wrapper").hasClass("active")) { 
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".Travel-container h1").addClass("visible slide-in-bottom-small");
 					$(".hotels").addClass("visible slide-in-bottom delay100");
@@ -817,38 +816,34 @@ $(document).ready(function() {
 							});
 				}
 			
-			   if ($("#R-wrapper").hasClass("active")) {
+			    if ($("#R-wrapper").hasClass("active")) {
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".Registry-container h1").addClass("visible slide-in-bottom-small");
 					$(".registry_content").addClass("visible slide-in-bottom delay100");
 				} 
 			
-			   if ($("#RSVP-wrapper").hasClass("active")) {
+			    if ($("#RSVP-wrapper").hasClass("active")) {
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".RSVP-container h1").addClass("visible slide-in-bottom-small");
 					$(".rsvp_wrapper").addClass("visible slide-in-bottom delay100");
 				}
 			
-			   if ($("#FAQ-wrapper").hasClass("active")) {
+			    if ($("#FAQ-wrapper").hasClass("active")) {
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".FAQ-container h1").addClass("visible slide-in-bottom-small");
 					$(".faq_content").addClass("visible slide-in-bottom delay100");
 				}
 			
-			   if ($("#P-wrapper").hasClass("active")) {
+				if ($("#P-wrapper").hasClass("active")) {
 				    $(".nav-panel").removeClass("navbar-no-bg");
 					$(".Photos-container h1").addClass("visible slide-in-bottom-small");
 					$(".m-p-g").addClass("visible slide-in-bottom delay100");
 				}
 			}
+		}	
 			
-			
-		});
+	});
 
-	//methods
-	//$.fn.fullpage.setAllowScrolling(false);
-	}	
-		
 });
 	
 	
