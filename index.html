@@ -40,7 +40,8 @@
 		<script src="https://kit.fontawesome.com/31d108e09a.js"></script>
 		<script type="text/javascript" src="js/fullpage.js"></script>
 		<script type="text/javascript" src="js/scrolloverflow.js"></script>
-		
+		<script type="text/javascript" src="js/slick.min.js"></script>
+
 		<!--- CSS --->
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/grid.css">
@@ -48,6 +49,7 @@
 		<link rel="stylesheet" href="css/styles2.css?v=1.4">
 		<link rel="stylesheet" href="css/animation.css">
 		<link rel="stylesheet" href="css/fullpage.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 		
 		<!--- Fonts --->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -523,7 +525,7 @@
 		<div id="P-wrapper" class="Photos-container section-container section fp-auto-height">
 			<section id="Photos">
 					<h1>Photos</h1>
-					<div class="m-p-g">
+					<div class="m-p-g desktop">
 						<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 							<img src="images/photos/ET-18small.jpg" data-full="images/photos/ET-18.jpg" loading="lazy" class="m-p-g__thumbs-img tall" />
 							<img src="images/photos/CoupleEmilyTurner-13small.jpg" data-full="images/photos/CoupleEmilyTurner-13.jpg" loading="lazy" class="m-p-g__thumbs-img wide" />
@@ -604,6 +606,90 @@
 						<div class="m-p-g__fullscreen"></div>
 					</div>   
 					<p>&nbsp;</p>
+					<div class="photo-rotator-wrapper mobile">
+						<div class="photo-rotator">
+							<div><img data-lazy="images/photos/ET-18.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-13.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-11.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-50.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-20.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-5.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-14.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P6.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-16.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-51.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-24.jpg"  class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-2.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-7.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-12.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-2.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-22.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-17.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-43.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-9.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-16.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-19.jpg" class="img-responsive tall" />						</div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-33.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-15.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-10.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-25.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-20.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-3.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-54.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-4.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P2.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P3.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-5.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-3.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-36.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-P4.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-46.1.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-P7.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P8.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P9.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P10.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-42.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-P5.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-58.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P13.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P11.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P12.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-44.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-P14.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-40.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-P15.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-P16.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-6.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-17.jpg" class="img-responsive tall" />	</div>
+							<div><img data-lazy="images/photos/ET-P1.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-56.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/CoupleEmilyTurner-59.jpg" class="img-responsive wide" /></div>
+							<div><img data-lazy="images/photos/ET-8.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-13.jpg" class="img-responsive tall" /></div>
+							<div><img data-lazy="images/photos/ET-1.jpg" class="img-responsive tall" /></div>
+						</div>
+					</div>
+<script>
+$('.photo-rotator').slick({
+	dots: false,
+	arrows: true,
+	lazyLoad: 'ondemand',
+	infinite: true,
+	speed: 300,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+    //autoplay: true,
+    //autoplaySpeed: 2000,
+	fade: true,
+    cssEase: 'linear',
+	//centerMode: true,
+	//centerPadding: '40px',
+	//variableWidth: true,
+	adaptiveHeight: true
+});
+
+</script>
+				
 			</section>
 		</div>
 		<div id="F-wrapper" class="Footer-container section-container section fp-auto-height">
@@ -732,19 +818,19 @@
 						$('.m-p-g__controls').css('top', topCalc);
 					}
 			
-				$('.m-p-g__thumbs img').click(function(){
-						$('.m-p-g__fullscreen').css('top', topCalc);
-						//$('.m-p-g__fullscreen').css('top', resulty);
-						$('.m-p-g__controls').css('top', topCalc);
-				});
-				
-				$(document).ready(function() {	
-					if($(window).width() < 769) {	
-						$('.m-p-g__thumbs img').click(function(){
-						 event.preventDefault();	
-						});
-					}
-				});
+//				$('.m-p-g__thumbs img').click(function(){
+//						$('.m-p-g__fullscreen').css('top', topCalc);
+//						//$('.m-p-g__fullscreen').css('top', resulty);
+//						$('.m-p-g__controls').css('top', topCalc);
+//				});
+//				
+//				$(document).ready(function() {	
+//					if($(window).width() < 769) {	
+//						$('.m-p-g__thumbs img').click(function(){
+//						 event.preventDefault();	
+//						});
+//					}
+//				});
 				
 			}
 		}
@@ -752,10 +838,6 @@
 			
 		//}
 	
-</script>
-		
-
-<script>
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;	
 	
 $(document).ready(function() {

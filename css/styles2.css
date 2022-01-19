@@ -316,11 +316,16 @@ p.home_date {
 
 /* =============== Our Story styles ========================= 
    ========================================================*/
-
-
-.OurStory-container {
+#OurStory {
 	height: 100vh; 
 	overflow: hidden;
+}
+
+.OurStory-container {
+/*
+	height: 100vh; 
+	overflow: hidden;
+*/
 	background-color: #fed7bb87;
 }
 
@@ -948,10 +953,12 @@ h4 i {
 
 /* =============== Photos styles ========================= 
    ========================================================*/
+/*
 #P-wrapper {
 	min-height: 100% !important;
 	height: 100% !important;
 }
+*/
 
 .Photos-container {
 /*	background: url("../images/backgrounds/bg_ring_leaf.jpg") no-repeat top center;*/
@@ -974,6 +981,7 @@ h4 i {
 	max-width: 100%;
 	margin: 0 auto;
 }
+
 .m-p-g__thumbs-img {
 	margin: 0;
 	float: left;
@@ -1994,6 +2002,37 @@ h4 {
 		line-height: normal;
 	}
 	
+	#P-wrapper {
+		padding-bottom: 75px;
+	}
+	
+	.slick-slide img.wide {
+		margin: 90px 0px;
+	}
+	
+	.slick-slide img {
+		padding: 0px;
+	}
+	
+	.photo-rotator-wrapper.mobile {
+		min-height: 585px;
+	}
+	
+	.slick-prev {
+		position: fixed;
+    	bottom: 105px;
+		z-index: 99;
+	}
+	
+	.slick-next {
+		position: fixed;
+    	bottom: 105px;
+		z-index: 99;
+		right: 0;
+	}
+					
+	
+/*
 	.m-p-g__fullscreen {
 		top: 0px;
 		position: relative;
@@ -2001,7 +2040,7 @@ h4 {
 	}
 	
 	.m-p-g__fullscreen-img {
-/*		padding: 10px;*/
+		padding: 10px;
 		max-width: 96vw;
 	}
 	
@@ -2027,6 +2066,7 @@ h4 {
 		padding: 0;
 		margin: 0;
 	}
+*/
 	
 	.footer {
 		padding: 15px 60px;
