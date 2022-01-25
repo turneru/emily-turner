@@ -862,12 +862,13 @@ p.home_date {
 
 .iframe_container {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
-iframe {
+#RSVP iframe {
     width: 100%;
-    min-height: 675px;
+    min-height: 590px;
+    height: 100%;
     overflow: auto;
 }
 
@@ -1717,7 +1718,45 @@ h4 {
 		height: auto;
 		min-height: calc(100vh + 30px);
 	}
+	
+	.photo-rotator-wrapper.mobile {
+		min-height: 730px;
+	}
+	
+	button.slick-arrow {
+		position: fixed;
+    	bottom: 515px;
+		z-index: 99;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.3);
+		transition: all 0.25s ease-out;
+		min-width: inherit;
+		border-color: transparent;
+	}
+	
+	.slick-prev {
+		position: fixed;
+    	bottom: 105px;
+		z-index: 99;
+	}
+	
+	.slick-next {
+		position: fixed;
+    	bottom: 105px;
+		z-index: 99;
+		right: 0;
+	}
+	
+	.slick-slide img {
+		margin: 0 auto;
+	}
 
+/*
 	.m-p-g__fullscreen {
     	top: 0px;
 	}
@@ -1737,6 +1776,7 @@ h4 {
 		width: 25px;
     	height: 25px;
 	}  	
+*/
 }
 
 @media only screen 
@@ -1750,7 +1790,7 @@ h4 {
     .desktop, .rsvp_btn {
         display: none;
     }
-
+	  
 /*
 	.WhenWhere-container, .Travel-container, .Registry-container, .RSVP-container, .FAQ-container  {
 		padding: 75px 0px;
@@ -1789,8 +1829,8 @@ h4 {
 		opacity: 1;
 	}
 	  
-	 .WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img, .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv, 
-	 .Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire, 
+	 #OurStory > h1, #timeline, .WhenWhere-container h1, .ceremony, .reception, .ceremony img, .reception img, .ceremony h3, .reception h3, .ceremony p, .reception p, #clockdiv, 
+	 .Travel-container h1, .hotels, p.hotel-intro, .hotels img, .hotels .row h3, .hotels .row p:nth-of-type(1), .hotels .row p:nth-of-type(2), p.attire, .rsvp_wrapper, .faq_content,
 	 .Photos-container h1, .m-p-g{
 		opacity: 1;
 	}

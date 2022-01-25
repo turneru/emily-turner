@@ -433,15 +433,32 @@
 							<p style="padding-top:25px;">Check back soon to RSVP!</p>
 						</div>
 						<div class="three columns">&nbsp;</div>
+					
+<!--
+				<div class="rsvp_wrapper">
+					<div class="row no-margin">
+						<div class="two columns desktop">&nbsp;</div>
+						<div class="eight columns">
+							<p>Please enter your first and last name to begin the RSVP form.
+ 							If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</p>
+						</div>
+						<div class="two columns desktop">&nbsp;</div>
 					</div>
-				<!--<div class="rsvp_wrapper">
-						<p>Please enter your first and last name to unlock your RSVP form.
- 						If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</p>
 						<div class="iframe_container">
 							<iframe src="https://emilyturner.app.rsvpify.com/" title="RSVP" frameborder="0"></iframe>
 						</div>
 
-					</div>-->
+					</div>
+-->
+					
+<!--
+						<script type="text/javascript" src="https://app.rsvpify.com/embed/500388447" scrolling="yes"></script>
+						<script type="text/javascript" src="https://app.rsvpify.com/js/iframeResizer.min.js"></script>
+						<script type="text/javascript">
+							iFrameResize({autoResize: true,checkOrigin: false,heightCalculationMethod: 'max', enablePublicMethods: true}, "#RSVPifyIFrame");
+					</script>
+-->
+					</div>
 				</div>
 				
 			</section>	
@@ -608,8 +625,8 @@
 					<p>&nbsp;</p>
 					<div class="photo-rotator-wrapper mobile">
 						<div class="photo-rotator">
-							<div><img data-lazy="images/photos/ET-18.jpg" class="img-responsive tall" /></div>
-							<div><img data-lazy="images/photos/CoupleEmilyTurner-13.jpg" class="img-responsive wide" /></div>
+							<div><img src="images/photos/ET-18.jpg" class="img-responsive tall" /></div>
+							<div><img src="images/photos/CoupleEmilyTurner-13.jpg" class="img-responsive wide" /></div>
 							<div><img data-lazy="images/photos/ET-11.jpg" class="img-responsive tall" /></div>
 							<div><img data-lazy="images/photos/CoupleEmilyTurner-50.jpg" class="img-responsive tall" /></div>
 							<div><img data-lazy="images/photos/CoupleEmilyTurner-20.jpg" class="img-responsive wide" /></div>
@@ -666,30 +683,29 @@
 							<div><img data-lazy="images/photos/CoupleEmilyTurner-59.jpg" class="img-responsive wide" /></div>
 							<div><img data-lazy="images/photos/ET-8.jpg" class="img-responsive tall" /></div>
 							<div><img data-lazy="images/photos/ET-13.jpg" class="img-responsive tall" /></div>
-							<div><img data-lazy="images/photos/ET-1.jpg" class="img-responsive tall" /></div>
+							<div><img src="images/photos/ET-1.jpg" class="img-responsive tall" /></div>
 						</div>
 					</div>
-<script>
-$('.photo-rotator').slick({
-	dots: false,
-	arrows: true,
-	lazyLoad: 'ondemand',
-	infinite: true,
-	speed: 300,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-    //autoplay: true,
-    //autoplaySpeed: 2000,
-	fade: true,
-    cssEase: 'linear',
-	//centerMode: true,
-	//centerPadding: '40px',
-	//variableWidth: true,
-	adaptiveHeight: true
-});
+					<script>
+					$('.photo-rotator').slick({
+						dots: false,
+						arrows: true,
+						lazyLoad: 'ondemand',
+						infinite: true,
+						speed: 300,
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						//autoplay: true,
+						//autoplaySpeed: 2000,
+						fade: true,
+						cssEase: 'linear',
+						//centerMode: true,
+						//centerPadding: '40px',
+						//variableWidth: true,
+						adaptiveHeight: true
+					});
 
-</script>
-				
+					</script>
 			</section>
 		</div>
 		<div id="F-wrapper" class="Footer-container section-container section fp-auto-height">
@@ -783,61 +799,7 @@ $('.photo-rotator').slick({
 		var gallery = new MaterialPhotoGallery(elem);
 	});
 	
-		var myFunction = function() {
-			
-			var y;
-			var topCalc;
-			var resulty;
-			
-			if ($("#P-wrapper").hasClass("active")) {
 
-				//$(window).on('mousewheel', function(){
-					var obj = $('.fp-scroller');
-					 var transformMatrix = obj.css("-webkit-transform") ||
-					   obj.css("-moz-transform")    ||
-					   obj.css("-ms-transform")     ||
-					   obj.css("-o-transform")      ||
-					   obj.css("transform");
-					 var matrix = transformMatrix.replace(/[^0-9\-.,]/g, '').split(',');
-					 var x = matrix[12] || matrix[4];//translate x
-					 var y = matrix[13] || matrix[5];//translate y
-
-					console.log("transform y is:" + y);
-
-					var resulty = -y;
-					console.log(resulty);
-				
-					//var topCalc = "calc(100vh + (" + y + "px / 2)";
-					//var topCalc = "calc(20vh + (" + resulty + "px)";
-					var topCalc = "calc(" + resulty + "px - 150px)";
-					console.log(topCalc);
-
-				if ($('.m-p-g__fullscreen').hasClass('active')) {
-						$(this).css('top', topCalc);
-						//$(this).css('top', resulty);
-						$('.m-p-g__controls').css('top', topCalc);
-					}
-			
-//				$('.m-p-g__thumbs img').click(function(){
-//						$('.m-p-g__fullscreen').css('top', topCalc);
-//						//$('.m-p-g__fullscreen').css('top', resulty);
-//						$('.m-p-g__controls').css('top', topCalc);
-//				});
-//				
-//				$(document).ready(function() {	
-//					if($(window).width() < 769) {	
-//						$('.m-p-g__thumbs img').click(function(){
-//						 event.preventDefault();	
-//						});
-//					}
-//				});
-				
-			}
-		}
-		setInterval(myFunction, 1000); // call every 1000 milliseconds
-			
-		//}
-	
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;	
 	
 $(document).ready(function() {
@@ -926,6 +888,55 @@ $(document).ready(function() {
 			
 	});
 
+		var myFunction = function() {
+			
+			var y;
+			var topCalc;
+			var resulty;
+			
+			if ($("#P-wrapper").hasClass("active")) {
+				
+				
+				//$(window).on('mousewheel', function(){
+					var obj = $('.fp-scroller');
+					var transformMatrix = obj.css("transform");
+					console.log("transformMatrix is:" + transformMatrix);
+				
+					var matrix = transformMatrix.replace(/[^0-9\-.,]/g, '').split(',');
+					console.log("matrix is:" + matrix);
+				
+					var x = matrix[12] || matrix[4];//translate x
+					var y = matrix[13] || matrix[5];//translate y
+
+					console.log("transform y is:" + y);
+
+					var resulty = -y;
+					console.log(resulty);
+				
+					//var topCalc = "calc(100vh + (" + y + "px / 2)";
+					//var topCalc = "calc(20vh + (" + resulty + "px)";
+					var topCalc = "calc(" + resulty + "px - 150px)";
+					console.log(topCalc);
+
+				if ($('.m-p-g__fullscreen').hasClass('active')) {
+						$(this).css('top', topCalc);
+						//$(this).css('top', resulty);
+						$('.m-p-g__controls').css('top', topCalc);
+					}
+			
+//				$('.m-p-g__thumbs img').click(function(){
+//						$('.m-p-g__fullscreen').css('top', topCalc);
+////						//$('.m-p-g__fullscreen').css('top', resulty);
+//						$('.m-p-g__controls').css('top', topCalc);
+////				});				
+				
+			}
+		}
+		setInterval(myFunction, 4000); // call every 1000 milliseconds
+			
+		//}
+		
+	
 });
 	
 	

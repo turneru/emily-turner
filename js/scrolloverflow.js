@@ -915,8 +915,8 @@ IScroll.prototype = {
 
 /* REPLACE START: _translate */
 
-            this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
-
+            this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)';
+			 //this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
 /* REPLACE END: _translate */
 
         } else {
@@ -2077,7 +2077,8 @@ Indicator.prototype = {
         this.y = y;
 
         if ( this.scroller.options.useTransform ) {
-            this.indicatorStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.scroller.translateZ;
+            this.indicatorStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)';
+			//this.indicatorStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
         } else {
             this.indicatorStyle.left = x + 'px';
             this.indicatorStyle.top = y + 'px';
