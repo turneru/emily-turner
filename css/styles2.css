@@ -1499,7 +1499,11 @@ h4 {
 	  
 	.WhenWhere-container {
     	min-height: 95vh;
-	} 
+	}
+	  
+	#WhenWhere h1 {
+    	padding-top: 75px;
+	}   
 	
 	.ceremony, .reception, .hotels, .registry_content {
 		padding: 10px 10px;
@@ -1537,11 +1541,11 @@ h4 {
 	#Travel {
 		margin-top: -75px;
 	}
-
+*/	
 	#Travel h1 {
-		padding-top: 45px;
+		padding-top: 75px;
 	}
-*/	  
+  
 	#Travel .ten.columns {
 		width: 96%;
 	}  
@@ -1549,12 +1553,7 @@ h4 {
 	.hotels h3 {
 		line-height: 30px;
 	}  
-	  
-	.RSVP-container {
-		min-height: 95vh;
-	}
-	   
-	  
+
 	.registry_content {
 		padding: 20px 20px;
 		margin: 50px 20px;
@@ -1572,7 +1571,11 @@ h4 {
 		height: auto;
 	}
 	  
-	#FAQ-wrapper .fp-auto-height.fp-section {
+	#RSVP h1 {
+		padding-top: 75px;
+	}  
+	  
+	#FAQ-wrapper.fp-auto-height.fp-section {
 		height: inherit !important;
 	}
 	  
@@ -1580,6 +1583,10 @@ h4 {
 		min-height: 95vh;
 		overflow: hidden;
 	}
+	  
+	#FAQ h1 {
+		padding-top: 35px;
+	}   
 	
 	.FAQ-container {
 		background: url(../images/backgrounds/mobile/faq.jpg) no-repeat center center;
@@ -1592,8 +1599,8 @@ h4 {
 	}  
 	
 	h4 i {
-		right: 0px;
-		margin: -20px 0px 0px 0px;
+		right: 25px;
+    	margin: -10px 0px 0px 0px;
 	}
 	  
 	.toggler {
@@ -1617,6 +1624,10 @@ h4 {
 	
 	.photo-rotator-wrapper.mobile {
 		min-height: 730px;
+	}
+	  
+	.slick-track {
+		min-height: 735px;
 	}
 	
 	button.slick-arrow {
