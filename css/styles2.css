@@ -1423,6 +1423,14 @@ h4 {
 		top: 0;
 		height: 40px;
 	}
+	  
+	#home {
+		height: 95vh;
+	}
+	  
+	.intro_text {
+		padding: 0px 0px 40px;
+	}
 
 	.home.section-container h1 {
 		margin-top: 75px;
@@ -1531,6 +1539,7 @@ h4 {
 		background-size: cover;
 		padding: 75px 0px;
 		height: auto;
+		min-height: 95vh;
 /*		min-height: calc(100vh + 30px);*/
 	}
 	
@@ -1539,9 +1548,8 @@ h4 {
 		background-size: cover;
 		padding: 75px 0px 0px;
 		height: auto;
-/*
-		min-height: calc(100vh + 30px);
-*/
+		min-height: 95vh;
+/*		min-height: calc(100vh + 30px); */
 	}  
 	  
 	.faq_content {
@@ -1568,26 +1576,46 @@ h4 {
 	.Photos-container  {
 		padding: 50px 0px 0px;
 		height: auto;
-/*		min-height: calc(100vh + 30px);*/
+		min-height: 95vh;
+/*		min-height: calc(100vh + 30px); */
 	}
 	
-	.m-p-g__fullscreen {
-    	top: 0px;
-		position: relative;
+	.photo-rotator-wrapper.mobile {
+		min-height: 730px;
 	}
 	
-	.m-p-g__controls-close {
-		right: -35px;
-		top: 16vh;
+	button.slick-arrow {
+		position: fixed;
+    	bottom: 515px;
+		z-index: 99;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.3);
+		transition: all 0.25s ease-out;
+		min-width: inherit;
+		border-color: transparent;
 	}
-	  
-	.m-p-g__btn {
-		background: rgb(0 0 0 / 40%);
+	
+	.slick-prev {
+		position: fixed;
+    	bottom: 105px;
+		z-index: 99;
 	}
-	  
-	.m-p-g__btn:hover {
-		background: rgb(0 0 0 / 40%);
-	}  
+	
+	.slick-next {
+		position: fixed;
+    	bottom: 105px;
+		z-index: 99;
+		right: 0;
+	}
+	
+	.slick-slide img {
+		margin: 0 auto;
+	}
 }
 
 @media only screen and (max-width: 768px) {
