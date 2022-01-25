@@ -1414,6 +1414,7 @@ h4 {
 	.home {
 		background: url(../images/home/ET15_mobile.jpg) no-repeat center center;
 		background-size: cover;
+		max-height: 100vh;
 	}
 	
 	.home_menu_bg {
@@ -1429,7 +1430,7 @@ h4 {
 	}
 	  
 	.intro_text {
-		padding: 0px 0px 40px;
+		padding: 0px 0px 55px;
 	}
 
 	.home.section-container h1 {
@@ -1461,19 +1462,31 @@ h4 {
 	}
 	
 	.OurStory-container {
-		padding: 50px 0px 0px;
-		margin: 55px 0px 0px;
-/*		min-height: 100vh;
-		min-height: calc(100vh + 30px);*/
+		padding: 0px;
+		margin: 0px;
+		min-height: 95vh;
+/*		min-height: calc(100vh + 30px);*/
+	}
+	  
+	#OurStory {
+		height: 96vh;
+		overflow: hidden;
 	}
 	
 	#OurStory > h1 {
 		padding-top: 0px;
 		text-shadow: none;
+		top: 0;
+	}
+	  
+	#timeline {
+		top: 0;
+		height: 95vh;
+		min-height: 95vh;
 	}
 	  
 	 .tl-item {
-		height: 100vh;
+		height: 90vh;
 	}
 	  
 	 .tl-item:hover {
@@ -1541,6 +1554,16 @@ h4 {
 		height: auto;
 		min-height: 95vh;
 /*		min-height: calc(100vh + 30px);*/
+	}
+	  
+	#RSVP {
+		min-height: 95vh;
+		overflow: hidden;
+	}  
+	  
+	#FAQ {
+		min-height: 95vh;
+		overflow: hidden;
 	}
 	
 	.FAQ-container {
