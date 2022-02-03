@@ -30,6 +30,17 @@
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-MP7HZRC');</script>
 		<!-- End Google Tag Manager -->
+
+		<!--- Fonts --->
+		<link rel="preload" href="fonts/Amalfi_Coast.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="fonts/Amalfi_Coast.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="fonts/Amalfi_Coast.otf" as="font" type="font/opentype" crossorigin>
+		<link rel="preload" href="fonts/Amalfi_Coast.ttf" as="font" type="font/truetype" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 		
 		<!--- JS --->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -51,13 +62,6 @@
 		<link rel="stylesheet" href="css/fullpage.css">
 		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 		
-		<!--- Fonts --->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
@@ -145,16 +149,23 @@
 				<div class="home_menu_bg mobile"></div>
 				<div class="intro_text center">
 					<!--- Desktop Intro Text --->
+<!--
 					<svg class="turner-emily desktop" viewBox="0 0 696.23 141.37">
 					   <use xlink:href="#e-and-t"></use>
 					</svg>
-					<p class="married desktop fade-in-fwd delay3200">ARE GETTING MARRIED</p>
-					<p class="home_date desktop fade-in-fwd delay3500">June 18th, 2022</p>
+-->
+					<div class="logo desktop">
+						<img src="images/home/et_title.png" class="img-responsive fade-in-fwd delay400" alt="Emily and Turner">
+					</div>
+					<p class="married desktop fade-in-fwd delay800">ARE GETTING MARRIED</p>
+					<p class="home_date desktop fade-in-fwd delay1200">Saturday June 18th, 2022</p>
 					
 					<!--- Mobile Intro Text--->
-					<h1 class="mobile fade-in-fwd delay500">Emily <span>&amp;</span> Turner</h1>
-					<p class="mobile married fade-in-fwd delay1000">ARE GETTING MARRIED</p>
-					<p class="mobile home_date fade-in-fwd delay1500">June 18th, 2022</p>
+					<div class="logo mobile">
+						<img src="images/home/et_title_mobile.png" class="img-responsive fade-in-fwd delay400" alt="Emily and Turner">
+					</div>
+					<p class="married mobile fade-in-fwd delay800">ARE GETTING MARRIED</p>
+					<p class="home_date mobile fade-in-fwd delay1200">Saturday June 18th, 2022</p>
 					<div id="end-home"></div>
 				</div>
 			</section>
@@ -404,7 +415,7 @@
 		<div id="R-wrapper" class="Registry-container section-container section">
 			<section id="Registry">
 				<div class="container sub">
-					<div class="row">
+					<div class="row no-margin">
 						<div class="twelve columns">
 							<h1>Registry</h1>
 							<div class="registry_content">

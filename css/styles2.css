@@ -1,6 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+	font-family: 'Amalfi Coast';
+	src: url('../fonts/Amalfi_Coast.woff2') format("woff2"),	
+	url('../fonts/Amalfi_Coast.woff') format('woff'),
+	url(../fonts/Amalfi_Coast.otf) format("opentype"),
+	url('../fonts/Amalfi_Coast.ttf') format('truetype'); 
+	font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -156,7 +165,7 @@ nav {
 .nav-btn.active .hvr-underline-from-center:before {
 	left: 5px;
 	right: 5px;
-	background: #548c2f;
+	background: #7d995a;
 }
 
 .rsvp_btn {
@@ -205,11 +214,18 @@ nav {
 }
 
 .intro_text {
-	background: linear-gradient(180deg, rgba(255,255,255,0) 3%, rgba(255,255,255,.3) 25%, rgba(255,255,255,.6) 50%, rgba(255,255,255,.9) 100%);
+	background: linear-gradient(180deg, 
+		rgba(255,255,255,.05) 2%,
+		rgba(255,255,255,.1) 10%,
+		rgba(255,255,255,.2) 15%,
+		rgba(255,255,255,.25) 20%, 
+		rgba(255,255,255,.35) 30%, 
+		rgba(255,255,255,.6) 50%, 
+		rgba(255,255,255,.9) 90%);
     width: 100%;
     position: absolute;
     bottom: 0;
-    padding: 5px 0px 40px;
+    padding: 0px 0px 30px;
 }
 
 .turner-emily {
@@ -287,12 +303,14 @@ svg.hdn {
 	padding-top: 0;
 }
 
+/*
 .home.section-container h1 span {
 	font-size: 90px;
     font-family: 'Parisienne', cursive;
     margin-right: -15px;
 	color: #f96674;
 }
+*/
 
 .home.section-container p {
     font-family: 'Cabin', sans-serif;
@@ -302,16 +320,19 @@ svg.hdn {
 }
 
 p.married {
-	font-size: 24px;
-    letter-spacing: 10px;
+	font-size: 20px;
+    letter-spacing: 4px;
+    margin-top: 7px;
+    margin-bottom: 12px !important;
 }            
 
 p.home_date {
-    font-size: 42px;
-    color: #548c2f !important;
+/*    color: #548c2f !important;*/
+	font-size: 30px;
+    color: #7c9959 !important;
     margin-bottom: 0 !important;
     text-transform: uppercase;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
 }
 
 /* =============== Our Story styles ========================= 
@@ -331,7 +352,7 @@ p.home_date {
 
 #OurStory > h1 {
 	padding-top: 50px;
-	top: 35px;
+    top: 105px;
 }
 
 #OurStory > h1, #timeline {
@@ -518,6 +539,14 @@ p.home_date {
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 20px;
+}
+
+.ceremony h3, .reception h3 {
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-family: 'Amalfi Coast', 'Dancing Script', cursive;
+    margin-bottom: 20px;
 }
 
 .glasses:hover {
@@ -768,14 +797,19 @@ p.home_date {
 }
 
 .Registry-container h1 {
-	padding-top: 75px;
+	margin-top: 75px;
+    padding-top: 0;
+    margin-bottom: 0;
+    display: block;
+    position: relative;
+    z-index: 999;
 }
 
 .registry_content {
 	text-align: center;
     padding: 10px;
     background-color: #fff;
-    margin: 15px 0px;
+    margin: 10px 0px 0px;
     border: 1px solid #eee;
     z-index: 500;
     position: relative;
@@ -821,7 +855,7 @@ p.home_date {
 	width: 100%;
 	height: 100%;
 	margin-top: -5px;
-	min-height: 750px;
+	min-height: 650px;
 }
 
 #myregsitry_embeded_iframe {
@@ -882,6 +916,11 @@ p.home_date {
 	background: url("../images/backgrounds/bg_pink_flowers_light.jpg") no-repeat top right;
     background-size: cover;
 }	
+
+.FAQ-container h1 {
+	padding-top: 90px;
+    margin-bottom: 30px;
+}
 						
 .faq_content {
     padding: 25px;
@@ -904,6 +943,15 @@ p.home_date {
 	margin-bottom: 3px;
 /*    border-bottom: 2px solid #f6b242;*/
 }
+
+.toggler {
+	transition: .5s;
+    background-color: rgb(125 153 90 / 15%);
+}
+
+.toggler:hover {
+	background-color: #548c2f;
+}
 						
 .toggled_on {
 	background-color: #fff;
@@ -914,10 +962,19 @@ p.home_date {
     width: 100%;
     margin-bottom: 0;
     color: #454545;
+	transition: .5s;
+}
+
+.toggler:hover h4 {
+	color: #fff;
+}
+
+.toggler.toggled_on:hover {
+	background-color: #fff;
 }
 						
 .toggler.toggled_on h4 {
-    color: #f96574;
+    color: #548c2f;
 }						
 
 .toggle_info {
@@ -939,10 +996,20 @@ h4 i {
     color: #454545;
     padding: 10px;
 }						
-						
+
+.toggler:hover h4 i {
+	color: #fff;
+}
+
 .toggled_on h4 i {
 	color: #f96574;
+	color: #548c2f;
 }
+
+.toggler.toggled_on:hover h4 i{
+	color: #548c2f;
+}
+
 .rotate_down {
     transform: rotate(0deg);
     transition: .5s;
@@ -1160,12 +1227,13 @@ h4 i {
    ========================================================*/
 
 h1 {
-    font-family: 'Dancing Script', cursive;
-/*    font-family: 'Parisienne', cursive;*/
-    font-size: 75px;
+	font-family: 'Amalfi Coast', 'Dancing Script', cursive;
+    font-size: 60px;
     color: #f96574;
     text-align: center;
-	padding-top: 100px;
+    padding-top: 110px;
+    text-transform: lowercase;
+    font-weight: 600;
 }
 
 .section-container .container.sub h1 {
@@ -1180,6 +1248,7 @@ h2 {
 h3 {
     font-size: 30px;
     color: #548c2f;
+	color: #7d995a;
 }
 
 h4 {
@@ -1451,9 +1520,9 @@ h4 {
 	}
 		
 	.home.section-container p.married {
-    	font-weight: 500;
-		margin-bottom: 15px;
-		letter-spacing: 8px;
+    	font-size: 16px;
+		margin-bottom: 6px !important;
+		letter-spacing: 4px;
 	}	
 	
 	.home.section-container p.home_date {
@@ -1685,7 +1754,6 @@ h4 {
 	}
 	
 	h1 {
-    	font-size: 60px;
 		padding-top: 0px;
 	}
 	
@@ -1701,17 +1769,16 @@ h4 {
 		top: 0;
 		height: 40px;
 	}
+	
+	.intro_text {
+		background: linear-gradient(180deg, rgba(255,255,255,.05) 2%, rgba(255,255,255,0.1) 5%, rgba(255,255,255,.2) 8%, rgba(255,255,255,.3) 10%, rgba(255,255,255,.45) 15%, rgba(255,255,255,0.75) 25%, rgba(255,255,255,.9) 90%)
+	}
+	
+	.logo.mobile {
+		max-width: 375px;
+		margin: 0 auto -30px;
+	}
 
-	.home.section-container h1 {
-		font-size: 60px;
-		line-height: 60px;
-		margin-top: 75px;
-	}
-	
-	.home.section-container h1 span {
-    	font-size: 50px;
-	}
-	
 	.section-container .container.sub h1 {
 		opacity: 1;
 	}
@@ -1724,14 +1791,13 @@ h4 {
 	}
 		
 	.home.section-container p.married {
-		font-size: 18px;
-    	font-weight: 500;
-		margin-bottom: 15px;
-		letter-spacing: 8px;
+		font-size: 16px;
+		margin-bottom: 6px !important;
+		letter-spacing: 4px;
 	}	
 	
 	.home.section-container p.home_date {
-		font-size: 25px;
+		font-size: 22px;
 	}
 	
 	.OurStory-container {
@@ -1815,7 +1881,7 @@ h4 {
 	}
 	
 	.tl-content h3 {
-		font-size: 22px;
+		font-size: 20px;
 		margin-bottom: 5px;
 	}
 	
@@ -1871,10 +1937,6 @@ h4 {
 */
 	}
 	
-	#WhenWhere h1 {
-		font-size: 55px;
-	}
-	
 	.ceremony, .reception, .hotels, .registry_content {
 		padding: 10px 10px;
 		margin: 10px 10px;
@@ -1912,28 +1974,15 @@ h4 {
 */
 	}
 	
-/*
-	#Travel {
-		margin-top: -75px;
-	}
-
-	#Travel h1 {
-		padding-top: 45px !important;
-	}
-*/
-	
 	.Registry-container {
 		background: url(../images/backgrounds/mobile/registry_bg.jpg) no-repeat center center;
 		background-size: cover;
 		padding: 75px 0px 0px;
 		height: auto;
-/*
-		min-height: calc(100vh + 30px);
-*/
 	}
 	
 	.Registry-container h1 {
-		padding-top: 0px;
+		padding-bottom: 20px;
 	}
 	
 	.RSVP-container h1, .rsvp_wrapper {
@@ -1945,7 +1994,6 @@ h4 {
 		background-size: cover;
 		padding: 75px 0px;
 		height: auto;
-/*		min-height: calc(100vh + 30px);*/
 	}
 	
 	.FAQ-container {
@@ -1953,17 +2001,7 @@ h4 {
 		background-size: cover;
 		padding: 75px 0px 0px;
 		height: auto;
-/*
-		min-height: calc(100vh + 30px);
-*/
 	}
-	
-/*
-	#FAQ h1 {
-		padding-top: 45px !important;
-	}
-	
-*/
 	
 	.faq_content {
 		padding: 0;
@@ -2036,12 +2074,26 @@ h4 {
 		min-height: 900px;
 	}
 */
+	h1 {
+		font-size: 40px;
+	}
+	
 	
 	.home {
 		background: url(../images/backgrounds/mobile/ET15_mobile400.jpg) no-repeat center center;
 		background-size: cover;
 	}
 
+	.logo.mobile {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	
+	.intro_text {
+		background: linear-gradient(180deg, rgba(255,255,255,.05) 2%, rgba(255,255,255,0.2) 5%, rgba(255,255,255,.3) 8%, rgba(255,255,255,.45) 10%, rgba(255,255,255,.55) 15%, rgba(255,255,255,.75) 30%, rgba(255,255,255,.9) 90%);
+		padding: 0px 0px 20px;
+	}
+	
 	#OurStory {
 		min-height: calc(100vh + 375px);
 		overflow: visible;
@@ -2061,6 +2113,10 @@ h4 {
 	
 	.ceremony, .reception {
 		margin: 10px 10px;
+	}
+	
+	.ceremony h3, .reception h3 {
+    	font-size: 25px;
 	}
 	
 	#clockdiv .countdown > div {
@@ -2084,6 +2140,10 @@ h4 {
 		margin: 10px;
 	}
 	
+	.Registry-container h1 {
+		padding-bottom: 0;
+	}
+	
 	.registry_content {
 		padding: 20px 10px;
 		margin: 50px 10px;
@@ -2093,6 +2153,7 @@ h4 {
 		min-height: 50px;
 		padding: 10px 5px 10px;
 		height: auto;
+		background-color: rgb(84 140 47 / 15%);
 	}
 	
 	.toggler h4 {
