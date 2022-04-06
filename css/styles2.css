@@ -2142,6 +2142,7 @@ h4 {
 	
 	.Registry-container h1 {
 		padding-bottom: 0;
+		margin-top: 0;
 	}
 	
 	.registry_content {
@@ -2203,6 +2204,11 @@ h4 {
 	
 	.vbar {
 		display: none;
+	}
+	
+	#H-wrapper, #OS-wrapper, #WW-wrapper, #T-wrapper, #R-wrapper, #RSVP-wrapper, #FAQ-wrapper, #P-wrapper {
+		height: auto !important;
+		min-height: 800px;
 	}
 	
 }
