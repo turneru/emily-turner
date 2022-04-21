@@ -170,6 +170,7 @@ nav {
 
 .rsvp_btn {
     position: fixed;
+	z-index: 999;
     right: 0px;
     top: 325px;
     width: 100px;
@@ -180,6 +181,7 @@ nav {
     padding: 10px;
     text-align: center;
 	box-shadow: 0 0 25px rgb(0 0 0 / 30%);
+	cursor: pointer;
 }
 
 .rsvp_btn a {

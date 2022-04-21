@@ -137,11 +137,10 @@
             </div>
 		</div>
 		<!--- RSVP Button --->
-<!--
 		<div class="rsvp_btn slide-in-right delay2500">
-			<a class="scroll-link fly_out" href="#RSVP">RSVP</a>
+			<a data-menuanchor="sixthPage" id="#RSVP" class="scroll-link fly_out">RSVP</a>
 		</div>
--->
+		
 		<div id="fullpage">
 		<!--- Home Section --->
 		<div id="H-wrapper" class="home section-container section">
@@ -462,10 +461,12 @@
 
 						</div>
 
+<!--
 						<script type="text/javascript" src="https://app.rsvpify.com/js/iframeResizer.min.js"></script>
 						<script type="text/javascript">
 							iFrameResize({autoResize: true,checkOrigin: false,heightCalculationMethod: 'max', enablePublicMethods: true}, "#RSVPifyIFrame");
 					</script>
+-->
 					</div>
 				</div>
 				
@@ -966,6 +967,12 @@ $('.nav-btn:nth-of-type(8)').click(function(){
         event.preventDefault();
         fullpage_api.moveTo('eigthPage', 7);
 });		
+	
+$('.rsvp_btn').click(function(){
+        event.preventDefault();
+        fullpage_api.moveTo('sixthPage', 5);
+});		
+	
 	
 //FAQ Accordion JS    
 $(document).ready(function(){
